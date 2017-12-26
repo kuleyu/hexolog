@@ -1,7 +1,8 @@
 ---
-title: "Git常用命令"
-date: 2017-07-27 23:21:09
+title: Git 常用命令
 tags: git
+abbrlink: 7065
+date: 2017-07-27 23:21:09
 ---
 
 [转载 - Ricky - CSDN博客](http://blog.csdn.net/top_code/article/details/51931589 "Permalink to Git常用命令 - Ricky - CSDN博客")

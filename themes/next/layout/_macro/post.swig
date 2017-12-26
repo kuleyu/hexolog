@@ -61,6 +61,18 @@
         {% endif %}
 
         <div class="post-meta">
+
+
+          <span class="post-edit">
+            {% if theme.post_meta.editbar %}
+              <span class="post-meta-item-icon">
+                <a href="{{ theme.post_meta.editurl }}{{ post.title }}.md" target="_blank">
+                  <i class="fa fa-edit"></i>
+                </a>
+              </span>
+            {% endif %}
+          </span>
+
           <span class="post-time">
             {% if theme.post_meta.created_at %}
               <span class="post-meta-item-icon">

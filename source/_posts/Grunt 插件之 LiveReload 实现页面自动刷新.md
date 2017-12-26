@@ -1,7 +1,8 @@
 ---
-title: "Grunt插件之LiveReload 实现页面自动刷新，所见即所得"
-date: 2017-07-21T22:54:53+08:00
+title: Grunt 插件之 LiveReload 实现页面自动刷新
 draft: false
+abbrlink: 5109
+date: 2017-07-21 14:54:53
 ---
 
 

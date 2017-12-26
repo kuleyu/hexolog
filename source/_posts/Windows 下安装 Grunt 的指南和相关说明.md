@@ -1,7 +1,8 @@
 ---
-title: "Windows下安装Grunt的指南和相关说明 "
-date: 2017-07-21T22:58:24+08:00
+title: Windows 下安装 Grunt 的指南和相关说明
 draft: false
+abbrlink: 9862
+date: 2017-07-21 14:58:24
 ---
 
 

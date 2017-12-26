@@ -1,9 +1,10 @@
 ---
-title: "常用 cmd 命令（遇到的）"
-date: 2017/07/27 22:46:19
+title: 常用 cmd 命令（遇到的）
+date: '2017/07/27 22:46:19'
 tags:
-- cmd
-- sublime text
+  - cmd
+  - sublime text
+abbrlink: 20990
 ---
 
 ## 常用 cmd 命令

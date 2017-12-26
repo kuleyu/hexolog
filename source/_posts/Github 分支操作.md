@@ -1,7 +1,8 @@
 ---
-title: "Github 分支操作"
-date: 2017-07-27T22:56:16+08:00
+title: Github 分支操作
 tags: git
+abbrlink: 1371
+date: 2017-07-27 14:56:16
 ---
 
 ## 查看分支

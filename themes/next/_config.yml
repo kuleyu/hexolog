@@ -216,6 +216,8 @@ auto_excerpt:
 
 # 文章头部信息Post meta display settings
 post_meta:
+  editbar: true # 新增编辑按钮
+  editurl: https://github.com/kuleyu/hexolog/edit/master/source/_posts/ #博客文章存储目录
   item_text: true
   created_at: true
   updated_at: false

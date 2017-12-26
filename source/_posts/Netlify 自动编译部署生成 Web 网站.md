@@ -1,8 +1,9 @@
 ---
-title: "Netlify 自动编译部署生成Web网站"
-date: 2017/10/24 17:21:09 
+title: Netlify 自动编译部署生成 Web 网站
+date: '2017/10/24 17:21:09'
 tags: Netlify
 draft: false
+abbrlink: 31808
 ---
 
 [转载自-freehao123.com](https://www.freehao123.com/netlify/ "Permalink to Netlify优秀的静态博客托管平台-自动编译部署生成Web网站可绑域名支持SSL | 免费资源部落")
