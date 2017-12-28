@@ -38,7 +38,7 @@ JSON的语法可以表示以下三种类型的值。
 
 ### 简单值
 
-简单值中，JSON字符串与JavaScript字符串的最大区别在于，JSON字符串必须使用==双引号==（单引号会导致语法错误）。
+简单值中，JSON字符串与JavaScript字符串的最大区别在于，JSON字符串必须使用<font color="#26f3f1">**双引号**</font>（单引号会导致语法错误）。
 
 ### 对象
 
@@ -412,3 +412,11 @@ JSON是一个轻量级的数据格式，可以简化表示复杂数据结构的�
 ECMAScript 5定义了一个原生的JSON对象，可以用来将对象序列化为JSON字符串或者将JSON数据解析为JavaScript对象。JSON.stringify()和JSON.parse()方法分别用来实现上述两项功能。这两个方法都有一些选项，通过它们可以改变过滤的方式，或者改变序列化的过程。
 
 原生的JSON对象也得到了很多浏览器的支持，比如IE8+、Firefox 3.5+、Safari 4+、Opera 10.5和Chrome。
+
+
+
+## 参考
+
+[javascript 高级程序设计 【第3版】][1]
+
+[1]: http://www.wrox.com/

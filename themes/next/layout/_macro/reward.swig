@@ -26,5 +26,12 @@
       </div>
     {% endif %}
 
+    {% if theme.alipaybonus %}
+      <div id="bitcoin" style="display: inline-block">
+        <img id="bitcoin_qr" src="{{ theme.alipaybonus }}" alt="{{ theme.author }} {{ __('reward.alipaybonus') }}"/>
+        <p>{{ __('reward.alipaybonus') }}</p>
+      </div>
+    {% endif %}
+
   </div>
 </div>

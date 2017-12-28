@@ -27,7 +27,7 @@ favicon:
   #ms_browserconfig: /images/browserconfig.xml
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT, Netlify"
+keywords: "Hexo, NexT, Netlify, javascript, web前端，kuleyu"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -119,9 +119,9 @@ scheme: Pisces
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
-  GitHub: https://github.com/kuleyu || github
+  GitHub: https://github.com/kuleyu || github-square
   E-Mail: mailto:1402546930@qq.com || envelope
-  Google: https://plus.google.com/yourname || google
+  Google: https://plus.google.com/yourname || google-plus-official
   Weibo: https://your-weibo-url || weibo
   DouBan: https://your-douban-url || douban
   ZhiHu: https://your-zhihu-url || zhihu 
@@ -240,9 +240,10 @@ post_wordcount:
 
 # 打赏 Reward
 #reward_comment: Donate comment here
-#wechatpay: /images/wechatpay.jpg
-#alipay: /images/alipay.jpg
+wechatpay: /images/wechatpay.png
+alipay: /images/alipay.png
 #bitcoin: /images/bitcoin.png
+alipaybonus: /images/bonus.png
 
 # Declare license on posts
 post_copyright:
@@ -528,9 +529,9 @@ rating:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: false
-  app_id: #<app_id>
-  app_key: #<app_key>
+  enable: true
+  app_id: HTgmoddgWECzdX2R22QI6f2H-gzGzoHsz #<app_id>
+  app_key: uY5OhmfM6Bos88BYLlOcb0UF #<app_key>
 
 # Another tool to show number of visitors to each article.
 # visit https://console.firebase.google.com/u/0/ to get apiKey and projectId
