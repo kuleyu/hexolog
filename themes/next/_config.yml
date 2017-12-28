@@ -121,10 +121,10 @@ scheme: Pisces
 social:
   GitHub: https://github.com/kuleyu || github-square
   E-Mail: mailto:1402546930@qq.com || envelope
-  Google: https://plus.google.com/yourname || google-plus-official
-  Weibo: https://your-weibo-url || weibo
-  DouBan: https://your-douban-url || douban
-  ZhiHu: https://your-zhihu-url || zhihu 
+  Google+: https://plus.google.com/yourname || google-plus-official
+  微博: https://your-weibo-url || weibo
+  豆瓣: https://your-douban-url || douban
+  知乎: https://your-zhihu-url || zhihu 
   #Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
   #VK Group: https://vk.com/yourname || vk
@@ -442,14 +442,14 @@ gitment:
 #           Technorati,Posterous,Tumblr,GoogleBookmarks,Newsvine,
 #           Evernote,Friendfeed,Vkontakte,Odnoklassniki,Mailru
 needmoreshare2:
-  enable: false
+  enable: true
   postbottom:
-    enable: false
+    enable: true
     options:
       iconStyle: box
       boxForm: horizontal
       position: bottomCenter
-      networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
+      networks: Weibo,Wechat,Douban,GooglePlus,Twitter,Facebook
   float:
     enable: false
     options:
@@ -530,8 +530,8 @@ rating:
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
   enable: true
-  app_id: HTgmoddgWECzdX2R22QI6f2H-gzGzoHsz #<app_id>
-  app_key: uY5OhmfM6Bos88BYLlOcb0UF #<app_key>
+  app_id: bVHFwyWVoXDg1pVfzy8aoD0H-gzGzoHsz #<app_id>
+  app_key: WByLAt3BrbNHUKUJMWxbO0kf #<app_key>
 
 # Another tool to show number of visitors to each article.
 # visit https://console.firebase.google.com/u/0/ to get apiKey and projectId
