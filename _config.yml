@@ -81,7 +81,7 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:kuleyu/blog1.git
+  repository: git@github.com:kuleyu/hexolog.git
   branch: master
 
 
