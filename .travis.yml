@@ -21,4 +21,4 @@ branches:
     - blog-source
 env:
  global:
-   - GH_REF: github.com/kuleyu/blog1.git
+   - GH_REF: github.com/kuleyu/hexolog.git
