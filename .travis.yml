@@ -2,7 +2,7 @@ language: node_js
 node_js: stable
 # S: Build Lifecycle
 install:
-  - npm install
+  - cnpm install
 #before_script:
  # - npm install -g gulp
 script:
