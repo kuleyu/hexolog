@@ -91,3 +91,9 @@ git checkout -b [branch name] 的效果相当于以下两步操作：
     git push origin :gh-dev
 ```
 >注意：通过 Pull request 创建的新分支默认会有一个 Pull request 的 Open 状态标识，这种状态下的分支是无法删除的（页面操作与命令行操作都无法删除），需要到 Pull request 选项里面将 Open 改为 close 后才可删除。
+
+## 下载github某个单独分支
+```bash
+    git clone -b gh-pages https://github.com/kuleyu/hexolog.git
+```
+> 其实没有这个说法，这个命令同样也会把所有分支下载下来，只不过下载后的当前分支是这个指定的分支而已。
