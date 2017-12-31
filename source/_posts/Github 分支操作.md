@@ -90,3 +90,4 @@ git checkout -b [branch name] 的效果相当于以下两步操作：
 ```bash
     git push origin :gh-dev
 ```
+>注意：通过 Pull request 创建的新分支默认会有一个 Pull request 的 Open 状态标识，这种状态下的分支是无法删除的（页面操作与命令行操作都无法删除），需要到 Pull request 选项里面将 Open 改为 close 后才可删除。
