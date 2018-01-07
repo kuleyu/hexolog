@@ -6,7 +6,7 @@ draft: false
 abbrlink: 31808
 ---
 
-[转载自-freehao123.com](https://www.freehao123.com/netlify/ "Permalink to Netlify优秀的静态博客托管平台-自动编译部署生成Web网站可绑域名支持SSL | 免费资源部落")
+[转载自-freehao123.com](https://www.freehao123.com/netlify/)
 
 ![Netlify优秀的静态博客托管平台-自动编译部署生成Web网站可绑域名支持SSL][3]
 
@@ -26,7 +26,7 @@ abbrlink: 31808
 
 1、Github官网： 
 
-* 1、官方网站：https://github.com/
+* 1、官方网站：[https://github.com/](https://github.com/)
 
 2、Netlify代码来自于Github、Gitlab或者BitBucket，所以你需要请先在Github、Gitlab或者BitBucket上建立一个代码库，并将自己的网页内容git上传到这个代码库中。Github建库，请看这篇文章：[Github空间在线写文章][7]。 
 
@@ -38,7 +38,7 @@ abbrlink: 31808
 
 1、Netlify官网： 
 
-* 1、官方首页：[netlify][9].com/">https://www.[netlify][9].com/
+* 1、官方首页：[https://www.netlify.com/][9]
 
 2、 首先是到netlify申请注册一个账号。这里可以使用Github、Gitlab以及Bitbucket直接授权登陆。然后登录到空间管理中心，点击右上角的"New site from Git"添加网站。 
 
@@ -185,12 +185,12 @@ abbrlink: 31808
 
 [2]: http://www.cloud.cc
 [3]: https://www.freehao123.com/wp-content/uploads/2017/05/netlify_00.gif
-[4]: https://www.freehao123.com/tag/github/
-[5]: https://www.freehao123.com/tag/hexo/ "Posts tagged with Hexo"
-[6]: https://www.freehao123.com/inkpaper/
+[4]: https://github.com/
+[5]: https://hexo.io/
+[6]: http://www.chole.io/
 [7]: https://www.freehao123.com/github-farbox-dropbox/#toc-1
-[8]: https://www.freehao123.com/bitbucket/
-[9]: https://www.freehao123.com/tag/netlify/ "Posts tagged with Netlify"
+[8]: https://bitbucket.org/
+[9]: https://www.netlify.com/
 [10]: https://www.freehao123.com/wp-content/uploads/2017/05/netlify_01.gif
 [11]: https://www.freehao123.com/wp-content/uploads/2017/05/netlify_02-530x300.gif
 [12]: https://www.freehao123.com/wp-content/uploads/2017/05/netlify_03-530x300.gif
