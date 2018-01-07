@@ -6,7 +6,7 @@ draft: false
 abbrlink: 31808
 ---
 
-[转载自-freehao123.com](https://www.freehao123.com/netlify/ "Permalink to Netlify优秀的静态博客托管平台-自动编译部署生成Web网站可绑域名支持SSL | 免费资源部落")
+[转载自-freehao123.com](https://www.freehao123.com/netlify/)
 
 ![Netlify优秀的静态博客托管平台-自动编译部署生成Web网站可绑域名支持SSL][3]
 
@@ -14,7 +14,7 @@ abbrlink: 31808
 
 今天推荐的netlify则是国外一家提供静态网络托管服务的综合平台，专注于静态网站托管的web服务平台，可以完美的取代Coding。 Netlify完美且免费支持的ssl、域名绑定、http/2和TLS。最重要的就是，管理方式用git方法传递给github、gitlab或者是Bitbucket，然后Netlify就能自动编译并生成静态网站。 
 
-对于想要使用Jekyll、[Hexo](5)、Hugo等静态搭建网站，又害怕复杂的本地环境配置的朋友，Netlify支持自动编译Jekyll、[Hexo](5)、Hugo等常见的静态博客程序真得是太方便了。另外，Netlify也是一个非常好的静态空间，如果你有用[纸小墨 inkPaper](6)或者Html网页，直接就可以上传发布到空间上了。
+对于想要使用Jekyll、[Hexo][5]、Hugo等静态搭建网站，又害怕复杂的本地环境配置的朋友，Netlify支持自动编译Jekyll、[Hexo][5]、Hugo等常见的静态博客程序真得是太方便了。另外，Netlify也是一个非常好的静态空间，如果你有用[纸小墨 inkPaper][6]或者Html网页，直接就可以上传发布到空间上了。
 
 <!-- more -->
 
@@ -26,11 +26,11 @@ abbrlink: 31808
 
 1、Github官网： 
 
-* 1、官方网站：https://github.com/
+* 1、官方网站：[https://github.com/](https://github.com/)
 
-2、Netlify代码来自于Github、Gitlab或者BitBucket，所以你需要请先在Github、Gitlab或者BitBucket上建立一个代码库，并将自己的网页内容git上传到这个代码库中。Github建库，请看这篇文章：[Github空间在线写文章](7)。 
+2、Netlify代码来自于Github、Gitlab或者BitBucket，所以你需要请先在Github、Gitlab或者BitBucket上建立一个代码库，并将自己的网页内容git上传到这个代码库中。Github建库，请看这篇文章：[Github空间在线写文章][7]。 
 
-3、用过Github空间的朋友，都知道Github上的Repos都是公共的，除非你愿意付费，否则你放在Github上的代码都能被所有人下载到。而Bitbucket的免费版本的用户可以有无限的私有Repos。如果想要使用Bitbucket，参考：[Bitbucket免费代码托管空间](8)。 
+3、用过Github空间的朋友，都知道Github上的Repos都是公共的，除非你愿意付费，否则你放在Github上的代码都能被所有人下载到。而Bitbucket的免费版本的用户可以有无限的私有Repos。如果想要使用Bitbucket，参考：[Bitbucket免费代码托管空间][8]。 
 
 **4、Git使用。**Git是目前世界上最先进的分布式版本控制系统，有愿意使用静态的博客的朋友建议系统学习一下Git。如果你只时想要建立一个静态博客，也可以使用Github Desktop，它可以让你像管理FTP那样上传更新代码，新手朋友再也不用害怕命令了。 
 
@@ -38,7 +38,7 @@ abbrlink: 31808
 
 1、Netlify官网： 
 
-* 1、官方首页：[https://www.netlify.com/](9)
+* 1、官方首页：[https://www.netlify.com/][9]
 
 2、 首先是到netlify申请注册一个账号。这里可以使用Github、Gitlab以及Bitbucket直接授权登陆。然后登录到空间管理中心，点击右上角的"New site from Git"添加网站。 
 
@@ -185,12 +185,12 @@ abbrlink: 31808
 
 [2]: http://www.cloud.cc
 [3]: https://www.freehao123.com/wp-content/uploads/2017/05/netlify_00.gif
-[4]: https://www.freehao123.com/tag/github/
-[5]: https://www.freehao123.com/tag/hexo/ "Posts tagged with Hexo"
-[6]: https://www.freehao123.com/inkpaper/
+[4]: https://github.com/
+[5]: https://hexo.io/
+[6]: http://www.chole.io/
 [7]: https://www.freehao123.com/github-farbox-dropbox/#toc-1
-[8]: https://www.freehao123.com/bitbucket/
-[9]: https://www.freehao123.com/tag/netlify/ "Posts tagged with Netlify"
+[8]: https://bitbucket.org/
+[9]: https://www.netlify.com/
 [10]: https://www.freehao123.com/wp-content/uploads/2017/05/netlify_01.gif
 [11]: https://www.freehao123.com/wp-content/uploads/2017/05/netlify_02-530x300.gif
 [12]: https://www.freehao123.com/wp-content/uploads/2017/05/netlify_03-530x300.gif
