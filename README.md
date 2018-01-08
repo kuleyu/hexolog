@@ -1,9 +1,11 @@
 # hexolog
 
+[![Build Status](https://secure.travis-ci.org/kuleyu/hexolog.png
+)](http://travis-ci.org/kuleyu/hexolog)
 
 **本文件夹内容作为 gh-pages 分支的源代码**
 
-其实相对于 master 分支，就只改了 <\_config.yml>文件：
+其实相对于 master 分支，主要改了 <\_config.yml>文件：
 ```
 	将		url: http://yoursite.com/
 	  		root: /
