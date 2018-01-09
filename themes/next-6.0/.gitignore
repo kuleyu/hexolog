@@ -20,3 +20,13 @@ source/lib/ua-parser-js/*
 !source/lib/ua-parser-js/dist/
 
 !source/lib/velocity/
+
+
+!source/lib/Han/
+
+!source/lib/canvas-ribbon/
+
+!source/lib/fancybox/
+
+!source/lib/needsharebutton/
+
