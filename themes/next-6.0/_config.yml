@@ -351,7 +351,7 @@ mathjax:
 
 # Han Support
 # Dependencies: https://github.com/theme-next/theme-next-han
-han: false
+han: true
 
 # Swiftype Search API Key
 #swiftype_key:
@@ -684,7 +684,7 @@ motion:
 
 # Fancybox
 # Dependencies: https://github.com/theme-next/theme-next-fancybox
-fancybox: false
+fancybox: true
 
 # Added switch option for separated repo in 6.0.0.
 # Dependencies: https://github.com/theme-next/theme-next-fastclick
@@ -692,7 +692,7 @@ fastclick: false
 
 # Added switch option for separated repo in 6.0.0.
 # Dependencies: https://github.com/theme-next/theme-next-jquery-lazyload
-lazyload: false
+lazyload: true
 
 # Progress bar in the top during page loading.
 # Dependencies: https://github.com/theme-next/theme-next-pace
@@ -713,7 +713,7 @@ pace: true
 #pace-theme-minimal
 # For example
 # pace_theme: pace-theme-center-simple
-pace_theme: pace-theme-center-simple
+pace_theme: pace-theme-center-radar
 
 # Canvas-nest
 # Dependencies: https://github.com/theme-next/theme-next-canvas-nest
@@ -735,10 +735,10 @@ canvas_sphere: false
 # alpha: The transparency of the ribbon.
 # zIndex: The display level of the ribbon.
 canvas_ribbon:
-  enable: false
-  size: 300
-  alpha: 0.6
-  zIndex: -1
+  enable: true
+  size: 200
+  alpha: 0.2
+  zIndex: -6
 
 # Script Vendors.
 # Set a CDN address for the vendor you want to customize.
