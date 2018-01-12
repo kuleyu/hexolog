@@ -717,10 +717,10 @@ pace: true
 #pace_theme: pace-theme-center-circle       # 5.中心立体翻转数字盘
 #pace_theme: pace-theme-center-radar        # 6.中心三条1/4圆弧旋转
 #pace_theme: pace-theme-center-simple       # 7.中心单横杠
-#pace_theme: pace-theme-corner-indicator    # 8.右上角同心圆旋转
+pace_theme: pace-theme-corner-indicator    # 8.右上角同心圆旋转
 #pace_theme: pace-theme-fill-left           # 9.底部半透明覆盖（在页面的底层，不明显）
 #pace_theme: pace-theme-flash               # 10.右上角1/4圆弧旋转
-pace_theme: pace-theme-loading-bar         # 11.中心横杠加数字
+#pace_theme: pace-theme-loading-bar         # 11.中心横杠加数字 (延缓了加载，pass)
 #pace_theme: pace-theme-mac-osx             # 12.顶部宽条覆盖
 #pace_theme: pace-theme-minimal             # 13.顶部细条覆盖（不明显）
 
