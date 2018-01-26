@@ -1,7 +1,7 @@
 ---
-title: music
+title: 音乐 · 心情
 date: 2018-01-26 17:29:24
-comments: false
+comments: true
 ---
 
 ----------------------------------
@@ -23,7 +23,7 @@ comments: false
 - 36990266
 {% endcplayer %}
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" minwidth=330 height=450 src="//music.163.com/outchain/player?type=0&id=2026957271&auto=1&height=430"></iframe>
+<!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" minwidth=330 height=450 src="//music.163.com/outchain/player?type=0&id=2026957271&auto=1&height=430"></iframe> -->
 
-<!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" minwidth=330 height=450 src="//music.163.com/outchain/player?type=0&id=2031425504&auto=0&height=430"></iframe> -->
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" minwidth=330 height=450 src="//music.163.com/outchain/player?type=0&id=2031425504&auto=0&height=430"></iframe>
 

@@ -24,4 +24,4 @@
 
 1. ~~修正 NexT Theme `themes\next\layout\_macro` 路径下 `wechat-subscriber.swig` 与 `reward.swig` 两个模板的一类 bug （当主配置文件的根目录设置为 `root:/XXXXXX/` 时，两个模板解析后的资源的相当路径问题）。未修正前，当主配置文件的根目录设置为 `root:/XXXXXX/` 时，部署完成后，文章尾部的关注图片与打赏图片加载不出来；修正后可以正常显示。~~
 
-2. 新增插件：`theme-next-han`、`theme-next-canvas-ribbon`、`theme-next-fancybox3`、`theme-next-needmoreshare2`、`hexo-tag-cplayer`音乐播放器
+2. 新增插件：`theme-next-han`、`theme-next-canvas-ribbon`、`theme-next-fancybox3`、`theme-next-needmoreshare2`、`hexo-tag-cplayer`音乐播放器、用`hexo-renderer-markdown-it-plus`替换了`hexo-renderer-marked`
