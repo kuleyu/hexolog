@@ -93,6 +93,7 @@ menu:
   #categories: /categories/ || th
   archives: /archives/ || archive
   about: /about/ || user
+  music: /music || music
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
