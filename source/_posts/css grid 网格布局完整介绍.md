@@ -602,7 +602,7 @@ CSS Grid 布局（又叫“Grid”），是一个基于网格的二维布局系�
 ### grid-auto-columns
 ### grid-auto-rows
 
-指定自动生成的网格迹的大小（又叫隐式网格轨迹），当你精确指定行和列的位置大于定义的网格时（通过 grid-template-rows/grid-template-columns）时隐式网格轨迹会被创建。
+指定自动生成的网格轨道的大小（又叫隐式网格轨道），当你精确指定行和列的位置大于定义的网格（通过 grid-template-rows/grid-template-columns）时隐式网格轨道会被创建。
 
 值有：
 
@@ -615,7 +615,7 @@ CSS Grid 布局（又叫“Grid”），是一个基于网格的二维布局系�
 }
 {% endcodeblock %}
 
-为了说明隐式网格轨迹如何被创建，思考一下这个：
+为了说明隐式网格轨道如何被创建，思考一下这个：
 
 {% codeblock lang:css %}
 .container{
@@ -628,7 +628,7 @@ CSS Grid 布局（又叫“Grid”），是一个基于网格的二维布局系�
 
 这里创建了 2 x 2 的网格。
 
-但现在想象你使用`grid-column`和`grid-row`来定位你的网格子项，就像这样：
+但现在想象你使用`grid-column`和`grid-row`来定位你的网格项，就像这样：
 
 {% codeblock lang:css %}
 .item-a{
@@ -643,7 +643,7 @@ CSS Grid 布局（又叫“Grid”），是一个基于网格的二维布局系�
 
 {% img https://cdn.css-tricks.com/wp-content/uploads/2016/03/implicit-tracks.png %}
 
-我们告诉`.item-b`在第 5 列网格线开始第 6 列网格线结束，但我们还没有定义第 5 或者第 6 列。因为我们引用的线不存在，0 宽度的隐式网格轨迹将被创建来填充这些空缺。我们可以使用`grid-auto-columns`和`grid-auto-rows`来指定这些隐式网格轨迹的宽度：
+我们告诉`.item-b`在第 5 列网格线开始第 6 列网格线结束，但我们还没有定义第 5 或者第 6 列。因为我们引用的线不存在，0 宽度的隐式网格轨道将被创建来填充这些空缺。我们可以使用`grid-auto-columns`和`grid-auto-rows`来指定这些隐式网格轨道的宽度：
 
 {% codeblock lang:css %}
 .container{
@@ -655,7 +655,7 @@ CSS Grid 布局（又叫“Grid”），是一个基于网格的二维布局系�
 
 ### grid-auto-flow
 
-如果你有网格子项没有明确地放置在网格中，自动布局算法会将网格子项自动放置起来，这个属性控制自动布局算法如何工作。
+如果你有网格项没有明确地放置在网格中，自动布局算法会将网格项自动放置起来，这个属性控制自动布局算法如何工作。
 
 值有：
 
@@ -731,7 +731,7 @@ CSS Grid 布局（又叫“Grid”），是一个基于网格的二维布局系�
 以下属性的简写方式：`grid-template-rows`，`grid-template-columns`，`grid-template-areas`，`grid-auto-rows`，`grid-auto-columns`，`grid-auto-flow`。它也可以设置`grid-column-gap`和`grid-row-gap`为它们的初始值，尽管它们不能通过这个属性来精确设置。
 值有：
 
-* **none** - 设置所有紫属性为它们的初始值
+* **none** - 设置所有子属性为它们的初始值
 * **\<grid-template-rows\>** / **\<grid-template-columns\>** - 分别设置`grid-template-rows`和`grid-template-columns`的指定值，以及设置其他所有子属性为初始值
 * **\<grid-auto-flow\>** [**\<grid-auto-rows\>** [ / **\<grid-auto-columns\>**] ] - 分别接收所有像`grid-auto-flow`，`grid-auto-rows`和`grid-auto-columnsaccepts`的相同值。如果`grid-auto-columns`被省略了，那么它的值会通过`grid-auto-rows`来设置，如果两个都省略了，它们将被设置为默认值。
 
@@ -775,7 +775,7 @@ CSS Grid 布局（又叫“Grid”），是一个基于网格的二维布局系�
 }
 {% endcodeblock %}
 
-它也可以接收一个更复杂但又相当方便的语法来一次性设置所有属性，你可以指定`grid-template-areas`，`grid-auto-rows`和`grid-auto-columns`，并且所有其他紫属性被设置为它们的默认值。你需要做的是指定网格线的名称和网格轨迹的大小来生成它们的网格区域。最简单的表述方法就是举一个例子：
+它也可以接收一个更复杂但又相当方便的语法来一次性设置所有属性，你可以指定`grid-template-areas`，`grid-auto-rows`和`grid-auto-columns`，并且所有其他子属性被设置为它们的默认值。你需要做的是指定网格线的名称和网格轨迹的大小来生成它们的网格区域。最简单的表述方法就是举一个例子：
 
 {% codeblock lang:css %}
 .container{
@@ -810,12 +810,12 @@ CSS Grid 布局（又叫“Grid”），是一个基于网格的二维布局系�
 
 ### grid-column-start、grid-column-end、grid-row-start 和 grid-row-end
   
-通过参考指定的网格线来决定网格中一个网格子项的位置，`grid-column-start/grid-row-start`是指网格子项开始的线，`grid-column-end/grid-row-end`是指网格子项结束的线。
+通过参考指定的网格线来决定网格中一个网格项的位置，`grid-column-start/grid-row-start`是指网格子项开始的线，`grid-column-end/grid-row-end`是指网格项结束的线。
 
 值有：
 
 * `<line>` - 可以是一个数字以适用被标记了数字号的网格线，或者是一个名字以适用命名了的网格线
-* span `<number>` - 子项将跨越指定数字的网格轨迹
+* span `<number>` - 子项将跨越指定数字的网格轨道
 * span `<name>` - 子项将跨越到指定名字之前的网格线
 * auto - 表示自动布局，自动跨越或者默认跨越一个
 
@@ -852,9 +852,9 @@ CSS Grid 布局（又叫“Grid”），是一个基于网格的二维布局系�
 
 {% img http://chris.house/images/grid-start-end-b.png %}
 
-如果`grid-column-end/grid-row-end`没有生命，网格子项将默认跨越一个网格轨迹。
+如果`grid-column-end/grid-row-end`没有生命，网格项将默认跨越一个网格轨道。
 
-网格子项可以互相重叠，你可以使用`z-index`来控制他们的层叠顺序。
+网格项可以互相重叠，你可以使用`z-index`来控制他们的层叠顺序。
 
 ### grid-column与grid-row
 
@@ -886,7 +886,7 @@ CSS Grid 布局（又叫“Grid”），是一个基于网格的二维布局系�
 
 ### grid-area
 
-给网格子项取一个名字以让它被由`grid-template-areas`属性创建的模板引用。同时，这个属性也可以用来更简短地表示`grid-row-start`+ `grid-column-start` + `grid-row-end`+ `grid-column-end`。
+给网格项取一个名字以让它被由`grid-template-areas`属性创建的模板引用。同时，这个属性也可以用来更简短地表示`grid-row-start`+ `grid-column-start` + `grid-row-end`+ `grid-column-end`。
 
 值有：
 
@@ -901,10 +901,9 @@ CSS Grid 布局（又叫“Grid”），是一个基于网格的二维布局系�
 
 举例：
 
-作为分配一个名字给网格子项的一种方式：
+作为分配一个名字给网格项的一种方式：
 
 {% codeblock lang:css %}
-.item{
 .item-d{
   grid-area: header
 }
@@ -922,14 +921,14 @@ CSS Grid 布局（又叫“Grid”），是一个基于网格的二维布局系�
 
 ### justify-self
 
-让网格子项的内容以列轴对齐（与之相反`align-self`是跟行轴对齐），这个值可以应用在单个网格子项的内容中。
+让网格项的内容以列轴对齐（与之相反`align-self`是跟行轴对齐），这个值可以应用在单个网格项的内容中。
 
 值有：
 
 * **start** - 让内容在网格区域左对齐
 * **end** - 让内容在网格区域右对齐
 * **center** - 让内容在网格区域中间对齐
-* **stretch** - 填充着呢个网络区域的宽度（默认值）
+* **stretch** - 填充整个网络区域的宽度（默认值）
 
 {% codeblock lang:css %}
 .item{
@@ -971,11 +970,11 @@ CSS Grid 布局（又叫“Grid”），是一个基于网格的二维布局系�
 
 {% img https://cdn.css-tricks.com/wp-content/uploads/2016/03/grid-justify-self-stretch.png %}
 
-为了让网格中的所有子项都对齐，这个行为也可以通过设置网格容器中的`justify-items`属性来实现。
+为了让网格中的所有项都对齐，这个行为也可以通过设置网格容器中的`justify-items`属性来实现。
 
 ### align-self
 
-让网格子项的内容以行轴对齐（与之相反`justify-self`是跟列轴对齐），这个值可以应用在单个网格子项的内容中。
+让网格项的内容以行轴对齐（与之相反`justify-self`是跟列轴对齐），这个值可以应用在单个网格项的内容中。
 
 值有：
 
@@ -1024,7 +1023,7 @@ CSS Grid 布局（又叫“Grid”），是一个基于网格的二维布局系�
 
 {% img https://cdn.css-tricks.com/wp-content/uploads/2016/03/grid-align-self-stretch.png %}
 
-为了让网格中的所有子项都对齐，这个行为也可以通过设置网格容器中的`align-items`属性来实现。
+为了让网格中的所有项都对齐，这个行为也可以通过设置网格容器中的`align-items`属性来实现。
 
 
 
@@ -1036,18 +1035,3 @@ CSS Grid 布局（又叫“Grid”），是一个基于网格的二维布局系�
 [03]: http://abookapart.com/products/get-ready-for-css-grid-layout
 [04]: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 [05]: https://caniuse.com/#search=CSS%20grid%20layout
-[06]: 
-[07]: 
-[08]: 
-[09]: 
-[10]: 
-[11]: 
-[12]: 
-[13]: 
-[14]: 
-[15]: 
-[16]: 
-[17]: 
-[18]: 
-[19]: 
-[20]: 
