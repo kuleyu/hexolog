@@ -3,6 +3,7 @@ title: Adobe Illustrator CC 学习笔记
 tags: Illustrator
 abbrlink: 3a977c25
 date: 2018-01-23 15:21:09
+categories: 学习笔记
 ---
 
 >视频资料[Illustrator CC实例教程-我要自学网][01]，里面都是满满的干货，非常受用。
@@ -143,10 +144,11 @@ Adobe Illustrator CC 是矢量图软件，而 Photoshop CC 是位图软件。矢
 
 
 
-
+> 相关: Adobe Animate CC 2017 入门教程——[Animate动画案例教程][02] 
 
 
 
 
 
 [01]: http://www.51zxw.net/list.aspx?cid=586
+[02]: http://www.51zxw.net/list.aspx?cid=632

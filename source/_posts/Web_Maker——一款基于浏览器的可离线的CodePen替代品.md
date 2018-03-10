@@ -1,7 +1,7 @@
 ---
 title: Web_Maker——一款基于浏览器的可离线的CodePen替代品
 comments: true
-categories: 工具
+categories: 翻译
 tags:
   - web maker
   - 编辑器
