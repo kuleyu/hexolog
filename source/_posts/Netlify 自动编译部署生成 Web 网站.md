@@ -4,6 +4,7 @@ date: '2017/10/24 17:21:09'
 tags: Netlify
 draft: false
 abbrlink: 31808
+categories: 搬运整理
 ---
 
 [转载自-freehao123.com](https://www.freehao123.com/netlify/)

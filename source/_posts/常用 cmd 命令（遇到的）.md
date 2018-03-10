@@ -5,6 +5,7 @@ tags:
   - cmd
   - sublime text
 abbrlink: 20990
+categories: 学习笔记
 ---
 
 ## 常用 cmd 命令

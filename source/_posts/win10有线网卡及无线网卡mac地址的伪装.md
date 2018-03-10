@@ -3,7 +3,7 @@ title: win10有线网卡及无线网卡mac地址的伪装
 comments: true
 abbrlink: c6b45260
 date: 2018-01-07 01:01:42
-categories: 杂七杂八
+categories: 搬运整理
 tags:
 - windows
 - win10

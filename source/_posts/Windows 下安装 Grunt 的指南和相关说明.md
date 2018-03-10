@@ -3,6 +3,8 @@ title: Windows 下安装 Grunt 的指南和相关说明
 draft: false
 abbrlink: 9862
 date: 2017-07-21 14:58:24
+categories: 搬运整理
+tags: Grunt
 ---
 
 

@@ -7,7 +7,7 @@ tags:
   - 包管理
 abbrlink: 70a6ae5d
 date: 2018-01-08 10:23:31
-categories:
+categories: 学习笔记
 ---
 
 ## 新手指南
