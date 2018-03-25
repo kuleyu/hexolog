@@ -1,9 +1,13 @@
 ---
 title: "HTML5+CSS3整体回顾"
 tags: ["HTML5","CSS3"]
-categories: ["搬运整理"]
+categories: ["Front-End","搬运整理"]
 abbrlink: d1c7e878
 date: 2017-05-17 09:36:24
+comments: true
+author: '<a href="http://blog.poetries.top/" rel="noopener" target="_blank">poetries</a>'
+contentCopyright: '<a href="https://github.com/poetries/poetries.github.io/blob/dev/source/_posts/HTML5+CSS3%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE%20.md" rel="noopener" target="_blank">See origin</a>'
+hiddenFromHomePage: true
 ---
 
 > [转载自Poetry's Blog](http://blog.poetries.top/2016/10/19/HTML5+CSS3%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE%20/)
@@ -13,7 +17,7 @@ date: 2017-05-17 09:36:24
 
 ![HTML5概览](http://upload-images.jianshu.io/upload_images/1480597-63390b75c7b22ea1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-#### 第一课 HTML5结构
+### 第一课 HTML5结构
 ---
 
 - `HTML5` 是新一代的 `HTML`
@@ -23,7 +27,7 @@ date: 2017-05-17 09:36:24
 
 ![一些总结--from-dunitian](http://upload-images.jianshu.io/upload_images/1480597-ce00790dcabf9c47.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-##### 常用的一些新的结构标签
+#### 常用的一些新的结构标签
 ---
 
 ![结构标签](http://upload-images.jianshu.io/upload_images/1480597-4585c0d9a5309443.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -42,7 +46,7 @@ date: 2017-05-17 09:36:24
   - `adress`这个元素显示`article`或整个文档的合同信息，且位于`footer`这个元素之中
   - `time`显示人和机器可读的日期和时间，而且机器可读的时间戳是属性`datetime`的值第二个可选的是`pubtime`用于表示出版日期值
 
-##### 删除的`HTML`标签
+#### 删除的`HTML`标签
 ---
 
 - 纯表现的元素：
@@ -83,10 +87,10 @@ date: 2017-05-17 09:36:24
 
 ![草图--from-dunitian](http://upload-images.jianshu.io/upload_images/1480597-dd4078736467f182.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-#### 第二课 HTML5智能表单
+### 第二课 HTML5智能表单
 ---
 
-##### HTML4.01 form表单复习
+#### HTML4.01 form表单复习
 ---
 
 - `input`表单`type`属性值
@@ -99,7 +103,7 @@ date: 2017-05-17 09:36:24
     - `type="file"`           上传文件
     - `type="reset"	 `    重置
 
-##### HTML5智能表单
+#### HTML5智能表单
 ---
 
 - `input`表单`type`属性值：
@@ -118,7 +122,7 @@ date: 2017-05-17 09:36:24
     - `type="tel" `    显示电话号码
 
 
-##### Input 类型 - Date Pickers（日期选择器）
+#### Input 类型 - Date Pickers（日期选择器）
 ---
 
 - **`HTML5` 拥有多个可供选取日期和时间的新输入类型：
@@ -131,7 +135,7 @@ date: 2017-05-17 09:36:24
     - `datetime`  选取时间、日、月、年（UTC 时间）
     - `datetime-local`  选取时间、日、月、年（本地时间）
 
-##### HTML5新增表单属性
+#### HTML5新增表单属性
 ---
 - `required:` `required `内容不能为空
 - `placeholder:` 表单提示信息
@@ -143,7 +147,7 @@ date: 2017-05-17 09:36:24
 - `datalist:` 输入框选择列表配合`list`使用 `list`值为`datalist`的`id`值
 - `output:` 计算或脚本输出
 
-##### 表单验证
+#### 表单验证
 ---
 
 - `validity`对象，通过下面的`valid`可以查看验证是否通过，如果八种验证都返回`true`,一种验证失败返回`false`
@@ -156,7 +160,7 @@ date: 2017-05-17 09:36:24
     - `cusomError`
       - `setCustomValidity()`
      
-#### 第三课 css3选择器
+### 第三课 css3选择器
 ---
 
 ![css3属性快速一览](http://upload-images.jianshu.io/upload_images/1480597-5c90a330f791f359.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -180,17 +184,18 @@ date: 2017-05-17 09:36:24
          - 浮动和定位、高级选择器等(子选择器、相邻选择器、通用选择器)
     - `CSS3`遵循的是模块化开发。发布时间并不是一个时间点，而是一个时间段
 
-- **`CSS`选择器复习**
+#### `CSS`选择器复习
+---
 
-    - 通用选择器：`* ` 选择到所有的元素
-    - 选择子元素：`>` 选择到元素的直接后代
-    - 相邻兄弟选择器：`+ `选择到紧随目标元素后的第一个元素
-    - 普通兄弟选择器：`~ `选择到紧随其后的所有兄弟元素
-    - 伪元素选择器：
-    	- `::first-line` 匹配文本块的首行
-    	- `::first-letter` 选择文本块的首字母
-    - 伪类选择器：
-    	- `:before`,`:after`在元素内容前面、后面添加内容(相当于行内元素)
+  - 通用选择器：`* ` 选择到所有的元素
+  - 选择子元素：`>` 选择到元素的直接后代
+  - 相邻兄弟选择器：`+ `选择到紧随目标元素后的第一个元素
+  - 普通兄弟选择器：`~ `选择到紧随其后的所有兄弟元素
+  - 伪元素选择器：
+  	- `::first-line` 匹配文本块的首行
+  	- `::first-letter` 选择文本块的首字母
+  - 伪类选择器：
+  	- `:before`,`:after`在元素内容前面、后面添加内容(相当于行内元素)
 
 
 - **CSS3结构选择器**
@@ -229,39 +234,43 @@ date: 2017-05-17 09:36:24
       - `:empty`选择内容为空的元素
     - `:selection `鼠标光标选择元素内容
 
-#### 第四课 CSS3新增文本属性
+### 第四课 CSS3新增文本属性
 ---
 
-- **CSS文本属性复习**
-    - `white-space`：对象内空格的处理方式
-      - `nowrap` 控制文本不换行
-		
-      - `pre` 空白会被浏览器保留
+#### CSS文本属性复习
+---
 
-      - `pre-line` 合并空白  保留换行符
+  - `white-space`：对象内空格的处理方式
+    - `nowrap` 控制文本不换行
+	
+    - `pre` 空白会被浏览器保留
 
-      - `pre-wrap` 保留空白  正常换行
+    - `pre-line` 合并空白  保留换行符
 
-    - `direction`：文本流的方向
-      - `ltr` 文本从左向右
-      - `rtl`  文本从右往左
+    - `pre-wrap` 保留空白  正常换行
 
-    - `unicode-bidi`：用于同一个页面里存在从不同方向读进的文本显示。与`direction`属性一起使用
+  - `direction`：文本流的方向
+    - `ltr` 文本从左向右
+    - `rtl`  文本从右往左
 
-- **CSS3新增文本属性**
+  - `unicode-bidi`：用于同一个页面里存在从不同方向读进的文本显示。与`direction`属性一起使用
 
-    - `color:rgba()`;
-    - `text-overflow`:是否使用一个省略标记（...）标示对象内文本的溢出
-    - `text-align`:文本的对齐方式
-    - `text-transform`:文字的大小写
-    - `text-decoration`:文本的装饰线，复合属性
-    - `text-shadow`:文本阴影
-    - `text-fill-color`:文字填充颜色
-    - `text-stroke`:复合属性。设置文字的描边
-    - `tab-size`:制表符的长度
-    - `word-wrap`:当前行超过指定容器的边界时是否断开转行
-    - `word-break`:规定自动换行的处理方法
+#### CSS3新增文本属性
+---
 
+  - `color:rgba()`;
+  - `text-overflow`:是否使用一个省略标记（...）标示对象内文本的溢出
+  - `text-align`:文本的对齐方式
+  - `text-transform`:文字的大小写
+  - `text-decoration`:文本的装饰线，复合属性
+  - `text-shadow`:文本阴影
+  - `text-fill-color`:文字填充颜色
+  - `text-stroke`:复合属性。设置文字的描边
+  - `tab-size`:制表符的长度
+  - `word-wrap`:当前行超过指定容器的边界时是否断开转行
+  - `word-break`:规定自动换行的处理方法
+
+---
 
 - **`text-overflow:`是否使用一个省略标记（`...`）标示对象内文本的溢出**
     - `clip`： 默认值 无省略号
@@ -319,7 +328,7 @@ date: 2017-05-17 09:36:24
     - 内容将在边界内换行。如果需要，单词内部允许断行
    
 
-#### 第五课 CSS3盒模型
+### 第五课 CSS3盒模型
 ---
 
 - CSS盒模型复习
@@ -328,7 +337,7 @@ date: 2017-05-17 09:36:24
 
 ![IE盒子模型](http://upload-images.jianshu.io/upload_images/1480597-693242e2f03506f8.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-- **CSS3弹性盒模型**
+#### CSS3弹性盒模型
 
    - **以下6个属性设置在容器上**
      - `flex-direction`
@@ -374,7 +383,7 @@ date: 2017-05-17 09:36:24
     - [flex布局实例篇](http://www.ruanyifeng.com/blog/2015/07/flex-examples.html)
 
 
-#### 第六课 css3新增背景属性
+### 第六课 css3新增背景属性
 ---
 
 - **CSS背景属性复习**
@@ -424,7 +433,7 @@ date: 2017-05-17 09:36:24
 
 
 
-#### 第七课 css3新增颜色属性
+### 第七课 css3新增颜色属性
 ---
 
 - **CSS颜色属性复习**
@@ -449,9 +458,9 @@ date: 2017-05-17 09:36:24
 
     - `H`： `Hue`(色调)。
         - 0(或360)表示红色，120表示绿色，240表示蓝色，也可取其他数值来指定颜色。取值为：`0 - 360` 
-    - `S`：` Saturation`(饱和度)。取值为：0.0% - 100.0% 
+    - `S`：`Saturation`(饱和度)。取值为：0.0% - 100.0% 
     - `L`： `Lightness`(亮度)。取值为：0.0% - 100.0%
-    - `A`:    `alpha  `   透明度   0~1之间
+    - `A`:    `alpha`   透明度   0~1之间
     
     - 语法:`HSLA(H,S,L,A)`
 
@@ -471,10 +480,10 @@ date: 2017-05-17 09:36:24
 	- 对于低版本的火狐浏览器需添加内核前缀，`-moz-opacity`
 
 
-#### 第八课 CSS3边框系列
+### 第八课 CSS3边框系列
 ---
 
-##### 圆角-阴影
+#### 圆角-阴影
 ---
 
 - 边框圆角
@@ -485,12 +494,13 @@ date: 2017-05-17 09:36:24
 - **`border-radius`边框圆角写法**
   - `border-radius: 2em 1em 4em / 0.5em 3em;`
   - 等价于
+
 ```css
-border-top-left-radius: 2em 0.5em;
-border-top-right-radius: 1em 3em;
-border-bottom-right-radius: 4em 0.5em;
-border-bottom-left-radius: 1em 3em;
-```
+  border-top-left-radius: 2em 0.5em;
+  border-top-right-radius: 1em 3em;
+  border-bottom-right-radius: 4em 0.5em;
+  border-bottom-left-radius: 1em 3em;
+```  
 
 - **`box-shadow`方框添加阴影**
     - 语法：`box-shadow:x-shadow y-shadow blur spread color inset;`
@@ -504,7 +514,7 @@ border-bottom-left-radius: 1em 3em;
         - `inset` 	可选。将外部阴影 (`outset`) 改为内部阴影
     - 实例：`box-shadow:10px 10px 5px 5px #888888;`
     
-##### 边框系列-图片
+#### 边框系列-图片
 ---
 
 - **`border-image`语法**
@@ -531,10 +541,10 @@ border-bottom-left-radius: 1em 3em;
     - `round`： 指定用平铺方式来填充边框背景图。图片会根据边框的尺寸动态调整图片的大小	直至正好可以铺满整个边框。写本文档时仅Firefox能看到该效果 
 
     
-#### 第九课 CSS3运动体系
+### 第九课 CSS3运动体系
 ---
 
-##### 过渡
+#### 过渡
 ---
 
 - 过渡：给改变添加过程
@@ -566,9 +576,10 @@ border-bottom-left-radius: 1em 3em;
 - 过渡完成事件   
 ![过渡完成事件](http://upload-images.jianshu.io/upload_images/1480597-f8a2291a249961ad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-- `Webkit`内核： 
+- `Webkit`内核：
+
 ```javascript
-obj.addEventListener('webkitTransitionEnd',function(){})
+  obj.addEventListener('webkitTransitionEnd',function(){})
 ```
 
 - 标准: 
@@ -577,7 +588,7 @@ obj.addEventListener('webkitTransitionEnd',function(){})
 obj.addEventListener('transitionend',function(){})
 ```
 	
-##### 动画
+#### 动画
 ---
 
 - 什么是`CSS3` 动画？
@@ -648,7 +659,7 @@ obj.addEventListener('transitionend',function(){})
   - [学会使用css3的box-sizing布局](http://www.jianshu.com/p/e2eb0d8c9de6)
 
 
-#### 第十课 transform 2D转换
+### 第十课 transform 2D转换
 ---
 
 - **`Css3`平面转换方法**
@@ -694,7 +705,7 @@ obj.addEventListener('transitionend',function(){})
    - 例：`transform: skew(30deg,20deg);`
      - 把元素围绕 `X `轴把元素翻转`30` 度，围绕 `Y` 轴翻转 `20 `度
 
-#### 第十一课 transform 3D转换
+### 第十一课 transform 3D转换
 ---
 
 - **`Css3`立体转换**
@@ -714,7 +725,7 @@ obj.addEventListener('transitionend',function(){})
     - `translateZ()`
     - `scaleZ()`
 
-#### 第十二课 视频音频
+### 第十二课 视频音频
 ---
 
 - 视频音频格式的简单介绍
@@ -724,7 +735,7 @@ obj.addEventListener('transitionend',function(){})
   - 常见的音频格式
     - 视频编码：ACC、MP3、Vorbis
 
-- **`HTML5`支持的格式**
+#### **`HTML5`支持的格式**
 ---
 
 - `HTML5`能在完全脱离插件的情况下播放音视频,但是不是所有格式都支持。
@@ -733,7 +744,7 @@ obj.addEventListener('transitionend',function(){})
     - `MEPG4=`带有H.264视频编码`+AAC`音频编码的`MPEG4`文件
     - `WebM=`带有`VP8`视频编码`+Vorbis`音频编码的`WebM`格式
 
-##### `Video`的使用
+#### `Video`的使用
 ---
 
 - **单独用法**
@@ -779,7 +790,7 @@ obj.addEventListener('transitionend',function(){})
 |load()|	videoWidth|	progress|
 |canPlayType()|	videoHeight|	error|
 
-#### 第十三课 canvas
+### 第十三课 canvas
 ---
 
 - 标签 `<canvas>`
@@ -907,7 +918,7 @@ obj.addEventListener('transitionend',function(){})
 	- [HTML5 API大盘点](http://jartto.wang/2016/07/25/make-an-inventory-of-html5-api/)
 
 
-#### 第十四课 SVG绘图
+### 第十四课 SVG绘图
 ---
 
 - **svg是什么**
@@ -916,7 +927,8 @@ obj.addEventListener('transitionend',function(){})
   
 - **svg的引入方式**
 
-- 方式一：
+  - 方式一：
+  
 ```html
 <?xml version="1.1" encoding="utf-8"?>
 <!DOCTYPE svg 
@@ -924,10 +936,10 @@ PUBLIC "-//W3C//DTD SVG 1.1//EN"  "http://www.w3.org/
 Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns="http://www.w3.org/2000/svg"></svg> 
 ```
-- 方式二：
-	- 图片、背景、框架
-- 方式三: 
-	- `html`页面中添加`svg`
+  - 方式二：
+  	- 图片、背景、框架
+  - 方式三: 
+  	- `html`页面中添加`svg`
 
 - **`circle`:圆形**
     - 圆心坐标  `cx`,`cy`
@@ -982,10 +994,10 @@ Graphics/SVG/1.1/DTD/svg11.dtd">
     - `xlink:href`(图片地址)
 
 
-#### 第十五课 地理信息与本地存储
+### 第十五课 地理信息与本地存储
 ---
 
-##### 地理位置
+#### 地理位置
 ---
 
 - 经度  :   南北极的连接线
@@ -1210,7 +1222,7 @@ btn.onclick = function(){
 
 [在线演示](http://codepen.io/poetries/pen/xgGwaZ)
 
-##### 本地存储
+#### 本地存储
 ---
 
 - **`Storage`**
@@ -1246,7 +1258,7 @@ btn.onclick = function(){
     - `url` :  触发该脚本变化的文档的url
     - 注：`session`同窗口才可以,例子：`iframe`操作
 
-#### 第十六课 HTML5新增JS方法
+### 第十六课 HTML5新增JS方法
 ---
 
 
@@ -1329,7 +1341,7 @@ loadScript("js/async.js",function(){
 
 
 
-#### 第十七课 HTML5拖拽事件
+### 第十七课 HTML5拖拽事件
 ---
 
 - 图片自带拖拽功能
@@ -1631,7 +1643,7 @@ function inserAfter(newItem,targerItem){
 [在线演示](http://codepen.io/poetries/pen/XpbEOW)
 
 
-#### 第十八课 跨文档操作
+### 第十八课 跨文档操作
 ---
 
 - **跨文档请求**
@@ -1666,7 +1678,7 @@ function inserAfter(newItem,targerItem){
 - 拓展阅读
   - [HTML5 API 大盘点](http://mp.weixin.qq.com/s?__biz=MzI0ODA2ODU2NQ==&mid=2651130595&idx=2&sn=3d0f546f1867992729b3ace5d03766fc&chksm=f257ca59c520434f08e215b3bdcec3764712f73301b738c18163359e5aa5e949ff019616ffca&mpshare=1&scene=23&srcid=11289XUSBAQzrCp3Io55aoS1#rd)
 
-###### 附录一　css3响应式布局
+### 附录一　css3响应式布局
 ---
 
 - 媒体类型
@@ -1728,7 +1740,7 @@ href="indexB.css" media="screen and (min-width: 600px) and (max-width: 800px)">
 href="indexC.css"    media="screen and (max-width: 600px)">
 ```
 
-###### 附录二　HTML5速查表
+### 附录二　HTML5速查表
 ---
 
 - [可以查阅支持H5+CSS3的属性](http://caniuse.com/#search=canvas)

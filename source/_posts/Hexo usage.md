@@ -83,7 +83,7 @@ tags:
 
 #### 兼容 `Hugo` 所需要的修改
 
-由于`Hugo` 似乎自支持`字符串`与`字符串数组`形式的 `Front-matter`，如下： 
+由于`Hugo` 似乎只支持`字符串`与`字符串数组`形式的 `Front-matter`，如下： 
 ``` yaml
 title: "title name"
 date: 2018-01-01 12:00:00
