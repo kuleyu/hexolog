@@ -1,23 +1,24 @@
 ---
-title: 常用 cmd 命令（遇到的）
-date: '2017/07/27 22:46:19'
-tags:
-  - cmd
-  - sublime text
+title: "常用 cmd 命令（遇到的）"
+date: 2017-07-27 22:46:19
+tags: ["cmd","sublime text"]
 abbrlink: 20990
-categories: 学习笔记
+categories: ["学习笔记"]
 ---
 
 ## 常用 cmd 命令
-1. 进入 cmd 命令窗口：快捷键 <kbd>Win</kbd>+<kbd>R</kbd> ,输入 “cmd” ，点击“运行”即可。
-2. 返回上一级文件夹：输入 “cd..” ，再按回车（enter）即可。
-3. 进入下一级文件夹：输入 “cd 文件夹名”，再按回车（enter）即可。
-4. 进入另一个磁盘（如：D盘）根目录：输入“d:”,再按回车（enter）即可。
-5. 进入任一文件夹：输入“cd 文件夹路径”，再按回车（enter）即可。
-6. 查看文件夹内容：输入“dir”,再按回车（enter）即可。
-7. 创建文件夹：输入“mkdir 文件夹名”，再按回车（enter）即可。
-8. *如何在cmd中打开D:\Github\Hugo\bin\hugo.exe*：输入“d:”进入d盘，再输入“start D:\Github\Hugo\bin\hugo.exe”，按回车即可。
-9. cmd清屏：输入“cls/clear”,再按回车（enter）即可。
+
+```bash
+1. 进入 cmd 命令窗口：快捷键 Win+R,输入 “cmd” ，点击“运行”即可。
+2. cd..                   				   # 返回上一级文件夹
+3. cd [文件夹名]          				   # 进入下一级文件夹
+4. d:                     				   # 进入另一个磁盘（如：D盘）根目录
+5. cd [文件夹路径]        				   # 进入任一文件夹
+6. dir                   				   # 查看当前路径文件夹内容
+7. mkdir [文件夹名]       				   # 创建文件夹
+8. start D:\Github\Hugo\bin\hugo.exe       # 如何在cmd中打开D:\Github\Hugo\bin\hugo.exe
+9. cls 或者 clear         				   # cmd清屏
+```
 
 ## 在 sublime 编辑器中运行 cmd
 

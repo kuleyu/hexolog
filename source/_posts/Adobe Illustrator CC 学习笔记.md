@@ -1,9 +1,9 @@
 ---
-title: Adobe Illustrator CC 学习笔记
-tags: Illustrator
+title: "Adobe Illustrator CC 学习笔记"
+tags: ["Illustrator"]
 abbrlink: 3a977c25
 date: 2018-01-23 15:21:09
-categories: 学习笔记
+categories: ["学习笔记"]
 ---
 
 >视频资料[Illustrator CC实例教程-我要自学网][01]，里面都是满满的干货，非常受用。

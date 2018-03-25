@@ -1,9 +1,9 @@
 ---
-title: Git 常用命令
-tags: git
+title: "Git 常用命令"
+tags: ["git"]
 abbrlink: 7065
 date: 2017-07-27 23:21:09
-categories: 搬运整理
+categories: ["搬运整理"]
 ---
 
 [转载 - Ricky - CSDN博客](http://blog.csdn.net/top_code/article/details/51931589 "Permalink to Git常用命令 - Ricky - CSDN博客")
@@ -105,17 +105,17 @@ Git 自带一个 git config 的工具来帮助设置控制 Git 外观和行为�
 
 ### 标签
 ```bash
-    $ git tag
+    $ git tag                            # 查看当前分支下的所有标签
     $ git tag [tag name]
     $ git tag -a [tag name] -m [message]
     $ git tag -a [tag name] [version]
-    $ git tag -d [tag]
+    $ git tag -d [tag]                       # 删除标签
     $ git push origin :refs/tags/[tagname]
     $ git push origin --delete tag 
-    $ git show [tag]
+    $ git show [tag]                         # 查看标签信息
     $ git push [remote] [tag]
     $ git push [remote] --tags
-    $ git checkout -b [branch] [tag]
+    $ git checkout -b [branch] [tag]         # 切换到标签
 ```
 
 ### 分支管理

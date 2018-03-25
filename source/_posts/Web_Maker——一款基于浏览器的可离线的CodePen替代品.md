@@ -1,18 +1,17 @@
 ---
-title: Web_Maker——一款基于浏览器的可离线的CodePen替代品
+title: "Web Maker——一款基于浏览器的可离线的CodePen替代品"
 comments: true
-categories: 翻译
-tags:
-  - web maker
-  - 编辑器
-  - Chrome插件
-  - living preview
+categories: ["翻译"]
+tags: ["web maker","编辑器","Chrome插件","living preview"]
 abbrlink: 3aa76942
 date: 2017-03-18 23:39:31
 ---
 
 译自: [Web Maker, an Offline, Browser-based CodePen Alternative][01] ——by [Kushagra Gaur][02]
-![img1][03]
+
+> [新版本3.0介绍](https://medium.com/web-maker/web-maker-3-0-is-here-f158a40eeaee)
+> 3.0版本开始，有了登录功能，可在线保存。同时还有了 [web app](https://webmakerapp.com/app/)，这意味着在各种现代浏览器中都可以使用 web maker 了，如：Firefox 58+, Edge。
+![img1](https://github.com/chinchang/web-maker/raw/master/ss1.png)
 本文，Kushagra Gaur介绍了一款他本人专为那些需要一个响应迅速且可离线工作的Web平台编译器的前端开发者而制作的浏览器扩展插件 —— [Web Maker][05]。
 
 ## 前言

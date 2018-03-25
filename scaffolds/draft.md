@@ -1,9 +1,10 @@
 ---
 title: {{ title }}
 date: {{ date }}
-comments: false
-categories:
-tags:
+categories: 
+tags: 
+comments: true
+draft: true
 ---
 
 

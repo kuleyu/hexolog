@@ -1,13 +1,10 @@
 ---
-title: win10有线网卡及无线网卡mac地址的伪装
+title: "win10有线网卡及无线网卡mac地址的伪装"
 comments: true
 abbrlink: c6b45260
 date: 2018-01-07 01:01:42
-categories: 搬运整理
-tags:
-- windows
-- win10
-- mac地址
+categories: ["搬运整理"]
+tags: ["windows","win10","mac地址"]
 ---
 
 > mac地址是硬件地址，又被称物理地址是用来定义网络设备的位置。现在很多学校喜欢把用户账号与电脑的mac地址绑定，以确定一台电脑登录一个账号。其实只需要把mac地址修改成他电脑的mac地址就可以使用小伙伴的网线，用小伙伴的账号登录了。

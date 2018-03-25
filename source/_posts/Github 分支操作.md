@@ -1,9 +1,10 @@
 ---
-title: Github 分支操作
-tags: git
-abbrlink: 1371
+title: "Github 分支操作"
 date: 2017-07-27 14:56:16
-categories: 学习笔记
+abbrlink: 1371
+draft: false
+categories: ["学习笔记"]
+tags: ["git"]
 ---
 
 ## 查看分支

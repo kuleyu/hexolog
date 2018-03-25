@@ -1,10 +1,8 @@
 ---
-title: JAMstack与CMS
+title: "JAMstack与CMS"
 comments: true
-categories: 学习笔记
-tags:
-  - CMS
-  - JAMstack
+categories: ["学习笔记"]
+tags: ["CMS","JAMstack"]
 abbrlink: edc048fb
 date: 2018-02-28 00:23:30
 ---

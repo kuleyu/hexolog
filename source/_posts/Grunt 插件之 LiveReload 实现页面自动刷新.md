@@ -1,9 +1,10 @@
 ---
-title: Grunt 插件之 LiveReload 实现页面自动刷新
+title: "Grunt 插件之 LiveReload 实现页面自动刷新"
 draft: false
 abbrlink: 5109
 date: 2017-07-21 14:54:53
-categories: 搬运整理
+categories: ["搬运整理"]
+tags: ["grunt"]
 ---
 
 

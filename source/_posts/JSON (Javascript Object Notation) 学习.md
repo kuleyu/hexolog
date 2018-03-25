@@ -1,12 +1,8 @@
 ---
-title: JSON (Javascript Object Notation) 学习
-date: '2017/06/10 21:32:17'
-categories:
-  - 学习笔记
-tags:
-  - javascript
-  - json
-  - learning-notes
+title: "JSON (Javascript Object Notation) 学习"
+date: 2017-06-10 21:32:17
+categories: ["学习笔记"]
+tags: ["javascript","json","learning-notes"]
 abbrlink: 23670
 ---
 
