@@ -1,12 +1,10 @@
 ---
-title: Epsilon Notes Help
-date: '2017/07/01 12:46:19'
-toc: Index
-style: bluegrey
-tags: Epsilon Note
+title: "Epsilon Notes Help"
+date: 2017-07-01 12:46:19
+categories: ["搬运整理"]
+tags: ["Epsilon Note"]
 draft: false
 abbrlink: 12495
-categories: 搬运整理
 ---
 
 

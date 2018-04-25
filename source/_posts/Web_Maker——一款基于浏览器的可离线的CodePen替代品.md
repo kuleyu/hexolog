@@ -1,18 +1,17 @@
 ---
-title: Web_Maker——一款基于浏览器的可离线的CodePen替代品
+title: "Web Maker——一款基于浏览器的可离线的CodePen替代品"
 comments: true
-categories: 翻译
-tags:
-  - web maker
-  - 编辑器
-  - Chrome插件
-  - living preview
+categories: ["翻译"]
+tags: ["web maker","编辑器","Chrome插件","living preview"]
 abbrlink: 3aa76942
 date: 2017-03-18 23:39:31
 ---
 
 译自: [Web Maker, an Offline, Browser-based CodePen Alternative][01] ——by [Kushagra Gaur][02]
-![img1][03]
+
+> [新版本3.0介绍](https://medium.com/web-maker/web-maker-3-0-is-here-f158a40eeaee)
+> 3.0版本开始，有了登录功能，可在线保存。同时还有了 [web app](https://webmakerapp.com/app/)，这意味着在各种现代浏览器中都可以使用 web maker 了，如：Firefox 58+, Edge。
+![img1](https://github.com/chinchang/web-maker/raw/master/ss1.png)
 本文，Kushagra Gaur介绍了一款他本人专为那些需要一个响应迅速且可离线工作的Web平台编译器的前端开发者而制作的浏览器扩展插件 —— [Web Maker][05]。
 
 ## 前言
@@ -72,24 +71,29 @@ Web Maker 中大量地使用了一些值得膜拜的开源项目如: [CodeMirror
 除了用于通常的 web 开发工作以外，Web Maker 可以用到很多有趣的方面。让我们来看看其中的一些吧。
 
 **学习的过程中实践，省去安装的麻烦**
+
 如果你正在开始学习 web 开发，Web Maker 是一个你日常练习、作业等的好地方。你可以专注于编写代码而无需分心去设置编辑器或者使用预处理器时代码的生成过程
 
 **为您的应用程序创建独立的组件**
+
 近期，[基于组件的体系结构][21]正被广泛的用于 web 应用程序的设计中。无论你们正在使用 react、Vue 还是其他某个 JavaScript 框架，每个人都朝着使各自的应用程序成为独立组件的集合的方向设计。
 
 您可以在 Web Maker 中开发或者快速地试用这些独立的组件，— — 喜欢的话，也可以将它们集成到你的应用程序中。
 
 **作为一款 Markdown 编辑器**
+
 Web Maker 并不仅仅限于 web 开发。如今，很多博主通常都用 Markdown 来写博客或文章，以至于他们经常要用到 Markdown 编辑器。你可以将 Web Maker 变成一款 Markdown 编辑器，并且可以非常快速地实时预览。（这篇文章是用 Web Maker 写的）。
 ![img3][22]
 
 **作为在课堂里教学生的工具**
+
 由于 Web Maker 可以离线运行，因而它又是一个很好的平台可以在课堂上供学生们探索实践巩固他们所学到的新东西。
 
 **（可以运行代码片段）调试时帮助减少测试项**
 当你试图查找你应用程序中的某个 bug 时，有必要隔离可疑组件，这样你就可以在一个更小的环境中进行调试，不受应用程序中其余部分的任何干扰。 Web Maker 就是这样一个可以快速运行一段代码的很好的工具。
 
 **存储你最喜爱的代码片段**
+
 在网站上找到了一些有趣的代码段时，你不必记住或记下该网页地址，只需打开 Web Maker ，将代码片段粘贴到相应区域，然后给它取个名称并保存即可。这样以后需要参考或编辑时你只要再打开就可以了。
 
 ## 即将到来的一些新功能

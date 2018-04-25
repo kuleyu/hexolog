@@ -1,10 +1,8 @@
 ---
-title: css grid 网格布局完整介绍
+title: "css grid 网格布局完整介绍"
 comments: true
-categories: 搬运整理
-tags:
-  - css
-  - grid
+categories: ["搬运整理"]
+tags: ["css","grid"]
 abbrlink: 30c1a0ec
 date: 2018-01-29 12:38:41
 ---

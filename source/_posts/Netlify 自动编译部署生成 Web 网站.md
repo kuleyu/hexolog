@@ -1,10 +1,10 @@
 ---
-title: Netlify 自动编译部署生成 Web 网站
-date: '2017/10/24 17:21:09'
-tags: Netlify
+title: "Netlify 自动编译部署生成 Web 网站"
+date: 2017-10-24 17:21:09
+tags: ["Netlify"]
 draft: false
 abbrlink: 31808
-categories: 搬运整理
+categories: ["搬运整理"]
 ---
 
 [转载自-freehao123.com](https://www.freehao123.com/netlify/)

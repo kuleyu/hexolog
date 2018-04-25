@@ -1,13 +1,10 @@
 ---
-title: yarn使用文档
+title: "yarn使用文档"
 comments: true
-tags:
-  - yarn
-  - npm
-  - 包管理
+tags: ["yarn","npm","包管理"]
 abbrlink: 70a6ae5d
 date: 2018-01-08 10:23:31
-categories: 学习笔记
+categories: ["学习笔记"]
 ---
 
 ## 新手指南
