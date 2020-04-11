@@ -1,15 +1,27 @@
 ---
-title: "Http协议相关"
+title: Http协议相关
 comment: true
 draft: false
-date: 2018-04-01T16:54:16+08:00
-lastmod: 2018-04-01T16:54:16+08:00
-categories: ["网络", "搬运整理"]
-tags: ["http","正则表达式","MySQL","Linux"]
-author: '<a href="https://github.com/CyC2018" rel="noopener" target="_blank">CyC2018</a>'
+categories:
+  - 网络
+  - 搬运整理
+tags:
+  - http
+  - 正则表达式
+  - MySQL
+  - Linux
+author: >-
+  <a href="https://github.com/CyC2018" rel="noopener"
+  target="_blank">CyC2018</a>
 weight: 10
-contentCopyright: '<a href="https://github.com/CyC2018/Interview-Notebook/blob/master/notes/HTTP.md" rel="noopener" target="_blank">See origin</a>'
+contentCopyright: >-
+  <a
+  href="https://github.com/CyC2018/Interview-Notebook/blob/master/notes/HTTP.md"
+  rel="noopener" target="_blank">See origin</a>
 hiddenFromHomePage: true
+abbrlink: e8d53a5a
+date: 2018-04-01 08:54:16
+lastmod: 2018-04-01 08:54:16
 ---
 
 

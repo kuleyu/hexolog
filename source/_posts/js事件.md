@@ -1,15 +1,21 @@
 ---
-title: "js事件之event.preventDefault()与event.stopPropagation()用法区别"
+title: js事件之event.preventDefault()与event.stopPropagation()用法区别
 comment: true
 draft: false
-date: 2018-03-28T02:35:37+08:00
-lastmod: 2018-03-28T02:35:37+08:00
-categories: ["", ""]
-tags: ["", "", ""]
+categories:
+  - ''
+  - ''
+tags:
+  - ''
+  - ''
+  - ''
 author: '<a href="https://laozhu.me" rel="noopener" target="_blank">米老朱</a>'
 weight: 10
 contentCopyright: '<a href="#" rel="noopener" target="_blank">See origin</a>'
 hiddenFromHomePage: true
+abbrlink: 4f797af7
+date: 2018-03-27 18:35:37
+lastmod: 2018-03-27 18:35:37
 ---
 
 ### event.preventDefault()用法介绍

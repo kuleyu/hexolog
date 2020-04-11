@@ -1,14 +1,22 @@
 ---
-title: "利用 Git-hook 自动配置不同仓库的用户信息"
+title: 利用 Git-hook 自动配置不同仓库的用户信息
 comment: true
 draft: false
-date: 2018-03-27T11:50:50+08:00
-lastmod: 2018-03-27T11:50:50+08:00
-categories: ["git", "搬运整理"]
-tags: ["git hook", "github", "配置"]
+categories:
+  - git
+  - 搬运整理
+tags:
+  - git hook
+  - github
+  - 配置
 author: '<a href="https://halohily.com" rel="noopener" target="_blank">halohily</a>'
-contentCopyright: '<a href="https://www.jianshu.com/p/69849461c38d" rel="noopener" target="_blank">See origin</a>'
+contentCopyright: >-
+  <a href="https://www.jianshu.com/p/69849461c38d" rel="noopener"
+  target="_blank">See origin</a>
 hiddenFromHomePage: true
+abbrlink: 2426aa95
+date: 2018-03-27 03:50:50
+lastmod: 2018-03-27 03:50:50
 ---
 
 [出自简书](https://www.jianshu.com/p/69849461c38d "Permalink to 利用 Git-hook 自动配置不同仓库的用户信息 - 简书")

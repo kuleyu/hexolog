@@ -1,9 +1,13 @@
 ---
-title: "Git笔记总结篇"
-date: 2017-07-29 21:30:24
-categories: ["Front-End","搬运整理"]
-tags: ["Git"]
+title: Git笔记总结篇
+categories:
+  - Front-End
+  - 搬运整理
+tags:
+  - Git
 comments: true
+abbrlink: 6c7ee97f
+date: 2017-07-29 21:30:24
 ---
 
 > 声明：资料来源互联网

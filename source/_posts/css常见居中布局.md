@@ -1,15 +1,23 @@
 ---
-title: "Css常见居中布局"
+title: Css常见居中布局
 comment: true
 draft: false
-date: 2018-03-28T02:08:49+08:00
-lastmod: 2018-03-28T02:08:49+08:00
-categories: ["Front-End", "搬运整理"]
-tags: ["css", "layout"]
+categories:
+  - Front-End
+  - 搬运整理
+tags:
+  - css
+  - layout
 author: '<a href="http://captaininphw.xyz/" rel="noopener" target="_blank">戴江涛</a>'
 weight: 10
-contentCopyright: '<a href="http://captaininphw.xyz/2018/03/16/CSS-%E5%B8%B8%E8%A7%81%E5%B8%83%E5%B1%80/" rel="noopener" target="_blank">See origin</a>'
+contentCopyright: >-
+  <a
+  href="http://captaininphw.xyz/2018/03/16/CSS-%E5%B8%B8%E8%A7%81%E5%B8%83%E5%B1%80/"
+  rel="noopener" target="_blank">See origin</a>
 hiddenFromHomePage: true
+abbrlink: daebb2da
+date: 2018-03-27 18:08:49
+lastmod: 2018-03-27 18:08:49
 ---
 
 前端工程师的一门必修课程就是 CSS ( Cascading Style Sheet, 层叠样式表)，CSS 是一门艺术，学好 CSS 需要投入大量的时间去实践。今天我们主要聊一聊工作中常用到的 CSS 布局套路。

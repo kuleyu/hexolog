@@ -1,11 +1,20 @@
 ---
-title: "CSS中的BFC"
-date: 2016-09-07 18:20:08
-categories: ["Front-End","搬运整理"]
-tags: ["CSS"]
+title: CSS中的BFC
+categories:
+  - Front-End
+  - 搬运整理
+tags:
+  - CSS
 comments: true
-author: '<a href="http://blog.poetries.top/" rel="noopener" target="_blank">poetries</a>'
-contentCopyright: '<a href="https://github.com/poetries/poetries.github.io/blob/dev/source/_posts/" rel="noopener" target="_blank">See origin</a>'
+author: >-
+  <a href="http://blog.poetries.top/" rel="noopener"
+  target="_blank">poetries</a>
+contentCopyright: >-
+  <a
+  href="https://github.com/poetries/poetries.github.io/blob/dev/source/_posts/"
+  rel="noopener" target="_blank">See origin</a>
+abbrlink: 3c61eba
+date: 2016-09-07 18:20:08
 ---
 
 ### BFC 是什么？

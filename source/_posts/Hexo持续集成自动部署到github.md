@@ -1,8 +1,12 @@
 ---
-title: "Hexo|Hugo持续集成自动部署到github"
+title: Hexo|Hugo持续集成自动部署到github
+categories:
+  - 静态博客
+tags:
+  - Hexo
+  - Hugo
+abbrlink: 9e2a28bc
 date: 2017-12-03 20:16:12
-categories: ["静态博客"]
-tags: ["Hexo","Hugo"]
 ---
 
 > Hugo 与 Netlify 相关的待更新  

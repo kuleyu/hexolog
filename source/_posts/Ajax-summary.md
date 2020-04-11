@@ -1,13 +1,22 @@
 ---
-title: "Ajax总结篇"
+title: Ajax总结篇
 comment: true
 draft: false
-date: 2018-04-19T16:54:16+08:00
-lastmod: 2018-04-19T16:54:16+08:00
-categories: ["Front-End", "搬运整理"]
-tags: ["JavaScript","Ajax"]
-author: '<a href="http://blog.poetries.top/" rel="noopener" target="_blank">poetries</a>'
-contentCopyright: '<a href="http://blog.poetries.top/2016/11/26/Ajax-summary" rel="noopener" target="_blank">See origin</a>'
+categories:
+  - Front-End
+  - 搬运整理
+tags:
+  - JavaScript
+  - Ajax
+author: >-
+  <a href="http://blog.poetries.top/" rel="noopener"
+  target="_blank">poetries</a>
+contentCopyright: >-
+  <a href="http://blog.poetries.top/2016/11/26/Ajax-summary" rel="noopener"
+  target="_blank">See origin</a>
+abbrlink: d4e64c45
+date: 2018-04-19 08:54:16
+lastmod: 2018-04-19 08:54:16
 ---
 
 
@@ -51,7 +60,7 @@ contentCopyright: '<a href="http://blog.poetries.top/2016/11/26/Ajax-summary" re
 
 在上面几中技术中，除了`XmlHttpRequest`对象以外，其它所有的技术都是基于`web`标准并且已经得到了广泛使用的，`XMLHttpRequest`虽然目前还没有被`W3C`所采纳，但是它已经是一个事实的标准，因为目前几乎所有的主流浏览器都支持它
 
-
+<!-- more -->
 
 ![两张著名的AJAX 介绍的图](http://upload-images.jianshu.io/upload_images/1480597-6937419905da762f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 

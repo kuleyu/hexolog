@@ -1,11 +1,21 @@
 ---
-title: "DOM编程之API学习总结篇"
-date: 2016-09-22 17:10:43
-categories: ["Front-End","搬运整理"]
-tags: ["JavaScript","DOM"]
+title: DOM编程之API学习总结篇
+categories:
+  - Front-End
+  - 搬运整理
+tags:
+  - JavaScript
+  - DOM
 comments: true
-author: '<a href="http://blog.poetries.top/" rel="noopener" target="_blank">poetries</a>'
-contentCopyright: '<a href="https://github.com/poetries/poetries.github.io/blob/dev/source/_posts/" rel="noopener" target="_blank">See origin</a>'
+author: >-
+  <a href="http://blog.poetries.top/" rel="noopener"
+  target="_blank">poetries</a>
+contentCopyright: >-
+  <a
+  href="https://github.com/poetries/poetries.github.io/blob/dev/source/_posts/"
+  rel="noopener" target="_blank">See origin</a>
+abbrlink: 4ac22b9d
+date: 2016-09-22 17:10:43
 ---
 
 

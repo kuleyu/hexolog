@@ -59,8 +59,8 @@ footer:
     version: true
   # -------------------------------------------------------------
   # Any custom text can be defined here.
-  custom_text: Hosted by <a target="_blank" href="https://pages.github.com/">GitHub Pages</a> with <a target="_blank" href="https://www.travis-ci.org/">Travis CI</a>
-
+  custom_text: Hosted by <a target="_blank" href="https://www.netlify.com/">Netlify</a>
+  
 # ---------------------------------------------------------------
 # SEO Settings
 # ---------------------------------------------------------------
@@ -88,20 +88,20 @@ index_with_subtitle: false
 # Value before `||` delimeter is the target link.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-  home: / || home
-  #tags: /tags/ || tags
-  #categories: /categories/ || th
-  archives: /archives/ || archive
-  about: /about/ || user
-  music: /music/ || music
-  #schedule: /schedule/ || calendar
-  #sitemap: /sitemap.xml || sitemap
-  #commonweal: /404/ || heartbeat
+  home: /|| home
+  about: /about/|| user
+  #tags: /tags/|| tags
+  #categories: /categories/|| th
+  archives: /archives/|| archive
+  music: /music/|| music  
+  #schedule: /schedule/|| fa fa-calendar
+  #sitemap: /sitemap.xml|| fa fa-sitemap
+  #commonweal: /404/ || fa fa-heartbeat
 
-# Enable/Disable menu icons.
-menu_icons:
-  enable: true
-
+# Enable/Disable menu icons / item badges.
+menu_settings:
+  icons: true
+  badges: false
 
 # ---------------------------------------------------------------
 # Scheme Settings
@@ -117,6 +117,9 @@ scheme: Pisces
 # ---------------------------------------------------------------
 # Sidebar Settings
 # ---------------------------------------------------------------
+
+# Posts / Categories / Tags in sidebar.
+site_state: true
 
 # Social Links.
 # Usage: `Key: permalink || icon`
@@ -142,6 +145,12 @@ social_icons:
   enable: true
   icons_only: false
   transition: false
+
+# Follow me on GitHub banner in right-top corner.
+# Usage: `permalink || title`
+# Value before `||` delimeter is the target permalink.
+# Value after `||` delimeter is the title and aria-label name.
+#github_banner: https://github.com/yourname || Follow me on GitHub
 
 # Blog rolls
 links_icon: link
@@ -253,7 +262,7 @@ alipaybonus: /images/bonus.png
 
 # Declare license on posts
 post_copyright:
-  enable: true
+  enable: false
   license: CC BY-NC-SA 3.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
 
@@ -653,10 +662,11 @@ tabs:
   border_radius: 0
 
 # Reading progress bar
+# Dependencies: https://github.com/theme-next/theme-next-reading-progress
 reading_progress:
   enable: true
   color: "#37c6c0"
-  height: 2px
+  height: 3px
 
 
 #! ---------------------------------------------------------------
@@ -683,8 +693,10 @@ motion:
     # Only for Pisces | Gemini.
     sidebar: slideUpIn
 
-# Fancybox
-# Dependencies: https://github.com/theme-next/theme-next-fancybox
+# Fancybox. There is support for old version 2 and new version 3.
+# Please, choose only any one variant, do not need to install both.
+# For install 2.x: https://github.com/theme-next/theme-next-fancybox
+# For install 3.x: https://github.com/theme-next/theme-next-fancybox3
 fancybox: true
 
 # Added switch option for separated repo in 6.0.0.
@@ -699,22 +711,20 @@ lazyload: false
 # Dependencies: https://github.com/theme-next/theme-next-pace
 pace: false
 # Themes list:
-#pace-theme-big-counter
-#pace-theme-bounce
-#pace-theme-barber-shop
-#pace-theme-center-atom
-#pace-theme-center-circle
-#pace-theme-center-radar
-#pace-theme-center-simple
-#pace-theme-corner-indicator
-#pace-theme-fill-left
-#pace-theme-flash
-#pace-theme-loading-bar
-#pace-theme-mac-osx
-#pace-theme-minimal
-# For example
-# pace_theme: pace-theme-center-simple
-pace_theme: pace-theme-center-radar
+#pace_theme: pace-theme-big-counter         # 1.右上角大数字百分百
+#pace_theme: pace-theme-bounce              # 2.右上角跳跳球
+#pace_theme: pace-theme-barber-shop         # 3.全屏覆盖
+#pace_theme: pace-theme-center-atom         # 4.中心旋转数字盘
+#pace_theme: pace-theme-center-circle       # 5.中心立体翻转数字盘
+#pace_theme: pace-theme-center-radar        # 6.中心三条1/4圆弧旋转
+#pace_theme: pace-theme-center-simple       # 7.中心单横杠
+#pace_theme: pace-theme-corner-indicator    # 8.右上角同心圆旋转
+#pace_theme: pace-theme-fill-left           # 9.底部半透明覆盖（在页面的底层，不明显）
+#pace_theme: pace-theme-flash               # 10.右上角1/4圆弧旋转
+#pace_theme: pace-theme-loading-bar         # 11.中心横杠加数字 (延缓了加载，pass)
+#pace_theme: pace-theme-mac-osx             # 12.顶部宽条覆盖
+#pace_theme: pace-theme-minimal             # 13.顶部细条覆盖（不明显）
+
 
 # Canvas-nest
 # Dependencies: https://github.com/theme-next/theme-next-canvas-nest
@@ -737,7 +747,7 @@ canvas_sphere: false
 # zIndex: The display level of the ribbon.
 canvas_ribbon:
   enable: true
-  size: 200
+  size: 160
   alpha: 0.2
   zIndex: -6
 
