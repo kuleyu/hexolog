@@ -4,9 +4,10 @@ node_js: stable
 #  directories:
 #    - node_modules
 install:
-- npm install
+- yarn install
 
 script:
+- hexo clean  
 - hexo g
 after_script:
 - cd ./public
@@ -14,7 +15,7 @@ after_script:
 - git config user.name "${U_NAME}"
 - git config user.email "${U_EMAIL}"
 - git add .
-- git commit -m "Update docs"
+- git commit -m "Update"
 - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:${P_BRANCH}
 branches:
   only:
