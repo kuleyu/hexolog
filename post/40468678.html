@@ -1,0 +1,2017 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/hexolog/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/hexolog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/hexolog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/hexolog/css/main.css?v=6.0.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/hexolog/images/apple-touch-icon-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/hexolog/images/favicon-32x32-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/hexolog/images/favicon-16x16-next.png?v=6.0.0">
+
+
+  <link rel="mask-icon" href="/hexolog/images/logo.svg?v=6.0.0" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT, Netlify, javascript, web前端，kuleyu" />
+
+
+
+
+  
+
+
+  <link rel="alternate" href="/hexolog/atom.xml" title="Ku-Le-Yu-Xuan" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="一个充满音乐细菌（你没看错，就是音乐细菌，来自大学室友的调侃）的，转弯到前端路上的潜行者  目前为无业游民(非理性的主动失业)   热爱音乐，会多种吹奏乐器，擅长葫芦丝、陶笛 喜欢编程">
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="http://yoursite.com/hexolog/about/index.html">
+<meta property="og:site_name" content="Ku-Le-Yu-Xuan">
+<meta property="og:description" content="一个充满音乐细菌（你没看错，就是音乐细菌，来自大学室友的调侃）的，转弯到前端路上的潜行者  目前为无业游民(非理性的主动失业)   热爱音乐，会多种吹奏乐器，擅长葫芦丝、陶笛 喜欢编程">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2017-12-25T06:29:13.000Z">
+<meta property="article:modified_time" content="2020-04-11T18:45:09.985Z">
+<meta property="article:author" content="kuleyu">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/hexolog/',
+    scheme: 'Pisces',
+    version: '6.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/hexolog/about/"/>
+
+
+
+
+
+  <title>前端编码风格规范(4) 之 CSS 和 Sass (SCSS) | Ku-Le-Yu-Xuan</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/hexolog/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ku-Le-Yu-Xuan</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/hexolog/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+
+            
+              首页
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/hexolog/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+
+            
+              关于
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/hexolog/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+
+            
+              归档
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-music">
+          <a href="/hexolog/music/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-music"></i> <br />
+            
+
+            
+              音乐
+            
+
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/hexolog/hexolog/post/40468678.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kuleyu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/hexolog/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ku-Le-Yu-Xuan">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">前端编码风格规范(4) 之 CSS 和 Sass (SCSS)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-23T00:10:16+00:00">2018-04-23</time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2020-04-11T18:45:09+00:00">2020-04-12</time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/hexolog/categories/%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/" itemprop="url" rel="index">
+                    <span itemprop="name">前端编码规范</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/hexolog/categories/%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/Front-End/" itemprop="url" rel="index">
+                    <span itemprop="name">Front-End"</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/hexolog/categories/%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/Front-End/%E6%90%AC%E8%BF%90%E6%95%B4%E7%90%86/" itemprop="url" rel="index">
+                    <span itemprop="name">搬运整理</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/hexolog/post/40468678.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/hexolog/post/40468678.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/hexolog/post/40468678.html" class="leancloud_visitors" data-flag-title="前端编码风格规范(4) 之 CSS 和 Sass (SCSS)">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>英文原文：<a href="http://newimg88.b0.upaiyun.com/newimg88/2015/01/web-styleguide-4.jpg" target="_blank" rel="noopener">Web Styleguide – Style guide to harmonize HTML, Javascript and CSS / SASS coding style</a></p>
+</blockquote>
+<h2 id="css-and-sass-scss-style-rules"><a class="markdownIt-Anchor" href="#css-and-sass-scss-style-rules"></a> CSS and Sass (SCSS) style rules</h2>
+<hr />
+<h3 id="id-and-class-naming"><a class="markdownIt-Anchor" href="#id-and-class-naming"></a> ID and class naming</h3>
+<p>ID和class(类)名总是使用可以反应元素目的和用途的名称，或其他通用名称。代替表象和晦涩难懂的名称。</p>
+<p>应该首选具体和反映元素目的的名称，因为这些是最可以理解的，而且发生变化的可能性最小。</p>
+<p>通用名称只是多个元素的备用名，他们兄弟元素之间是一样的，没有特别意义。<br />
+区分他们，使他们具有特殊意义，通常需要为&quot;帮手&quot;。</p>
+<p>尽管class(类)名和ID 的语义化对于计算机解析来说没有什么实际的意义，<br />
+语义化的名称 通常是正确的选择，因为它们所代表的信息含义，不包含表现的限制。</p>
+<a id="more"></a>
+<p><strong>不推荐</strong></p>
+<pre><code>.fw-800 {
+  font-weight: 800;
+}
+
+.red {
+  color: red;
+}
+</code></pre>
+<p><strong>推荐</strong></p>
+<pre><code>.heavy {
+  font-weight: 800;
+}
+
+.important {
+  color: red;
+}
+</code></pre>
+<hr />
+<h3 id="合理的避免使用id"><a class="markdownIt-Anchor" href="#合理的避免使用id"></a> 合理的避免使用ID</h3>
+<p>一般情况下ID不应该被应用于样式。<br />
+ID的样式不能被复用并且每个页面中你只能使用一次ID。<br />
+使用ID唯一有效的是确定网页或整个站点中的位置。<br />
+尽管如此，你应该始终考虑使用class，而不是id，除非只使用一次。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>#content .title {
+  font-size: 2em;
+}
+</code></pre>
+<p><strong>推荐</strong></p>
+<pre><code>.content .title {
+  font-size: 2em;
+}
+</code></pre>
+<p>另一个反对使用ID的观点是含有ID选择器权重很高。<br />
+一个只包含一个ID选择器权重高于包含1000个class(类)名的选择器，这使得它很奇怪。</p>
+<pre><code>// 这个选择器权重高于下面的选择器
+#content .title {
+  color: red;
+}
+
+// than this selector!
+html body div.content.news-content .title.content-title.important {
+  color: blue;
+}
+</code></pre>
+<hr />
+<h3 id="css选择器中避免标签名"><a class="markdownIt-Anchor" href="#css选择器中避免标签名"></a> CSS选择器中避免标签名</h3>
+<p>当构建选择器时应该使用清晰， 准确和有语义的class(类)名。不要使用标签选择器。 如果你只关心你的class(类)名<br />
+，而不是你的代码元素，这样会更容易维护。</p>
+<p>从分离的角度考虑,在表现层中不应该分配html标记/语义。<br />
+它可能是一个有序列表需要被改成一个无序列表，或者一个div将被转换成article。<br />
+如果你只使用具有实际意义的class(类)名，<br />
+并且不使用元素选择器，那么你只需要改变你的html标记，而不用改动你的CSS。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>div.content &gt; header.content-header &gt; h2.title {
+  font-size: 2em;
+}
+</code></pre>
+<p><strong>推荐</strong></p>
+<pre><code>.content &gt; .content-header &gt; .title {
+  font-size: 2em;
+}
+</code></pre>
+<hr />
+<h3 id="尽可能的精确"><a class="markdownIt-Anchor" href="#尽可能的精确"></a> 尽可能的精确</h3>
+<p>很多前端开发人员写选择器链的时候不使用 直接子选择器（注：直接子选择器和后代选择器的区别）。<br />
+有时，这可能会导致疼痛的设计问题并且有时候可能会很耗性能。<br />
+然而，在任何情况下，这是一个非常不好的做法。<br />
+如果你不写很通用的，需要匹配到DOM末端的选择器， 你应该总是考虑直接子选择器。</p>
+<p>考虑下面的DOM:</p>
+<pre><code>  News event
+  
+
+    
+
+      Check this out
+</code></pre>
+<p>This is a news article content</p>
+<p>Buy this</p>
+<p>Yey!</p>
+<p>下面的CSS将应用于有title类的全部三个元素。<br />
+然后，要解决content类下的title类 和 teaser类下的title类下不同的样式，这将需要更精确的选择器再次重写他们的样式。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>.content .title {
+  font-size: 2rem;
+}
+</code></pre>
+<p><strong>推荐</strong></p>
+<pre><code>.content &gt; .title {
+  font-size: 2rem;
+}
+
+.content &gt; .content-body &gt; .title {
+  font-size: 1.5rem;
+}
+
+.content &gt; .content-body &gt; .teaser &gt; .title {
+  font-size: 1.2rem;
+}
+</code></pre>
+<hr />
+<h3 id="缩写属性"><a class="markdownIt-Anchor" href="#缩写属性"></a> 缩写属性</h3>
+<p>CSS提供了各种缩写属性（如 font 字体）应该尽可能使用，即使在只设置一个值的情况下。</p>
+<p>使用缩写属性对于代码效率和可读性是有很有用的。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>border-top-style: none;
+font-family: palatino, georgia, serif;
+font-size: 100%;
+line-height: 1.6;
+padding-bottom: 2em;
+padding-left: 1em;
+padding-right: 1em;
+padding-top: 0;
+</code></pre>
+<p><strong>推荐</strong></p>
+<pre><code>border-top: 0;
+font: 100%/1.6 palatino, georgia, serif;
+padding: 0 1em 2em;
+</code></pre>
+<hr />
+<h3 id="0-和-单位"><a class="markdownIt-Anchor" href="#0-和-单位"></a> 0 和 单位</h3>
+<p>省略&quot;0&quot;值后面的单位。不要在0值后面使用单位，除非有值。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>padding-bottom: 0px;
+margin: 0em;
+</code></pre>
+<p><strong>推荐</strong></p>
+<pre><code>padding-bottom: 0;
+margin: 0;
+</code></pre>
+<hr />
+<h3 id="十六进制表示法"><a class="markdownIt-Anchor" href="#十六进制表示法"></a> 十六进制表示法</h3>
+<p>在可能的情况下，使用3个字符的十六进制表示法。<br />
+颜色值允许这样表示，<br />
+3个字符的十六进制表示法更简短。</p>
+<p>始终使用小写的十六进制数字。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>color: #FF33AA;
+</code></pre>
+<p><strong>推荐</strong></p>
+<pre><code>color: #f3a;
+</code></pre>
+<hr />
+<h3 id="id-和-class类-名的分隔符"><a class="markdownIt-Anchor" href="#id-和-class类-名的分隔符"></a> ID 和 Class（类） 名的分隔符</h3>
+<p>使用连字符（中划线）分隔ID和Class（类）名中的单词。为了增强课理解性，在选择器中不要使用除了连字符（中划线）以为的任何字符（包括没有）来连接单词和缩写。</p>
+<p>另外，作为该标准，预设属性选择器能识别连字符（中划线）作为单词[<code>attribute|=value]</code>的分隔符，<br />
+所以最好的坚持使用连字符作为分隔符。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>.demoimage {}
+.error_status {}
+</code></pre>
+<p><strong>推荐</strong></p>
+<pre><code>#video-id {}
+.ads-sample {}
+</code></pre>
+<hr />
+<h3 id="hacks"><a class="markdownIt-Anchor" href="#hacks"></a> Hacks</h3>
+<p>避免用户代理检测以及CSS&quot;hacks&quot; – 首先尝试不同的方法。通过用户代理检测或特殊的CSS滤镜，变通的方法和 hacks 很容易解决样式差异。为了达到并保持一个有效的和可管理的代码库，这两种方法都应该被认为是最后的手段。换句话说，从长远来看，用户代理检测和hacks<br />
+会伤害项目，作为项目往往应该采取阻力最小的途径。也就是说，轻易允许使用用户代理检测和hacks 以后将过于频繁。</p>
+<hr />
+<h3 id="声明顺序"><a class="markdownIt-Anchor" href="#声明顺序"></a> 声明顺序</h3>
+<p>这是一个选择器内书写CSS属性顺序的大致轮廓。这是为了保证更好的可读性和可扫描重要。</p>
+<p>作为最佳实践，我们应该遵循以下顺序（应该按照下表的顺序）：</p>
+<ol>
+<li>结构性属性：
+<ol>
+<li>display</li>
+<li>position, left, top, right etc.</li>
+<li>overflow, float, clear etc.</li>
+<li>margin, padding</li>
+</ol>
+</li>
+<li>表现性属性：
+<ol>
+<li>background, border etc.</li>
+<li>font, text</li>
+</ol>
+</li>
+</ol>
+<p><strong>不推荐</strong></p>
+<pre><code>.box {
+  font-family: 'Arial', sans-serif;
+  border: 3px solid #ddd;
+  left: 30%;
+  position: absolute;
+  text-transform: uppercase;
+  background-color: #eee;
+  right: 30%;
+  isplay: block;
+  font-size: 1.5rem;
+  overflow: hidden;
+  padding: 1em;
+  margin: 1em;
+}
+</code></pre>
+<p><strong>推荐</strong></p>
+<pre><code>.box {
+  display: block;
+  position: absolute;
+  left: 30%;
+  right: 30%;
+  overflow: hidden;
+  margin: 1em;
+  padding: 1em;
+  background-color: #eee;
+  border: 3px solid #ddd;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+</code></pre>
+<hr />
+<h3 id="声明结束"><a class="markdownIt-Anchor" href="#声明结束"></a> 声明结束</h3>
+<p>为了保证一致性和可扩展性，每个声明应该用分号结束，每个声明换行。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>.test {
+  display: block; height: 100px
+}
+</code></pre>
+<p><strong>推荐</strong></p>
+<pre><code>.test {
+  display: block;
+  height: 100px;
+}
+</code></pre>
+<hr />
+<h3 id="属性名结束"><a class="markdownIt-Anchor" href="#属性名结束"></a> 属性名结束</h3>
+<p>属性名的冒号后使用一个空格。出于一致性的原因，<br />
+属性和值（但属性和冒号之间没有空格）的之间始终使用一个空格。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>h3 {
+  font-weight:bold;
+}
+</code></pre>
+<p><strong>推荐</strong></p>
+<pre><code>h3 {
+  font-weight: bold;
+}
+</code></pre>
+<hr />
+<h3 id="选择器和声明分离"><a class="markdownIt-Anchor" href="#选择器和声明分离"></a> 选择器和声明分离</h3>
+<p>每个选择器和属性声明总是使用新的一行。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>a:focus, a:active {
+  position: relative; top: 1px;
+}
+</code></pre>
+<p><strong>推荐</strong></p>
+<pre><code>h1,
+h2,
+h3 {
+  font-weight: normal;
+  line-height: 1.2;
+}
+</code></pre>
+<hr />
+<h3 id="规则分隔"><a class="markdownIt-Anchor" href="#规则分隔"></a> 规则分隔</h3>
+<p>规则之间始终有一个空行（双换行符）分隔。</p>
+<p><strong>推荐</strong></p>
+<pre><code>html {
+  background: #fff;
+}
+
+body {
+  margin: auto;
+  width: 50%;
+}
+</code></pre>
+<hr />
+<h3 id="css引号"><a class="markdownIt-Anchor" href="#css引号"></a> CSS引号</h3>
+<p>属性选择器或属性值用双引号（&quot;&quot;），而不是单引号（&quot;）括起来。<br />
+URI值（url()）不要使用引号。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>@import url('//cdn.com/foundation.css');
+
+html {
+  font-family: 'open sans', arial, sans-serif;
+}
+
+body:after {
+  content: 'pause';
+}
+</code></pre>
+<p><strong>推荐</strong></p>
+<pre><code>@import url(//cdn.com/foundation.css);
+
+html {
+  font-family: &quot;open sans&quot;, arial, sans-serif;
+}
+
+body:after {
+  content: &quot;pause&quot;;
+}
+</code></pre>
+<hr />
+<h3 id="选择器嵌套-scss"><a class="markdownIt-Anchor" href="#选择器嵌套-scss"></a> 选择器嵌套 (SCSS)</h3>
+<p>在Sass中你可以嵌套选择器，这可以使代码变得更清洁和可读。嵌套所有的选择器，但尽量避免嵌套没有任何内容的选择器。<br />
+如果你需要指定一些子元素的样式属性，而父元素将不什么样式属性，<br />
+可以使用常规的CSS选择器链。<br />
+这将防止您的脚本看起来过于复杂。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>// Not a good example by not making use of nesting at all
+.content {
+  display: block;
+}
+
+.content &gt; .news-article &gt; .title {
+  font-size: 1.2em;
+}
+</code></pre>
+<p><strong>不推荐</strong></p>
+<pre><code>// Using nesting is better but not in all cases
+// Avoid nesting when there is no attributes and use selector chains instead
+.content {
+  display: block;
+
+  &gt; .news-article {
+    &gt; .title {
+      font-size: 1.2em;
+    }
+  }
+}
+</code></pre>
+<p><strong>推荐</strong></p>
+<pre><code>// This example takes the best approach while nesting but use selector chains where possible
+.content {
+  display: block;
+
+  &gt; .news-article &gt; .title {
+    font-size: 1.2em;
+  }
+}
+</code></pre>
+<hr />
+<h3 id="嵌套中引入-空行-scss"><a class="markdownIt-Anchor" href="#嵌套中引入-空行-scss"></a> 嵌套中引入 空行 (SCSS)</h3>
+<p>嵌套选择器和CSS属性之间空一行。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>.content {
+  display: block;
+  &gt; .news-article {
+    background-color: #eee;
+    &gt; .title {
+      font-size: 1.2em;
+    }
+    &gt; .article-footnote {
+      font-size: 0.8em;
+    }
+  }
+}
+</code></pre>
+<p><strong>推荐</strong></p>
+<pre><code>.content {
+  display: block;
+
+  &gt; .news-article {
+    background-color: #eee;
+
+    &gt; .title {
+      font-size: 1.2em;
+    }
+
+    &gt; .article-footnote {
+      font-size: 0.8em;
+    }
+  }
+}
+</code></pre>
+<hr />
+<h3 id="上下文媒体查询scss"><a class="markdownIt-Anchor" href="#上下文媒体查询scss"></a> 上下文媒体查询(SCSS)</h3>
+<p>在Sass中，当你嵌套你的选择器时也可以使用上下文媒体查询。<br />
+在Sass中，你可以在任何给定的嵌套层次中使用媒体查询。<br />
+由此生成的CSS将被转换，这样的媒体查询将包裹选择器的形式呈现。</p>
+<p>这技术非常方便，<br />
+有助于保持媒体查询属于的上下文。</p>
+<p>第一种方法这可以让你先写你的手机样式，然后在任何你需要的地方<br />
+用上下文媒体查询以提供桌面样式。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>// This mobile first example looks like plain CSS where the whole structure of SCSS is repeated
+// on the bottom in a media query. This is error prone and makes maintenance harder as it's not so easy to relate
+// the content in the media query to the content in the upper part (mobile style)
+
+.content-page {
+  font-size: 1.2rem;
+
+  &gt; .main {
+    background-color: whitesmoke;
+
+    &gt; .latest-news {
+      padding: 1rem;
+
+      &gt; .news-article {
+        padding: 1rem;
+
+        &gt; .title {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    &gt; .content {
+      margin-top: 2rem;
+      padding: 1rem;
+    }
+  }
+
+  &gt; .page-footer {
+    margin-top: 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 641px) {
+  .content-page {
+    font-size: 1rem;
+
+    &gt; .main &gt; .latest-news &gt; .news-article &gt; .title {
+      font-size: 3rem;
+    }
+
+    &gt; .page-footer {
+      font-size: 0.8rem;
+    }
+  }
+}
+</code></pre>
+<p><strong>推荐</strong></p>
+<pre><code>// This is the same example as above but here we use contextual media queries in order to put the different styles
+// for different media into the right context.
+
+.content-page {
+  font-size: 1.2rem;
+
+  @media screen and (min-width: 641px) {
+    font-size: 1rem;
+  }
+
+  &gt; .main {
+    background-color: whitesmoke;
+
+    &gt; .latest-news {
+      padding: 1rem;
+
+      &gt; .news-article {
+        padding: 1rem;
+
+        &gt; .title {
+          font-size: 2rem;
+
+          @media screen and (min-width: 641px) {
+            font-size: 3rem;
+          }
+        }
+      }
+    }
+
+    &gt; .content {
+      margin-top: 2rem;
+      padding: 1rem;
+    }
+  }
+
+  &gt; .page-footer {
+    margin-top: 2rem;
+    font-size: 1rem;
+
+    @media screen and (min-width: 641px) {
+      font-size: 0.8rem;
+    }
+  }
+}
+</code></pre>
+<hr />
+<h3 id="嵌套顺序和父级选择器scss"><a class="markdownIt-Anchor" href="#嵌套顺序和父级选择器scss"></a> 嵌套顺序和父级选择器(SCSS)</h3>
+<p>当使用Sass的嵌套功能的时候，<br />
+重要的是有一个明确的嵌套顺序，<br />
+以下内容是一个SCSS块应具有的顺序。</p>
+<ol>
+<li>当前选择器的样式属性</li>
+<li>父级选择器的伪类选择器 (:first-letter, :hover, :active etc)</li>
+<li>伪类元素 (:before and :after)</li>
+<li>父级选择器的声明样式 (.selected, .active, .enlarged etc.)</li>
+<li>用Sass的上下文媒体查询</li>
+<li>子选择器作为最后的部分</li>
+</ol>
+<p>The following example should illustrate how this ordering will achieve a clear structure while making use of the Sass parent selector.</p>
+<p><strong>Recommended</strong></p>
+<pre><code>.product-teaser {
+  // 1. Style attributes
+  display: inline-block;
+  padding: 1rem;
+  background-color: whitesmoke;
+  color: grey;
+
+  // 2. Pseudo selectors with parent selector
+  &amp;:hover {
+    color: black;
+  }
+
+  // 3. Pseudo elements with parent selector
+  &amp;:before {
+    content: &quot;&quot;;
+    display: block;
+    border-top: 1px solid grey;
+  }
+
+  &amp;:after {
+    content: &quot;&quot;;
+    display: block;
+    border-top: 1px solid grey;
+  }
+
+  // 4. State classes with parent selector
+  &amp;.active {
+    background-color: pink;
+    color: red;
+
+    // 4.2. Pseuso selector in state class selector
+    &amp;:hover {
+      color: darkred;
+    }
+  }
+
+  // 5. Contextual media queries
+  @media screen and (max-width: 640px) {
+    display: block;
+    font-size: 2em;
+  }
+
+  // 6. Sub selectors
+  &gt; .content &gt; .title {
+    font-size: 1.2em;
+
+    // 6.5. Contextual media queries in sub selector
+    @media screen and (max-width: 640px) {
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+  }
+}
+</code></pre>
+<hr />
+<h2 id="系列文章"><a class="markdownIt-Anchor" href="#系列文章"></a> 系列文章</h2>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/hexolog/images/wechatpay.png" alt="kuleyu 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/hexolog/images/alipay.png" alt="kuleyu 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/hexolog/tags/css/" rel="tag"># css</a>
+          
+            <a href="/hexolog/tags/%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/" rel="tag"># 编码规范</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/hexolog/post/64839f25.html" rel="next" title="前端编码风格规范(2) 之 HTML 规范">
+                <i class="fa fa-chevron-left"></i> 前端编码风格规范(2) 之 HTML 规范
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/hexolog/images/avatar.png"
+                alt="kuleyu" />
+            
+              <p class="site-author-name" itemprop="name">kuleyu</p>
+              <p class="site-description motion-element" itemprop="description">你的态度，就是你未来生活的样子</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                  
+                    <a href="/hexolog/archives/">
+                  
+                    <span class="site-state-item-count">46</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/hexolog/categories/index.html">
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/hexolog/tags/index.html">
+                    <span class="site-state-item-count">60</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/kuleyu" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github-square"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1402546930@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://plus.google.com/yourname" target="_blank" title="Google+">
+                      
+                        <i class="fa fa-fw fa-google-plus-official"></i>Google+</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://your-weibo-url" target="_blank" title="微博">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>微博</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://your-douban-url" target="_blank" title="豆瓣">
+                      
+                        <i class="fa fa-fw fa-douban"></i>豆瓣</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://your-zhihu-url" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-zhihu"></i>知乎</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://surmon.me/" title="surmon" target="_blank">surmon</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://xinwenke.top/" title="wenke" target="_blank">wenke</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#css-and-sass-scss-style-rules"><span class="nav-number">1.</span> <span class="nav-text"> CSS and Sass (SCSS) style rules</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#id-and-class-naming"><span class="nav-number">1.1.</span> <span class="nav-text"> ID and class naming</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#合理的避免使用id"><span class="nav-number">1.2.</span> <span class="nav-text"> 合理的避免使用ID</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css选择器中避免标签名"><span class="nav-number">1.3.</span> <span class="nav-text"> CSS选择器中避免标签名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#尽可能的精确"><span class="nav-number">1.4.</span> <span class="nav-text"> 尽可能的精确</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缩写属性"><span class="nav-number">1.5.</span> <span class="nav-text"> 缩写属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0-和-单位"><span class="nav-number">1.6.</span> <span class="nav-text"> 0 和 单位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#十六进制表示法"><span class="nav-number">1.7.</span> <span class="nav-text"> 十六进制表示法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#id-和-class类-名的分隔符"><span class="nav-number">1.8.</span> <span class="nav-text"> ID 和 Class（类） 名的分隔符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hacks"><span class="nav-number">1.9.</span> <span class="nav-text"> Hacks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#声明顺序"><span class="nav-number">1.10.</span> <span class="nav-text"> 声明顺序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#声明结束"><span class="nav-number">1.11.</span> <span class="nav-text"> 声明结束</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性名结束"><span class="nav-number">1.12.</span> <span class="nav-text"> 属性名结束</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择器和声明分离"><span class="nav-number">1.13.</span> <span class="nav-text"> 选择器和声明分离</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#规则分隔"><span class="nav-number">1.14.</span> <span class="nav-text"> 规则分隔</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css引号"><span class="nav-number">1.15.</span> <span class="nav-text"> CSS引号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择器嵌套-scss"><span class="nav-number">1.16.</span> <span class="nav-text"> 选择器嵌套 (SCSS)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#嵌套中引入-空行-scss"><span class="nav-number">1.17.</span> <span class="nav-text"> 嵌套中引入 空行 (SCSS)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上下文媒体查询scss"><span class="nav-number">1.18.</span> <span class="nav-text"> 上下文媒体查询(SCSS)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#嵌套顺序和父级选择器scss"><span class="nav-number">1.19.</span> <span class="nav-text"> 嵌套顺序和父级选择器(SCSS)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系列文章"><span class="nav-number">2.</span> <span class="nav-text"> 系列文章</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017.03 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">kuleyu</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.0</div>
+
+
+
+  <div class="footer-custom">Hosted by <a target="_blank" href="https://www.netlify.com/">Netlify</a></div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+    <script type="text/javascript" src="/hexolog/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/hexolog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/hexolog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/hexolog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script id="ribbon" type="text/javascript" size="160" alpha="0.2"  zIndex="-6" src="/hexolog/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/hexolog/lib/reading_progress/reading_progress.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/hexolog/js/src/utils.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/hexolog/js/src/motion.js?v=6.0.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/hexolog/js/src/affix.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/hexolog/js/src/schemes/pisces.js?v=6.0.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/hexolog/js/src/scrollspy.js?v=6.0.0"></script>
+<script type="text/javascript" src="/hexolog/js/src/post-details.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/hexolog/js/src/bootstrap.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'kuleyu',
+            repo: 'bloxment',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '365893ba8bb81ccf4e102ed1af2979a89b8cea38',
+            
+                client_id: 'af4f71ced0f776cb26d9'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/hexolog/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("bVHFwyWVoXDg1pVfzy8aoD0H-gzGzoHsz", "WByLAt3BrbNHUKUJMWxbO0kf");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/hexolog/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/hexolog/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

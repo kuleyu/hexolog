@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/hexolog/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/hexolog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/hexolog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/hexolog/css/main.css?v=6.0.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/hexolog/images/apple-touch-icon-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/hexolog/images/favicon-32x32-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/hexolog/images/favicon-16x16-next.png?v=6.0.0">
+
+
+  <link rel="mask-icon" href="/hexolog/images/logo.svg?v=6.0.0" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT, Netlify, javascript, web前端，kuleyu" />
+
+
+
+
+  
+
+
+  <link rel="alternate" href="/hexolog/atom.xml" title="Ku-Le-Yu-Xuan" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="一个充满音乐细菌（你没看错，就是音乐细菌，来自大学室友的调侃）的，转弯到前端路上的潜行者  目前为无业游民(非理性的主动失业)   热爱音乐，会多种吹奏乐器，擅长葫芦丝、陶笛 喜欢编程">
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="http://yoursite.com/hexolog/about/index.html">
+<meta property="og:site_name" content="Ku-Le-Yu-Xuan">
+<meta property="og:description" content="一个充满音乐细菌（你没看错，就是音乐细菌，来自大学室友的调侃）的，转弯到前端路上的潜行者  目前为无业游民(非理性的主动失业)   热爱音乐，会多种吹奏乐器，擅长葫芦丝、陶笛 喜欢编程">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2017-12-25T06:29:13.000Z">
+<meta property="article:modified_time" content="2020-04-11T18:45:09.985Z">
+<meta property="article:author" content="kuleyu">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/hexolog/',
+    scheme: 'Pisces',
+    version: '6.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/hexolog/about/"/>
+
+
+
+
+
+  <title>javascript 字符串及数组操作方法 | Ku-Le-Yu-Xuan</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/hexolog/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ku-Le-Yu-Xuan</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/hexolog/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+
+            
+              首页
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/hexolog/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+
+            
+              关于
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/hexolog/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+
+            
+              归档
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-music">
+          <a href="/hexolog/music/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-music"></i> <br />
+            
+
+            
+              音乐
+            
+
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/hexolog/hexolog/post/b0e2f0cd.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kuleyu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/hexolog/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ku-Le-Yu-Xuan">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">javascript 字符串及数组操作方法</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-23T04:51:49+00:00">2018-03-23</time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2020-04-11T18:45:09+00:00">2020-04-12</time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/hexolog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index">
+                    <span itemprop="name">学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/hexolog/post/b0e2f0cd.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/hexolog/post/b0e2f0cd.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/hexolog/post/b0e2f0cd.html" class="leancloud_visitors" data-flag-title="javascript 字符串及数组操作方法">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这里总结一下 js 中字符串及数组的操作方法</p>
+<h3 id="字符串操作方法"><a class="markdownIt-Anchor" href="#字符串操作方法"></a> 字符串操作方法</h3>
+<blockquote>
+<ul>
+<li><strong><code>charAt()</code></strong> 返回在指定位置的字符</li>
+<li><strong><code>charCodeAt()</code></strong> 返回在指定的位置的字符的 Unicode 编码</li>
+<li><strong><code>fromCharCode()</code></strong> 从字符编码创建一个字符串</li>
+<li><strong><code>slice()</code></strong> 提取字符串的片断，并在新的字符串中返回被提取的部分</li>
+<li><strong><code>split()</code></strong> 把字符串分割为字符串数组</li>
+<li><strong><code>concat()</code></strong> 连接字符串</li>
+<li><strong><code>indexOf()</code></strong> 检索字符串</li>
+<li><strong><code>lastIndexOf()</code></strong> 从后向前搜索字符串。</li>
+<li><strong><code>match()</code></strong> 找到一个或多个正则表达式的匹配</li>
+<li><strong><code>replace()</code></strong> 替换与正则表达式匹配的子串</li>
+<li><strong><code>search()</code></strong>  检索与正则表达式相匹配的值(大小写敏感)，未找到输出-1</li>
+</ul>
+</blockquote>
+<a id="more"></a>
+<hr />
+<h4 id="charat"><a class="markdownIt-Anchor" href="#charat"></a> <code>charAt()</code></h4>
+<p>返回在指定位置的字符</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">"abac_dfra_wa"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.charAt(<span class="number">3</span>)); <span class="comment">//输出 c</span></span><br></pre></td></tr></table></figure>
+<hr />
+<h4 id="charcodeat"><a class="markdownIt-Anchor" href="#charcodeat"></a> <code>charCodeAt()</code></h4>
+<p>返回在指定的位置的字符的 Unicode 编码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">"abac_dfra_wa"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.charCodeAt(<span class="number">3</span>)); <span class="comment">//输出99</span></span><br></pre></td></tr></table></figure>
+<hr />
+<h4 id="fromcharcode"><a class="markdownIt-Anchor" href="#fromcharcode"></a> <code>fromCharCode()</code></h4>
+<p>从字符编码创建一个字符串</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">String</span>.fromCharCode(<span class="number">72</span>,<span class="number">69</span>,<span class="number">76</span>,<span class="number">76</span>,<span class="number">79</span>)); <span class="comment">//输出HELLO</span></span><br></pre></td></tr></table></figure>
+<hr />
+<h4 id="slice"><a class="markdownIt-Anchor" href="#slice"></a> <code>slice()</code></h4>
+<p>提取字符串的片断，并在新的字符串中返回被提取的部分</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str=<span class="string">"Hello happy world!"</span></span><br><span class="line"><span class="built_in">console</span>.log(str.slice(<span class="number">6</span>)); <span class="comment">//输出happy world!</span></span><br><span class="line"><span class="built_in">console</span>.log(str.slice(<span class="number">6</span>, <span class="number">11</span>)); <span class="comment">//输出happy</span></span><br></pre></td></tr></table></figure>
+<hr />
+<h4 id="split"><a class="markdownIt-Anchor" href="#split"></a> <code>split()</code></h4>
+<p>把字符串分割为字符串数组</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"|a|b|c"</span>.split(<span class="string">"|"</span>) <span class="comment">////将返回["", "a", "b", "c"]</span></span><br><span class="line"></span><br><span class="line"><span class="string">"How are you doing today?"</span>.split(<span class="string">" "</span>,<span class="number">3</span>) <span class="comment">//返回 How,are,you</span></span><br><span class="line"></span><br><span class="line"><span class="string">"hello"</span>.split(<span class="string">""</span>)	<span class="comment">//可返回 ["h", "e", "l", "l", "o"]</span></span><br></pre></td></tr></table></figure>
+<hr />
+<h4 id="concat"><a class="markdownIt-Anchor" href="#concat"></a> <code>concat()</code></h4>
+<p>连接字符串</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">"abac_dfra_wa"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.concat(<span class="string">'_000'</span>)); <span class="comment">//输出abac_dfra_wa_000</span></span><br></pre></td></tr></table></figure>
+<hr />
+<h4 id="indexof"><a class="markdownIt-Anchor" href="#indexof"></a> <code>indexOf()</code></h4>
+<p>检索字符串</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">"abac_dfra_wa"</span>; </span><br><span class="line"><span class="built_in">console</span>.log(str.indexOf(<span class="string">'ac'</span>)); <span class="comment">//输出2</span></span><br></pre></td></tr></table></figure>
+<hr />
+<h4 id="lastindexof"><a class="markdownIt-Anchor" href="#lastindexof"></a> <code>lastIndexOf()</code></h4>
+<p>从后向前搜索字符串</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">"abac_dfra_wa"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.lastIndexOf(<span class="string">'ac'</span>)); <span class="comment">//输出2</span></span><br></pre></td></tr></table></figure>
+<hr />
+<h4 id="match"><a class="markdownIt-Anchor" href="#match"></a> <code>match()</code></h4>
+<p>找到一个或多个正则表达式的匹配</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str=<span class="string">"1 plus 2 equal 3"</span></span><br><span class="line"><span class="built_in">console</span>.log(str.match(<span class="string">'plus'</span>)); <span class="comment">// plus</span></span><br><span class="line"><span class="built_in">console</span>.log(str.match(<span class="string">'st'</span>));   <span class="comment">// null</span></span><br><span class="line"><span class="built_in">console</span>.log(str.match(<span class="regexp">/\d+/g</span>))  <span class="comment">// [ '1', '2', '3' ]</span></span><br></pre></td></tr></table></figure>
+<hr />
+<h4 id="replace"><a class="markdownIt-Anchor" href="#replace"></a> <code>replace()</code></h4>
+<p>替换与正则表达式匹配的子串</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str=<span class="string">"Hello WoRlD!"</span></span><br><span class="line"><span class="built_in">console</span>.log(str.replace(<span class="regexp">/WoRlD/</span>, <span class="string">"World"</span>));     <span class="comment">// Hello World!</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> str=<span class="string">"Hello WoRlD! "</span></span><br><span class="line">str += str;</span><br><span class="line"><span class="built_in">console</span>.log(str.replace(<span class="regexp">/WoRlD/g</span>, <span class="string">"World"</span>)); <span class="comment">//替换所有, 输出：Hello World! Hello World! </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">"javascript Tutorial "</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.replace(<span class="regexp">/javascript/i</span>, <span class="string">"JavaScript"</span>)); <span class="comment">//确保匹配字符串大写字符的正确</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> name = <span class="string">"Doe, John"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(name.replace(<span class="regexp">/(\w+)\s*, \s*(\w+)/</span>, <span class="string">"$2 $1"</span>)); <span class="comment">//将把 "Doe, John" 转换为 "John Doe" 的形式</span></span><br></pre></td></tr></table></figure>
+<hr />
+<h4 id="search"><a class="markdownIt-Anchor" href="#search"></a> <code>search()</code></h4>
+<p>检索与正则表达式相匹配的值(大小写敏感)，未找到输出-1</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str=<span class="string">"Hello World!"</span></span><br><span class="line"><span class="built_in">console</span>.log(str.search(<span class="regexp">/World/</span>)); <span class="comment">//输出6</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> str=<span class="string">"Hello World!"</span></span><br><span class="line"><span class="built_in">console</span>.log(str.search(<span class="regexp">/world/i</span>)); <span class="comment">//忽略大小写的检索，输出6</span></span><br></pre></td></tr></table></figure>
+<hr />
+<h3 id="数组操作方法"><a class="markdownIt-Anchor" href="#数组操作方法"></a> 数组操作方法</h3>
+<blockquote>
+<ul>
+<li><strong><code>shift()</code></strong> 删除原数组第一项，并返回删除元素的值；如果数组为空则返回undefined</li>
+<li><strong><code>unshift()</code></strong> 将参数添加到原数组开头，并返回新数组的长度</li>
+<li><strong><code>pop()</code></strong> 删除原数组最后一项，并返回删除元素的值；如果数组为空则返回undefined</li>
+<li><strong><code>push()</code></strong> 将参数添加到原数组末尾，并返回数组的长度</li>
+<li><strong><code>concat()</code></strong> 回一个新数组，是将参数添加到原数组中构成的</li>
+<li><strong><code>splice(start,deleteCount,val1,val2,...)</code></strong> 从start位置开始删除deleteCount项，并从该位置起插入val1,val2,…</li>
+<li><strong><code>reverse()</code></strong> 将数组反序</li>
+<li><strong><code>sort(orderfunction)</code></strong> 按指定的参数对数组进行排序</li>
+<li><strong><code>slice(start,end)</code></strong> 返回从原数组中指定开始下标到结束下标之间的项组成的新数组</li>
+<li><strong><code>join(separator)</code></strong> 将数组的元素组起一个字符串，以separator为分隔符，省略的话则用默认用逗号为分隔符</li>
+</ul>
+</blockquote>
+<hr />
+<h4 id="shift"><a class="markdownIt-Anchor" href="#shift"></a> <code>shift()</code></h4>
+<p>删除原数组第一项，并返回删除元素的值；如果数组为空则返回undefined</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];   </span><br><span class="line"><span class="keyword">var</span> b = a.shift(); <span class="comment">//a:[2,3,4,5] b:1</span></span><br></pre></td></tr></table></figure>
+<h4 id="unshift"><a class="markdownIt-Anchor" href="#unshift"></a> <code>unshift()</code></h4>
+<p>将参数添加到原数组开头，并返回数组的长度</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];   </span><br><span class="line"><span class="keyword">var</span> b = a.unshift(<span class="number">-2</span>,<span class="number">-1</span>); <span class="comment">//a:[-2,-1,1,2,3,4,5] b:7</span></span><br></pre></td></tr></table></figure>
+<p>注:在IE6.0下测试返回值总为undefined，FF2.0下测试返回值为7，所以这个方法的返回值不可靠，需要用返回值时可用splice代替本方法来使用。</p>
+<h4 id="pop"><a class="markdownIt-Anchor" href="#pop"></a> <code>pop()</code></h4>
+<p>删除原数组最后一项，并返回删除元素的值；如果数组为空则返回undefined</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];   </span><br><span class="line"><span class="keyword">var</span> b = a.pop(); <span class="comment">//a:[1,2,3,4] b:5</span></span><br></pre></td></tr></table></figure>
+<h4 id="push"><a class="markdownIt-Anchor" href="#push"></a> <code>push()</code></h4>
+<p>将参数添加到原数组末尾，并返回数组的长度</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];   </span><br><span class="line"><span class="keyword">var</span> b = a.push(<span class="number">6</span>,<span class="number">7</span>); <span class="comment">//a:[1,2,3,4,5,6,7] b:7</span></span><br></pre></td></tr></table></figure>
+<h4 id="concat-2"><a class="markdownIt-Anchor" href="#concat-2"></a> <code>concat()</code></h4>
+<p>返回一个新数组，是将参数添加到原数组中构成的</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];   </span><br><span class="line"><span class="keyword">var</span> b = a.concat(<span class="number">6</span>,<span class="number">7</span>); <span class="comment">//a:[1,2,3,4,5] b:[1,2,3,4,5,6,7]</span></span><br></pre></td></tr></table></figure>
+<h4 id="splicestartdeletecountval1val2"><a class="markdownIt-Anchor" href="#splicestartdeletecountval1val2"></a> <code>splice(start,deleteCount,val1,val2,...)</code></h4>
+<p>从start位置开始删除deleteCount项，并从该位置起插入val1,val2,…</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];   </span><br><span class="line"><span class="keyword">var</span> b = a.splice(<span class="number">2</span>,<span class="number">2</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>); <span class="comment">//a:[1,2,7,8,9,5] b:[3,4]   </span></span><br><span class="line"><span class="keyword">var</span> b = a.splice(<span class="number">0</span>,<span class="number">1</span>); <span class="comment">//同shift   </span></span><br><span class="line">a.splice(<span class="number">0</span>,<span class="number">0</span>,<span class="number">-2</span>,<span class="number">-1</span>); <span class="keyword">var</span> b = a.length; <span class="comment">//同unshift   </span></span><br><span class="line"><span class="keyword">var</span> b = a.splice(a.length<span class="number">-1</span>,<span class="number">1</span>); <span class="comment">//同pop   </span></span><br><span class="line">a.splice(a.length,<span class="number">0</span>,<span class="number">6</span>,<span class="number">7</span>); <span class="keyword">var</span> b = a.length; <span class="comment">//同push</span></span><br></pre></td></tr></table></figure>
+<h4 id="reverse"><a class="markdownIt-Anchor" href="#reverse"></a> <code>reverse()</code></h4>
+<p>将数组反序</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];   </span><br><span class="line"><span class="keyword">var</span> b = a.reverse(); <span class="comment">//a:[5,4,3,2,1] b:[5,4,3,2,1]</span></span><br></pre></td></tr></table></figure>
+<h4 id="sortorderfunction"><a class="markdownIt-Anchor" href="#sortorderfunction"></a> <code>sort(orderfunction)</code></h4>
+<p>按指定的参数对数组进行排序</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];   </span><br><span class="line"><span class="keyword">var</span> b = a.sort(); <span class="comment">//a:[1,2,3,4,5] b:[1,2,3,4,5]</span></span><br></pre></td></tr></table></figure>
+<h4 id="slicestartend"><a class="markdownIt-Anchor" href="#slicestartend"></a> <code>slice(start,end)</code></h4>
+<p>返回从原数组中指定开始下标到结束下标之间的项组成的新数组</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];   </span><br><span class="line"><span class="keyword">var</span> b = a.slice(<span class="number">2</span>,<span class="number">5</span>); <span class="comment">//a:[1,2,3,4,5] b:[3,4,5]</span></span><br></pre></td></tr></table></figure>
+<h4 id="joinseparator"><a class="markdownIt-Anchor" href="#joinseparator"></a> <code>join(separator)</code></h4>
+<p>将数组的元素组起一个字符串，以separator为分隔符，省略的话则用默认用逗号为分隔符</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];   </span><br><span class="line"><span class="keyword">var</span> b = a.join(<span class="string">"|"</span>); <span class="comment">//a:[1,2,3,4,5] b:"1|2|3|4|5"</span></span><br></pre></td></tr></table></figure>
+<h4 id="数组方法小结"><a class="markdownIt-Anchor" href="#数组方法小结"></a> 数组方法小结</h4>
+<p>数组是JavaScript提供的一个内部对象，它是一个标准的集合，我们可以添加(push)、删除(shift)里面元素，我们还可以通过for循环遍历里面的元素，那么除了数组我们在JavaScript里还可以有别的集合吗?</p>
+<p>由于JavaScript的语言特性，我们可以向通用对象动态添加和删除属性。所以Object也可以看成是JS的一种特殊的集合。下面比较一下Array和Object的特性:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">　　<span class="comment">//Array:  </span></span><br><span class="line">  </span><br><span class="line"><span class="comment">/*新建:*/</span><span class="keyword">var</span> ary = <span class="keyword">new</span> <span class="built_in">Array</span>(); 或 <span class="keyword">var</span> ary = [];   </span><br><span class="line"><span class="comment">/*增加:*/</span>ary.push(value);   </span><br><span class="line"><span class="comment">/*删除:*/</span><span class="keyword">delete</span> ary[n];   </span><br><span class="line"><span class="comment">/*遍历:*/</span><span class="keyword">for</span> ( <span class="keyword">var</span> i=<span class="number">0</span> ; i &lt; ary.length ; ++i ) ary[i];  </span><br><span class="line">  </span><br><span class="line">　　<span class="comment">//Object:  </span></span><br><span class="line">  </span><br><span class="line"><span class="comment">/*新建:*/</span><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>(); 或 <span class="keyword">var</span> obj = &#123;&#125;;   </span><br><span class="line"><span class="comment">/*增加:*/</span>obj[key] = value; (key为string)   </span><br><span class="line"><span class="comment">/*删除:*/</span><span class="keyword">delete</span> obj[key];   </span><br><span class="line"><span class="comment">/*遍历:*/</span><span class="keyword">for</span> ( <span class="keyword">var</span> key <span class="keyword">in</span> obj ) obj[key];</span><br></pre></td></tr></table></figure>
+<p>从上面的比较可以看出Object完全可以作为一个集合来使用，在使用Popup窗口创建无限级Web页菜单(3)中我介绍过Eric实现的那个__MenuCache__，它也就是一个模拟的集合对象。</p>
+<p>如果我们要在Array中检索出一个指定的值，我们需要遍历整个数组:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> keyword = ;   </span><br><span class="line">　　<span class="keyword">for</span> ( <span class="keyword">var</span> i=<span class="number">0</span> ; i &lt; ary.length ; ++i )   </span><br><span class="line">　　&#123;   </span><br><span class="line">　　<span class="keyword">if</span> ( ary[i] == keyword )   </span><br><span class="line">　　&#123;   </span><br><span class="line">　　<span class="comment">// todo   </span></span><br><span class="line">　　&#125;   </span><br><span class="line">　　&#125;</span><br></pre></td></tr></table></figure>
+<p>而我们在Object中检索一个指定的key的条目，只需要是要使用:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> key = <span class="string">''</span>;   </span><br><span class="line">　　<span class="keyword">var</span> value = obj[key];   </span><br><span class="line">　　<span class="comment">// todo</span></span><br></pre></td></tr></table></figure>
+<p>Object的这个特性可以用来高效的检索Unique的字符串集合，遍历Array的时间复杂度是O(n)，而遍历Object的时间复杂度是O(1)。虽然对于10000次集合的for检索代价也就几十ms，可是如果是1000<code>*</code>1000次检索或更多，使用Object的优势一下就体现出来了。在此之前我做了一个mapping，把100个Unique的字符mapping到1000个字符串数组上，耗时25-30s!后来把for遍历改成了Object模拟的集合的成员引用，同样的数据量mapping，耗时仅1.7-2s!!!</p>
+<p>对于集合的遍历效率(从高到低):var value = obj[key]; &gt; for ( ; ; ) &gt; for ( in )。效率最差的就是for( in )了，如果集合过大，尽量不要使用for ( in )遍历。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/hexolog/images/wechatpay.png" alt="kuleyu 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/hexolog/images/alipay.png" alt="kuleyu 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/hexolog/tags/javascript/" rel="tag"># javascript</a>
+          
+            <a href="/hexolog/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag"># 字符串</a>
+          
+            <a href="/hexolog/tags/%E6%95%B0%E7%BB%84/" rel="tag"># 数组</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/hexolog/post/3a176a24.html" rel="next" title="css 浮动与清除浮动">
+                <i class="fa fa-chevron-left"></i> css 浮动与清除浮动
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/hexolog/post/2426aa95.html" rel="prev" title="利用 Git-hook 自动配置不同仓库的用户信息">
+                利用 Git-hook 自动配置不同仓库的用户信息 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/hexolog/images/avatar.png"
+                alt="kuleyu" />
+            
+              <p class="site-author-name" itemprop="name">kuleyu</p>
+              <p class="site-description motion-element" itemprop="description">你的态度，就是你未来生活的样子</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                  
+                    <a href="/hexolog/archives/">
+                  
+                    <span class="site-state-item-count">46</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/hexolog/categories/index.html">
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/hexolog/tags/index.html">
+                    <span class="site-state-item-count">60</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/kuleyu" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github-square"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1402546930@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://plus.google.com/yourname" target="_blank" title="Google+">
+                      
+                        <i class="fa fa-fw fa-google-plus-official"></i>Google+</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://your-weibo-url" target="_blank" title="微博">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>微博</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://your-douban-url" target="_blank" title="豆瓣">
+                      
+                        <i class="fa fa-fw fa-douban"></i>豆瓣</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://your-zhihu-url" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-zhihu"></i>知乎</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://surmon.me/" title="surmon" target="_blank">surmon</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://xinwenke.top/" title="wenke" target="_blank">wenke</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串操作方法"><span class="nav-number">1.</span> <span class="nav-text"> 字符串操作方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#charat"><span class="nav-number">1.1.</span> <span class="nav-text"> charAt()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#charcodeat"><span class="nav-number">1.2.</span> <span class="nav-text"> charCodeAt()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fromcharcode"><span class="nav-number">1.3.</span> <span class="nav-text"> fromCharCode()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#slice"><span class="nav-number">1.4.</span> <span class="nav-text"> slice()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#split"><span class="nav-number">1.5.</span> <span class="nav-text"> split()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#concat"><span class="nav-number">1.6.</span> <span class="nav-text"> concat()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#indexof"><span class="nav-number">1.7.</span> <span class="nav-text"> indexOf()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lastindexof"><span class="nav-number">1.8.</span> <span class="nav-text"> lastIndexOf()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#match"><span class="nav-number">1.9.</span> <span class="nav-text"> match()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#replace"><span class="nav-number">1.10.</span> <span class="nav-text"> replace()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#search"><span class="nav-number">1.11.</span> <span class="nav-text"> search()</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组操作方法"><span class="nav-number">2.</span> <span class="nav-text"> 数组操作方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#shift"><span class="nav-number">2.1.</span> <span class="nav-text"> shift()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#unshift"><span class="nav-number">2.2.</span> <span class="nav-text"> unshift()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pop"><span class="nav-number">2.3.</span> <span class="nav-text"> pop()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#push"><span class="nav-number">2.4.</span> <span class="nav-text"> push()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#concat-2"><span class="nav-number">2.5.</span> <span class="nav-text"> concat()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#splicestartdeletecountval1val2"><span class="nav-number">2.6.</span> <span class="nav-text"> splice(start,deleteCount,val1,val2,...)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#reverse"><span class="nav-number">2.7.</span> <span class="nav-text"> reverse()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sortorderfunction"><span class="nav-number">2.8.</span> <span class="nav-text"> sort(orderfunction)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#slicestartend"><span class="nav-number">2.9.</span> <span class="nav-text"> slice(start,end)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#joinseparator"><span class="nav-number">2.10.</span> <span class="nav-text"> join(separator)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组方法小结"><span class="nav-number">2.11.</span> <span class="nav-text"> 数组方法小结</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017.03 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">kuleyu</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.0</div>
+
+
+
+  <div class="footer-custom">Hosted by <a target="_blank" href="https://www.netlify.com/">Netlify</a></div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+    <script type="text/javascript" src="/hexolog/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/hexolog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/hexolog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/hexolog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script id="ribbon" type="text/javascript" size="160" alpha="0.2"  zIndex="-6" src="/hexolog/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/hexolog/lib/reading_progress/reading_progress.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/hexolog/js/src/utils.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/hexolog/js/src/motion.js?v=6.0.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/hexolog/js/src/affix.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/hexolog/js/src/schemes/pisces.js?v=6.0.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/hexolog/js/src/scrollspy.js?v=6.0.0"></script>
+<script type="text/javascript" src="/hexolog/js/src/post-details.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/hexolog/js/src/bootstrap.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'kuleyu',
+            repo: 'bloxment',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '365893ba8bb81ccf4e102ed1af2979a89b8cea38',
+            
+                client_id: 'af4f71ced0f776cb26d9'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/hexolog/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("bVHFwyWVoXDg1pVfzy8aoD0H-gzGzoHsz", "WByLAt3BrbNHUKUJMWxbO0kf");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/hexolog/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/hexolog/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

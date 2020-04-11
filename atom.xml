@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ku-Le-Yu-Xuan</title>
+  
+  
+  <link href="/hexolog/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/hexolog/"/>
+  <updated>2020-04-11T18:45:09.985Z</updated>
+  <id>http://yoursite.com/hexolog/</id>
+  
+  <author>
+    <name>kuleyu</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端编码风格规范(4) 之 CSS 和 Sass (SCSS)</title>
+    <link href="http://yoursite.com/hexolog/post/40468678.html"/>
+    <id>http://yoursite.com/hexolog/post/40468678.html</id>
+    <published>2018-04-23T00:10:16.000Z</published>
+    <updated>2020-04-11T18:45:09.985Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;英文原文：&lt;a href=&quot;http://newimg88.b0.upaiyun.com/newimg88/2015/01/web-styleguide-4.jpg&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Web Styleguide – Style guide to harmonize HTML, Javascript and CSS / SASS coding style&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;css-and-sass-scss-style-rules&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#css-and-sass-scss-style-rules&quot;&gt;&lt;/a&gt; CSS and Sass (SCSS) style rules&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;h3 id=&quot;id-and-class-naming&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#id-and-class-naming&quot;&gt;&lt;/a&gt; ID and class naming&lt;/h3&gt;
+&lt;p&gt;ID和class(类)名总是使用可以反应元素目的和用途的名称，或其他通用名称。代替表象和晦涩难懂的名称。&lt;/p&gt;
+&lt;p&gt;应该首选具体和反映元素目的的名称，因为这些是最可以理解的，而且发生变化的可能性最小。&lt;/p&gt;
+&lt;p&gt;通用名称只是多个元素的备用名，他们兄弟元素之间是一样的，没有特别意义。&lt;br /&gt;
+区分他们，使他们具有特殊意义，通常需要为&amp;quot;帮手&amp;quot;。&lt;/p&gt;
+&lt;p&gt;尽管class(类)名和ID 的语义化对于计算机解析来说没有什么实际的意义，&lt;br /&gt;
+语义化的名称 通常是正确的选择，因为它们所代表的信息含义，不包含表现的限制。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="前端编码规范" scheme="http://yoursite.com/hexolog/categories/%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/"/>
+    
+      <category term="Front-End&quot;" scheme="http://yoursite.com/hexolog/categories/%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/Front-End/"/>
+    
+      <category term="搬运整理" scheme="http://yoursite.com/hexolog/categories/%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/Front-End/%E6%90%AC%E8%BF%90%E6%95%B4%E7%90%86/"/>
+    
+    
+      <category term="css" scheme="http://yoursite.com/hexolog/tags/css/"/>
+    
+      <category term="编码规范" scheme="http://yoursite.com/hexolog/tags/%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端编码风格规范(2) 之 HTML 规范</title>
+    <link href="http://yoursite.com/hexolog/post/64839f25.html"/>
+    <id>http://yoursite.com/hexolog/post/64839f25.html</id>
+    <published>2018-04-23T00:09:52.000Z</published>
+    <updated>2020-04-11T18:45:09.985Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;文档类型&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#文档类型&quot;&gt;&lt;/a&gt; 文档类型&lt;/h2&gt;
+&lt;p&gt;推荐使用 HTML5 的文档类型申明： &lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;（建议使用 text/html 格式的 HTML。避免使用 XHTML。XHTML 以及它的属性，比如  &lt;code&gt;application/xhtml+xml&lt;/code&gt;在浏览器中的应用支持与优化空间都十分有限）。&lt;/p&gt;
+&lt;p&gt;HTML 中最好不要将无内容元素（主要包括：&lt;code&gt;area&lt;/code&gt;, &lt;code&gt;base&lt;/code&gt;, &lt;code&gt;br&lt;/code&gt;, &lt;code&gt;col&lt;/code&gt;, &lt;code&gt;command&lt;/code&gt;, &lt;code&gt;embed&lt;/code&gt;, &lt;code&gt;hr&lt;/code&gt;, &lt;code&gt;img&lt;/code&gt;,  &lt;code&gt;input&lt;/code&gt;, &lt;code&gt;keygen&lt;/code&gt;, &lt;code&gt;link&lt;/code&gt;, &lt;code&gt;meta&lt;/code&gt;, &lt;code&gt;param&lt;/code&gt;, &lt;code&gt;source&lt;/code&gt;, &lt;code&gt;track&lt;/code&gt;, &lt;code&gt;wbr&lt;/code&gt;）的标签闭合，例如：使用 &lt;code&gt;&amp;lt;br&amp;gt;&lt;/code&gt; 而非 &lt;code&gt;&amp;lt;br /&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;html-验证&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#html-验证&quot;&gt;&lt;/a&gt; HTML 验证&lt;/h2&gt;
+&lt;p&gt;一般情况下，建议使用能通过标准规范验证的 HTML 代码，除非在性能优化和控制文件大小上不得不做出让步。&lt;/p&gt;
+&lt;p&gt;使用诸如 W3C HTML validator 这样的工具来进行检测。&lt;/p&gt;
+&lt;p&gt;规范化的 HTML 是显现技术要求与局限的显著质量基线，它促进了 HTML 被更好地运用。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="前端编码规范" scheme="http://yoursite.com/hexolog/categories/%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/"/>
+    
+      <category term="Front-End&quot;" scheme="http://yoursite.com/hexolog/categories/%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/Front-End/"/>
+    
+      <category term="搬运整理" scheme="http://yoursite.com/hexolog/categories/%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/Front-End/%E6%90%AC%E8%BF%90%E6%95%B4%E7%90%86/"/>
+    
+    
+      <category term="编码规范" scheme="http://yoursite.com/hexolog/tags/%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/"/>
+    
+      <category term="html" scheme="http://yoursite.com/hexolog/tags/html/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端编码风格规范(1) 之 一般规范</title>
+    <link href="http://yoursite.com/hexolog/post/226a05d8.html"/>
+    <id>http://yoursite.com/hexolog/post/226a05d8.html</id>
+    <published>2018-04-23T00:09:41.000Z</published>
+    <updated>2020-04-11T18:45:09.981Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;英文原文：&lt;a href=&quot;https://github.com/gionkunz/chartist-js/blob/develop/CODINGSTYLE.md&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Web Styleguide – Style guide to harmonize HTML, Javascript and CSS / SASS coding style&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这是一份旨在增强团队的开发协作，提高代码质量和打造开发基石的编码风格规范，其中包含了 HTML, JavaScript 和 CSS/SCSS 这几个部分。我们知道，当一个团队开始指定并实行编码规范的话，错误就会变得更加显而易见。如果一段特定的代码不符合规范的话，它有可能只是代码风格错误，而也有可能会是 bug。早期指定规范就使得代码审核得以更好的开展，并且可以更精确的地定位到错误。只要开发者们能够保证源代码源文件都严格遵循规范，那接下去所使用的混淆、压缩和编译工具则可投其所好不尽相同。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="前端编码规范" scheme="http://yoursite.com/hexolog/categories/%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/"/>
+    
+      <category term="Front-End&quot;" scheme="http://yoursite.com/hexolog/categories/%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/Front-End/"/>
+    
+      <category term="搬运整理" scheme="http://yoursite.com/hexolog/categories/%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/Front-End/%E6%90%AC%E8%BF%90%E6%95%B4%E7%90%86/"/>
+    
+    
+      <category term="编码规范" scheme="http://yoursite.com/hexolog/tags/%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端编码风格规范(3) 之 JavaScript</title>
+    <link href="http://yoursite.com/hexolog/post/87ab92a0.html"/>
+    <id>http://yoursite.com/hexolog/post/87ab92a0.html</id>
+    <published>2018-04-22T23:33:38.000Z</published>
+    <updated>2020-04-11T18:45:09.985Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;英文原文：&lt;a href=&quot;https://github.com/gionkunz/chartist-js/blob/develop/CODINGSTYLE.md&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Web Styleguide – Style guide to harmonize HTML, Javascript and CSS / SASS coding style&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;javascript-规范&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#javascript-规范&quot;&gt;&lt;/a&gt; JavaScript 规范&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;h3 id=&quot;全局命名空间污染与-iife&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#全局命名空间污染与-iife&quot;&gt;&lt;/a&gt; 全局命名空间污染与 IIFE&lt;/h3&gt;
+&lt;p&gt;总是将代码包裹成一个 IIFE(Immediately-Invoked Function Expression)，用以创建独立隔绝的定义域。这一举措可防止全局命名空间被污染。&lt;/p&gt;
+&lt;p&gt;IIFE 还可确保你的代码不会轻易被其它全局命名空间里的代码所修改（i.e. 第三方库，window 引用，被覆盖的未定义的关键字等等）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;不推荐&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;var x = 10,
+    y = 100;
+
+// Declaring variables in the global scope is resulting in global scope pollution. All variables declared like this
+// will be stored in the window object. This is very unclean and needs to be avoided.
+console.log(window.x + &#39; &#39; + window.y);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;推荐&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// We declare a IIFE and pass parameters into the function that we will use from the global space
+(function(log, w, undefined){
+  &#39;use strict&#39;;
+
+  var x = 10,
+      y = 100;
+
+  // Will output &#39;true true&#39;
+  log((w.x === undefined) + &#39; &#39; + (w.y === undefined));
+
+}(window.console.log, window));
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+    
+      <category term="前端编码规范" scheme="http://yoursite.com/hexolog/categories/%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/"/>
+    
+      <category term="Front-End&quot;" scheme="http://yoursite.com/hexolog/categories/%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/Front-End/"/>
+    
+      <category term="搬运整理" scheme="http://yoursite.com/hexolog/categories/%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/Front-End/%E6%90%AC%E8%BF%90%E6%95%B4%E7%90%86/"/>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/hexolog/tags/JavaScript/"/>
+    
+      <category term="编码规范" scheme="http://yoursite.com/hexolog/tags/%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ajax总结篇</title>
+    <link href="http://yoursite.com/hexolog/post/d4e64c45.html"/>
+    <id>http://yoursite.com/hexolog/post/d4e64c45.html</id>
+    <published>2018-04-19T00:54:16.000Z</published>
+    <updated>2020-04-11T18:45:09.977Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;本文主要总结整理&lt;code&gt;Ajax&lt;/code&gt;的一些常用的基础知识，适合初学者。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;一-ajax简介-优劣势-应用场景以及技术&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#一-ajax简介-优劣势-应用场景以及技术&quot;&gt;&lt;/a&gt; 一、Ajax简介、优劣势、应用场景以及技术&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Ajax简介 :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Asynchronous Javascript And XML&lt;/code&gt; （异步的&lt;br /&gt;
+&lt;code&gt;JavaScript&lt;/code&gt;和&lt;code&gt;XML&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;它并不是一种单一的技术，而是有机利用一系列交互式网页应用相关的技术所形成的结合体&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;AJAX&lt;/code&gt; 是一种用于创建快速动态网页的技术。通过在后台与服务器进行少量数据交换，&lt;code&gt;AJAX&lt;/code&gt; 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;优点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;页面无刷新，用户体验好。&lt;/li&gt;
+&lt;li&gt;异步通信，更加快的响应能力。&lt;/li&gt;
+&lt;li&gt;减少冗余请求，减轻了服务器负担&lt;/li&gt;
+&lt;li&gt;基于标准化的并被广泛支持的技术，不需要下载插件或者小程序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;缺点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ajax&lt;/code&gt;干掉了&lt;code&gt;back&lt;/code&gt;按钮，即对浏览器后退机制的破坏。&lt;/li&gt;
+&lt;li&gt;存在一定的安全问题。&lt;/li&gt;
+&lt;li&gt;对搜索引擎的支持比较弱。&lt;/li&gt;
+&lt;li&gt;破坏了程序的异常机制。&lt;/li&gt;
+&lt;li&gt;无法用&lt;code&gt;URL&lt;/code&gt;直接访问&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ajax&lt;/code&gt;应用场景&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;场景 1. 数据验证&lt;/li&gt;
+&lt;li&gt;场景 2. 按需取数据&lt;/li&gt;
+&lt;li&gt;场景 3. 自动更新页面&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;AJAX&lt;/code&gt; 包含以下五个部分：&lt;br /&gt;
+&lt;code&gt;ajax&lt;/code&gt;并非一种新的技术，而是几种原有技术的结合体。它由下列技术组合而成。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用&lt;code&gt;CSS&lt;/code&gt;和&lt;code&gt;XHTML&lt;/code&gt;来表示。&lt;/li&gt;
+&lt;li&gt;使用&lt;code&gt;DOM&lt;/code&gt;模型来交互和动态显示。&lt;/li&gt;
+&lt;li&gt;数据互换和操作技术，使用&lt;code&gt;XML&lt;/code&gt;与&lt;code&gt;XSLT&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;使用&lt;code&gt;XMLHttpRequest&lt;/code&gt;来和服务器进行异步通信。&lt;/li&gt;
+&lt;li&gt;使用&lt;code&gt;javascript&lt;/code&gt;来绑定和调用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在上面几中技术中，除了&lt;code&gt;XmlHttpRequest&lt;/code&gt;对象以外，其它所有的技术都是基于&lt;code&gt;web&lt;/code&gt;标准并且已经得到了广泛使用的，&lt;code&gt;XMLHttpRequest&lt;/code&gt;虽然目前还没有被&lt;code&gt;W3C&lt;/code&gt;所采纳，但是它已经是一个事实的标准，因为目前几乎所有的主流浏览器都支持它&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Front-End" scheme="http://yoursite.com/hexolog/categories/Front-End/"/>
+    
+      <category term="搬运整理" scheme="http://yoursite.com/hexolog/categories/Front-End/%E6%90%AC%E8%BF%90%E6%95%B4%E7%90%86/"/>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/hexolog/tags/JavaScript/"/>
+    
+      <category term="Ajax" scheme="http://yoursite.com/hexolog/tags/Ajax/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Javascript常用方法函数收集</title>
+    <link href="http://yoursite.com/hexolog/post/30fd5d95.html"/>
+    <id>http://yoursite.com/hexolog/post/30fd5d95.html</id>
+    <published>2018-04-18T12:54:15.000Z</published>
+    <updated>2020-04-11T18:45:09.981Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;字符串及数组类&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#字符串及数组类&quot;&gt;&lt;/a&gt; 字符串及数组类&lt;/h2&gt;
+&lt;h3 id=&quot;判断一个字符串中出现次数最多的字符统计这个次数&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#判断一个字符串中出现次数最多的字符统计这个次数&quot;&gt;&lt;/a&gt; 判断一个字符串中出现次数最多的字符，统计这个次数&lt;/h3&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; str = &lt;span class=&quot;string&quot;&gt;&quot;zhaochucichuzuiduodezifu&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; o = &amp;#123;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, length = str.length; i &amp;lt; length; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//        var char = str[i];&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; char = str.charAt(i);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (o[char]) &amp;#123;  &lt;span class=&quot;comment&quot;&gt;//char就是对象o的一个属性，o[char]是属性值，o[char]控制出现的次数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        o[char]++;  &lt;span class=&quot;comment&quot;&gt;//次数加1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125; &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        o[char] = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;    &lt;span class=&quot;comment&quot;&gt;//若第一次出现，次数记为1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(o);   &lt;span class=&quot;comment&quot;&gt;//输出的是完整的对象，记录着每一个字符及其出现的次数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//遍历对象，找到出现次数最多的字符和次数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; max = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; maxChar = &lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; key &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; o) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (max &amp;lt; o[key]) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        max = o[key];   &lt;span class=&quot;comment&quot;&gt;//max始终储存次数最大的那个&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        maxChar = key;  &lt;span class=&quot;comment&quot;&gt;//那么对应的字符就是当前的key&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;&quot;最多的字符是&quot;&lt;/span&gt; + maxChar);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;&quot;出现的次数是&quot;&lt;/span&gt; + max);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;字符串长度截取&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#字符串长度截取&quot;&gt;&lt;/a&gt; 字符串长度截取&lt;/h3&gt;
+    
+    </summary>
+    
+    
+      <category term="Front-End" scheme="http://yoursite.com/hexolog/categories/Front-End/"/>
+    
+      <category term="搬运整理" scheme="http://yoursite.com/hexolog/categories/Front-End/%E6%90%AC%E8%BF%90%E6%95%B4%E7%90%86/"/>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/hexolog/tags/JavaScript/"/>
+    
+      <category term="Snippet" scheme="http://yoursite.com/hexolog/tags/Snippet/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Js作用域问题一步一步透彻理解</title>
+    <link href="http://yoursite.com/hexolog/post/ae13e827.html"/>
+    <id>http://yoursite.com/hexolog/post/ae13e827.html</id>
+    <published>2018-04-01T02:09:34.000Z</published>
+    <updated>2020-04-11T18:45:09.981Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;黄金守则第一条&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#黄金守则第一条&quot;&gt;&lt;/a&gt; &lt;strong&gt;黄金守则第一条&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;js没有块级作用域（你可以自己闭包或其他方法实现），只有函数级作用域，函数外面的变量函数里面可以找到，函数里面的面找不到。&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;aaa&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	alert(a);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;bbb&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	aaa();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bbb();      &lt;span class=&quot;comment&quot;&gt;// 10&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/hexolog/categories/JavaScript/"/>
+    
+      <category term="学习笔记" scheme="http://yoursite.com/hexolog/categories/JavaScript/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="js" scheme="http://yoursite.com/hexolog/tags/js/"/>
+    
+      <category term="作用域" scheme="http://yoursite.com/hexolog/tags/%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Http协议相关</title>
+    <link href="http://yoursite.com/hexolog/post/e8d53a5a.html"/>
+    <id>http://yoursite.com/hexolog/post/e8d53a5a.html</id>
+    <published>2018-04-01T00:54:16.000Z</published>
+    <updated>2020-04-11T18:45:09.981Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;一-基础概念&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#一-基础概念&quot;&gt;&lt;/a&gt; 一 、基础概念&lt;/h1&gt;
+&lt;h2 id=&quot;web-基础&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="网络" scheme="http://yoursite.com/hexolog/categories/%E7%BD%91%E7%BB%9C/"/>
+    
+      <category term="搬运整理" scheme="http://yoursite.com/hexolog/categories/%E7%BD%91%E7%BB%9C/%E6%90%AC%E8%BF%90%E6%95%B4%E7%90%86/"/>
+    
+    
+      <category term="http" scheme="http://yoursite.com/hexolog/tags/http/"/>
+    
+      <category term="正则表达式" scheme="http://yoursite.com/hexolog/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    
+      <category term="MySQL" scheme="http://yoursite.com/hexolog/tags/MySQL/"/>
+    
+      <category term="Linux" scheme="http://yoursite.com/hexolog/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Js变量提升、临时死区、作用域、立即执行函数</title>
+    <link href="http://yoursite.com/hexolog/post/56be0507.html"/>
+    <id>http://yoursite.com/hexolog/post/56be0507.html</id>
+    <published>2018-03-27T10:37:02.000Z</published>
+    <updated>2020-04-11T18:45:09.981Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;提到 JS 中声明变量的方式，必然提及var、let、const、function 四个关键词，其中 var、function 声明的变量会发生变量提升。&lt;/p&gt;
+&lt;h3 id=&quot;var&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>js事件之event.preventDefault()与event.stopPropagation()用法区别</title>
+    <link href="http://yoursite.com/hexolog/post/4f797af7.html"/>
+    <id>http://yoursite.com/hexolog/post/4f797af7.html</id>
+    <published>2018-03-27T10:35:37.000Z</published>
+    <updated>2020-04-11T18:45:09.981Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;eventpreventdefault用法介绍&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#eventpreventdefault用法介绍&quot;&gt;&lt;/a&gt;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Css常见居中布局</title>
+    <link href="http://yoursite.com/hexolog/post/daebb2da.html"/>
+    <id>http://yoursite.com/hexolog/post/daebb2da.html</id>
+    <published>2018-03-27T10:08:49.000Z</published>
+    <updated>2020-04-11T18:45:09.981Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前端工程师的一门必修课程就是 CSS ( Cascading Style Sheet, 层叠样式表)，CSS 是一门艺术，学好 CSS 需要投入大量的时间去实践。今天我们主要聊一聊工作中常用到的 CSS 布局套路。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Front-End" scheme="http://yoursite.com/hexolog/categories/Front-End/"/>
+    
+      <category term="搬运整理" scheme="http://yoursite.com/hexolog/categories/Front-End/%E6%90%AC%E8%BF%90%E6%95%B4%E7%90%86/"/>
+    
+    
+      <category term="css" scheme="http://yoursite.com/hexolog/tags/css/"/>
+    
+      <category term="layout" scheme="http://yoursite.com/hexolog/tags/layout/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>利用 Git-hook 自动配置不同仓库的用户信息</title>
+    <link href="http://yoursite.com/hexolog/post/2426aa95.html"/>
+    <id>http://yoursite.com/hexolog/post/2426aa95.html</id>
+    <published>2018-03-26T19:50:50.000Z</published>
+    <updated>2020-04-11T18:45:09.981Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/69849461c38d&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot; title=&quot;Permalink to 利用 Git-hook 自动配置不同仓库的用户信息 - 简书&quot;&gt;出自简书&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;问题的起因来自于某天一位同学的问题：&amp;quot;我给一个知名开源项目提交了代码，也被合并了，为什么 &lt;code&gt;contributors&lt;/code&gt; 里面没有我？&amp;quot;其实，这多是因为提交代码时本地仓库的&lt;code&gt;user.name&lt;/code&gt;、&lt;code&gt;user.email&lt;/code&gt;与GitHub账号不匹配导致，只有提交代码时的用户设置与自己的 &lt;code&gt;GitHub&lt;/code&gt; 账号相匹配时，各项数据才会被 &lt;code&gt;GitHub&lt;/code&gt; 计入统计。如下图所示，这样的 &lt;code&gt;commit&lt;/code&gt; 记录便来自于一个用户设置和我 &lt;code&gt;GitHub&lt;/code&gt; 账号不匹配的本地仓库。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="git" scheme="http://yoursite.com/hexolog/categories/git/"/>
+    
+      <category term="搬运整理" scheme="http://yoursite.com/hexolog/categories/git/%E6%90%AC%E8%BF%90%E6%95%B4%E7%90%86/"/>
+    
+    
+      <category term="git hook" scheme="http://yoursite.com/hexolog/tags/git-hook/"/>
+    
+      <category term="github" scheme="http://yoursite.com/hexolog/tags/github/"/>
+    
+      <category term="配置" scheme="http://yoursite.com/hexolog/tags/%E9%85%8D%E7%BD%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>javascript 字符串及数组操作方法</title>
+    <link href="http://yoursite.com/hexolog/post/b0e2f0cd.html"/>
+    <id>http://yoursite.com/hexolog/post/b0e2f0cd.html</id>
+    <published>2018-03-23T04:51:49.000Z</published>
+    <updated>2020-04-11T18:45:09.981Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这里总结一下 js 中字符串及数组的操作方法&lt;/p&gt;
+&lt;h3 id=&quot;字符串操作方法&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#字符串操作方法&quot;&gt;&lt;/a&gt; 字符串操作方法&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;charAt()&lt;/code&gt;&lt;/strong&gt; 返回在指定位置的字符&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;charCodeAt()&lt;/code&gt;&lt;/strong&gt; 返回在指定的位置的字符的 Unicode 编码&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;fromCharCode()&lt;/code&gt;&lt;/strong&gt; 从字符编码创建一个字符串&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;slice()&lt;/code&gt;&lt;/strong&gt; 提取字符串的片断，并在新的字符串中返回被提取的部分&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;split()&lt;/code&gt;&lt;/strong&gt; 把字符串分割为字符串数组&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;concat()&lt;/code&gt;&lt;/strong&gt; 连接字符串&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;indexOf()&lt;/code&gt;&lt;/strong&gt; 检索字符串&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;lastIndexOf()&lt;/code&gt;&lt;/strong&gt; 从后向前搜索字符串。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;match()&lt;/code&gt;&lt;/strong&gt; 找到一个或多个正则表达式的匹配&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;replace()&lt;/code&gt;&lt;/strong&gt; 替换与正则表达式匹配的子串&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;search()&lt;/code&gt;&lt;/strong&gt;  检索与正则表达式相匹配的值(大小写敏感)，未找到输出-1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="学习笔记" scheme="http://yoursite.com/hexolog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/hexolog/tags/javascript/"/>
+    
+      <category term="字符串" scheme="http://yoursite.com/hexolog/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+      <category term="数组" scheme="http://yoursite.com/hexolog/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>css 浮动与清除浮动</title>
+    <link href="http://yoursite.com/hexolog/post/3a176a24.html"/>
+    <id>http://yoursite.com/hexolog/post/3a176a24.html</id>
+    <published>2018-03-19T09:41:48.000Z</published>
+    <updated>2020-04-11T18:45:09.981Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;最好用的—:after伪元素法：&lt;/p&gt;
+&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+      <category term="学习笔记" scheme="http://yoursite.com/hexolog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="css" scheme="http://yoursite.com/hexolog/tags/css/"/>
+    
+      <category term="float" scheme="http://yoursite.com/hexolog/tags/float/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>javascript 变量提升相关</title>
+    <link href="http://yoursite.com/hexolog/post/a33deebd.html"/>
+    <id>http://yoursite.com/hexolog/post/a33deebd.html</id>
+    <published>2018-03-19T09:40:41.000Z</published>
+    <updated>2020-04-11T18:45:09.981Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;什么是变量提升&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#什么是变量提升&quot;&gt;&lt;/a&gt; 什么是变量提升？&lt;/h3&gt;
+&lt;p&gt;&lt;b&gt;变量提升&lt;/b&gt;：把变量声明提升到&lt;code&gt;当前执行环境&lt;/code&gt;的最顶端。按照js代码解析原则，js引擎在读取js代码时分两个步骤，第一个步骤是解释，第二个步骤是执行。所谓解释就是会先通篇扫描所有的Js代码，&lt;code&gt;然后把所有声明提升到顶端&lt;/code&gt;；而执行就是操作一类的，依次执行解释完的代码。&lt;/p&gt;
+&lt;h3 id=&quot;变量提升大致可分为两类&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#变量提升大致可分为两类&quot;&gt;&lt;/a&gt; 变量提升大致可分为两类：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;var 声明的变量的提升&lt;/code&gt;。只将变量声明语句提升至当前执行环境的顶端，初始化语句（若有）则依然处于原位置不动。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;function 声明的函数的提升&lt;/code&gt;。将整个函数声明语句块提升至当前执行环境顶端，同时函数在声明时就已经将函数名初始化了。若有多个，则依次往下排，即先声明的位于最前。&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="学习笔记" scheme="http://yoursite.com/hexolog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/hexolog/tags/javascript/"/>
+    
+      <category term="变量提升" scheme="http://yoursite.com/hexolog/tags/%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>卡片</title>
+    <link href="http://yoursite.com/hexolog/post/7edad275.html"/>
+    <id>http://yoursite.com/hexolog/post/7edad275.html</id>
+    <published>2018-03-04T10:21:30.000Z</published>
+    <updated>2020-04-11T18:45:09.985Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;该站&lt;code&gt;https://bbs.qn.img-space.com/&lt;/code&gt;图片无法在其他站正常加载显示或单击右键跳转单独打开；只能复制链接单独在浏览器窗口打开。同时，打开后，浏览器有了缓存，又可以在其他站加载显示了。&lt;/p&gt;
+&lt;ul&gt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="探究测试" scheme="http://yoursite.com/hexolog/categories/%E6%8E%A2%E7%A9%B6%E6%B5%8B%E8%AF%95/"/>
+    
+    
+      <category term="markdown-html" scheme="http://yoursite.com/hexolog/tags/markdown-html/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JAMstack与CMS</title>
+    <link href="http://yoursite.com/hexolog/post/edc048fb.html"/>
+    <id>http://yoursite.com/hexolog/post/edc048fb.html</id>
+    <published>2018-02-27T16:23:30.000Z</published>
+    <updated>2020-04-11T18:45:09.981Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;找到了几个比较有意思的网站：&lt;a href=&quot;https://headlesscms.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;headlesscms.org&lt;/a&gt;、&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="学习笔记" scheme="http://yoursite.com/hexolog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="CMS" scheme="http://yoursite.com/hexolog/tags/CMS/"/>
+    
+      <category term="JAMstack" scheme="http://yoursite.com/hexolog/tags/JAMstack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2017 前端大事件和趋势回顾，2018 何去何从？</title>
+    <link href="http://yoursite.com/hexolog/post/f9211a6.html"/>
+    <id>http://yoursite.com/hexolog/post/f9211a6.html</id>
+    <published>2018-02-27T16:13:20.000Z</published>
+    <updated>2020-04-11T18:45:09.977Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/GhCdntYKN_9Y9tk6ENRFDg&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot; title=&quot;Permalink to 2017 前端大事件和趋势回顾，2018 何去何从？&quot;&gt;Source&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;2017-前端大事件和趋势回顾2018-何去何从&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#2017-前端大事件和趋势回顾2018-何去何从&quot;&gt;&lt;/a&gt; 2017 前端大事件和趋势回顾，2018 何去何从？&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2017年，前端开发继续飞速发展。以下是在过去的一年中非常值得关注的十大事件整理，主要参考了国内外的一些报道和文章，希望能对大家在思考 2018 年的趋势和走向上有所帮助。欢迎指正、评论和补充。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;1-react-16-和-mit-许可证&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#1-react-16-和-mit-许可证&quot;&gt;&lt;/a&gt; &lt;strong&gt;1、React 16 和 MIT 许可证&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;2017年，React 继续在前端领域占据主导地位，备受期待的 React 16 也正式发布。该版本包含可实现异步 UI 渲染的 fiber 架构，以及更便捷的错误管理。&lt;/p&gt;
+&lt;p&gt;不过，React 更引人关注的不是其新特性，而是开源许可证的更改。Facebook 放弃了导致很多企业拒绝使用其开源项目的 BSD+专利许可模式，并采用了对用户友好的 MIT 许可证。同时，Jest、Flow、Immutable.js 和 GraphQL 等项目也更改为了 MIT 许可证。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="搬运整理" scheme="http://yoursite.com/hexolog/categories/%E6%90%AC%E8%BF%90%E6%95%B4%E7%90%86/"/>
+    
+    
+      <category term="前端记事" scheme="http://yoursite.com/hexolog/tags/%E5%89%8D%E7%AB%AF%E8%AE%B0%E4%BA%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>css grid 网格布局完整介绍</title>
+    <link href="http://yoursite.com/hexolog/post/30c1a0ec.html"/>
+    <id>http://yoursite.com/hexolog/post/30c1a0ec.html</id>
+    <published>2018-01-29T04:38:41.000Z</published>
+    <updated>2020-04-11T18:45:09.981Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;英文原文：&lt;a href=&quot;https://css-tricks.com/snippets/css/complete-guide-grid/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;A Complete Guide to Grid&lt;/a&gt;,感谢&lt;a href=&quot;https://github.com/zhaozhiming&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;zhaozhiming&lt;/a&gt;的翻译。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;介绍&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#介绍&quot;&gt;&lt;/a&gt; 介绍&lt;/h2&gt;
+&lt;p&gt;CSS Grid 布局（又叫“Grid”），是一个基于网格的二维布局系统，目的是为了完全改变我们基于网格设计用户界面的方式。CSS 可以用来做我们的网页布局，但它在这一方面做的不是很好。开始的时候我们使用&lt;code&gt;tables&lt;/code&gt;, 然后使用&lt;code&gt;floats&lt;/code&gt;，&lt;code&gt;positioning&lt;/code&gt;和&lt;code&gt;inline-block&lt;/code&gt;，但这些方法本质上都是 hack 的方法并缺少一些重要功能（比如&lt;code&gt;垂直居中&lt;/code&gt;）。&lt;code&gt;Flexbox&lt;/code&gt;帮助我们解决了问题，但它是简单的一维布局，而不是复杂的二维布局（实际上 Flexbox 和 Grid 可以很好地组合起来使用）。Grid 是第一个专门为了解决那些我们一直使用 hack 手段而导致的页面布局问题而创建的 CSS 模块。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="搬运整理" scheme="http://yoursite.com/hexolog/categories/%E6%90%AC%E8%BF%90%E6%95%B4%E7%90%86/"/>
+    
+    
+      <category term="css" scheme="http://yoursite.com/hexolog/tags/css/"/>
+    
+      <category term="grid" scheme="http://yoursite.com/hexolog/tags/grid/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>优质资源整理收藏</title>
+    <link href="http://yoursite.com/hexolog/post/5d70cfef.html"/>
+    <id>http://yoursite.com/hexolog/post/5d70cfef.html</id>
+    <published>2018-01-26T14:17:20.000Z</published>
+    <updated>2020-04-11T18:45:09.981Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;📌 推荐一些实用的好资源&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;电子书籍&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#电子书籍&quot;&gt;&lt;/a&gt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="学习笔记" scheme="http://yoursite.com/hexolog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="收藏" scheme="http://yoursite.com/hexolog/tags/%E6%94%B6%E8%97%8F/"/>
+    
+      <category term="分享" scheme="http://yoursite.com/hexolog/tags/%E5%88%86%E4%BA%AB/"/>
+    
+  </entry>
+  
+</feed>

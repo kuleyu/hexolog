@@ -1,0 +1,2223 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/hexolog/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/hexolog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/hexolog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/hexolog/css/main.css?v=6.0.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/hexolog/images/apple-touch-icon-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/hexolog/images/favicon-32x32-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/hexolog/images/favicon-16x16-next.png?v=6.0.0">
+
+
+  <link rel="mask-icon" href="/hexolog/images/logo.svg?v=6.0.0" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT, Netlify, javascript, web前端，kuleyu" />
+
+
+
+
+  
+
+
+  <link rel="alternate" href="/hexolog/atom.xml" title="Ku-Le-Yu-Xuan" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="一个充满音乐细菌（你没看错，就是音乐细菌，来自大学室友的调侃）的，转弯到前端路上的潜行者  目前为无业游民(非理性的主动失业)   热爱音乐，会多种吹奏乐器，擅长葫芦丝、陶笛 喜欢编程">
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="http://yoursite.com/hexolog/about/index.html">
+<meta property="og:site_name" content="Ku-Le-Yu-Xuan">
+<meta property="og:description" content="一个充满音乐细菌（你没看错，就是音乐细菌，来自大学室友的调侃）的，转弯到前端路上的潜行者  目前为无业游民(非理性的主动失业)   热爱音乐，会多种吹奏乐器，擅长葫芦丝、陶笛 喜欢编程">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2017-12-25T06:29:13.000Z">
+<meta property="article:modified_time" content="2020-04-11T18:45:09.985Z">
+<meta property="article:author" content="kuleyu">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/hexolog/',
+    scheme: 'Pisces',
+    version: '6.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/hexolog/about/"/>
+
+
+
+
+
+  <title>前端编码风格规范(3) 之 JavaScript | Ku-Le-Yu-Xuan</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/hexolog/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ku-Le-Yu-Xuan</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/hexolog/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+
+            
+              首页
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/hexolog/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+
+            
+              关于
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/hexolog/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+
+            
+              归档
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-music">
+          <a href="/hexolog/music/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-music"></i> <br />
+            
+
+            
+              音乐
+            
+
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/hexolog/hexolog/post/87ab92a0.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kuleyu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/hexolog/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ku-Le-Yu-Xuan">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">前端编码风格规范(3) 之 JavaScript</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-22T23:33:38+00:00">2018-04-23</time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2020-04-11T18:45:09+00:00">2020-04-12</time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/hexolog/categories/%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/" itemprop="url" rel="index">
+                    <span itemprop="name">前端编码规范</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/hexolog/categories/%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/Front-End/" itemprop="url" rel="index">
+                    <span itemprop="name">Front-End"</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/hexolog/categories/%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/Front-End/%E6%90%AC%E8%BF%90%E6%95%B4%E7%90%86/" itemprop="url" rel="index">
+                    <span itemprop="name">搬运整理</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/hexolog/post/87ab92a0.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/hexolog/post/87ab92a0.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/hexolog/post/87ab92a0.html" class="leancloud_visitors" data-flag-title="前端编码风格规范(3) 之 JavaScript">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>英文原文：<a href="https://github.com/gionkunz/chartist-js/blob/develop/CODINGSTYLE.md" target="_blank" rel="noopener">Web Styleguide – Style guide to harmonize HTML, Javascript and CSS / SASS coding style</a></p>
+</blockquote>
+<h2 id="javascript-规范"><a class="markdownIt-Anchor" href="#javascript-规范"></a> JavaScript 规范</h2>
+<hr />
+<h3 id="全局命名空间污染与-iife"><a class="markdownIt-Anchor" href="#全局命名空间污染与-iife"></a> 全局命名空间污染与 IIFE</h3>
+<p>总是将代码包裹成一个 IIFE(Immediately-Invoked Function Expression)，用以创建独立隔绝的定义域。这一举措可防止全局命名空间被污染。</p>
+<p>IIFE 还可确保你的代码不会轻易被其它全局命名空间里的代码所修改（i.e. 第三方库，window 引用，被覆盖的未定义的关键字等等）。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>var x = 10,
+    y = 100;
+
+// Declaring variables in the global scope is resulting in global scope pollution. All variables declared like this
+// will be stored in the window object. This is very unclean and needs to be avoided.
+console.log(window.x + ' ' + window.y);
+</code></pre>
+<p><strong>推荐</strong></p>
+<pre><code>// We declare a IIFE and pass parameters into the function that we will use from the global space
+(function(log, w, undefined){
+  'use strict';
+
+  var x = 10,
+      y = 100;
+
+  // Will output 'true true'
+  log((w.x === undefined) + ' ' + (w.y === undefined));
+
+}(window.console.log, window));
+</code></pre>
+<a id="more"></a>
+<hr />
+<h3 id="iife立即执行的函数表达式"><a class="markdownIt-Anchor" href="#iife立即执行的函数表达式"></a> IIFE（立即执行的函数表达式）</h3>
+<p>无论何时，想要创建一个新的封闭的定义域，那就用 IIFE。它不仅避免了干扰，也使得内存在执行完后立即释放。</p>
+<p>所有脚本文件建议都从 IIFE 开始。</p>
+<p>立即执行的函数表达式的执行括号应该写在外包括号内。虽然写在内还是写在外都是有效的，但写在内使得整个表达式看起来更像一个整体，因此推荐这么做。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>(function(){})();
+</code></pre>
+<p><strong>推荐</strong></p>
+<pre><code>(function(){}());
+</code></pre>
+<p>so，用下列写法来格式化你的 IIFE 代码：</p>
+<pre><code>(function(){
+  'use strict';
+
+  // Code goes here
+
+}());
+</code></pre>
+<p>如果你想引用全局变量或者是外层 IIFE 的变量，可以通过下列方式传参：</p>
+<pre><code>(function($, w, d){
+  'use strict';
+
+  $(function() {
+    w.alert(d.querySelectorAll('div').length);
+  });
+}(jQuery, window, document));
+</code></pre>
+<hr />
+<h3 id="严格模式"><a class="markdownIt-Anchor" href="#严格模式"></a> 严格模式</h3>
+<p>ECMAScript 5 严格模式可在整个脚本或独个方法内被激活。它对应不同的 javascript 语境会做更加严格的错误检查。严格模式也确保了 javascript 代码更加的健壮，运行的也更加快速。</p>
+<p>严格模式会阻止使用在未来很可能被引入的预留关键字。</p>
+<p>你应该在你的脚本中启用严格模式，最好是在独立的 IIFE 中应用它。避免在你的脚本第一行使用它而导致你的所有脚本都启动了严格模式，这有可能会引发一些第三方类库的问题。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>// Script starts here
+'use strict';
+
+(function(){
+
+  // Your code starts here
+
+}());
+</code></pre>
+<p><strong>推荐</strong></p>
+<pre><code>(function(){
+  'use strict';
+
+  // Your code starts here
+
+}());
+</code></pre>
+<hr />
+<h3 id="变量声明"><a class="markdownIt-Anchor" href="#变量声明"></a> 变量声明</h3>
+<p>总是使用 <code>var</code> 来声明变量。如不指定 var，变量将被隐式地声明为全局变量，这将对变量难以控制。如果没有声明，变量处于什么定义域就变得不清（可以是在 Document 或 Window 中，也可以很容易地进入本地定义域）。所以，请总是使用 var 来声明变量。</p>
+<p>采用严格模式带来的好处是，当你手误输入错误的变量名时，它可以通过报错信息来帮助你定位错误出处。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>x = 10;
+y = 100;
+</code></pre>
+<p><strong>推荐</strong></p>
+<pre><code>var x = 10,
+    y = 100;
+</code></pre>
+<hr />
+<h3 id="理解-javascript-的定义域和定义域提升"><a class="markdownIt-Anchor" href="#理解-javascript-的定义域和定义域提升"></a> 理解 JavaScript 的定义域和定义域提升</h3>
+<p>在 JavaScript 中变量和方法定义会自动提升到执行之前。JavaScript 只有 function 级的定义域，而无其他很多编程语言中的块定义域，所以使得你在某一 function 内的某语句和循环体中定义了一个变量，此变量可作用于整个 function 内，而不仅仅是在此语句或循环体中，因为它们的声明被 JavaScript 自动提升了。</p>
+<p>我们通过例子来看清楚这到底是怎么一回事：</p>
+<p><strong>原 function</strong></p>
+<pre><code>(function(log){
+  'use strict';
+
+  var a = 10;
+
+  for(var i = 0; i &amp;lt; a; i++) {
+    var b = i * i;
+    log(b);
+  }
+
+  if(a === 10) {
+    var f = function() {
+      log(a);
+    };
+    f();
+  }
+
+  function x() {
+    log('Mr. X!');
+  }
+  x();
+
+}(window.console.log));
+</code></pre>
+<p><strong>被 JS 提升过后</strong></p>
+<pre><code>(function(log){
+  'use strict';
+  // All variables used in the closure will be hoisted to the top of the function
+  var a,
+      i,
+      b,
+      f;
+  // All functions in the closure will be hoisted to the top
+  function x() {
+    log('Mr. X!');
+  }
+
+  a = 10;
+
+  for(i = 0; i &amp;lt; a; i++) {
+    b = i * i;
+    log(b);
+  }
+
+  if(a === 10) {
+    // Function assignments will only result in hoisted variables but the function body will not be hoisted
+    // Only by using a real function declaration the whole function will be hoisted with its body
+    f = function() {
+      log(a);
+    };
+    f();
+  }
+
+  x();
+
+}(window.console.log));
+</code></pre>
+<p>根据以上提升过程，你是否可理解以下代码？</p>
+<p><strong>有效代码</strong></p>
+<pre><code>(function(log){
+  'use strict';
+
+  var a = 10;
+
+  i = 5;
+
+  x();
+
+  for(var i; i &amp;lt; a; i++) {
+    log(b);
+    var b = i * i;
+  }
+
+  if(a === 10) {
+    f = function() {
+      log(a);
+    };
+    f();
+
+    var f;
+  }
+
+  function x() {
+    log('Mr. X!');
+  }
+
+}(window.console.log));
+</code></pre>
+<p>正如你所看到的这段令人充满困惑与误解的代码导致了出人意料的结果。只有良好的声明习惯，也就是下一章节我们要提到的声明规则，才能尽可能的避免这类错误风险。</p>
+<hr />
+<p>提升声明</p>
+<p>为避免上一章节所述的变量和方法定义被自动提升造成误解，把风险降到最低，我们应该手动地显示地去声明变量与方法。也就是说，所有的变量以及方法，应当定义在 function 内的首行。</p>
+<p>只用一个 <code>var</code> 关键字声明，多个变量用逗号隔开。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>(function(log){
+  'use strict';
+
+  var a = 10;
+  var b = 10;
+
+  for(var i = 0; i &amp;lt; 10; i++) {
+    var c = a * b * i;
+  }
+
+  function f() {
+
+  }
+
+  var d = 100;
+  var x = function() {
+    return d * d;
+  };
+  log(x());
+
+}(window.console.log));
+</code></pre>
+<p><strong>推荐</strong></p>
+<pre><code>(function(log){
+  'use strict';
+
+  var a = 10,
+      b = 10,
+      i,
+      c,
+      d,
+      x;
+
+  function f() {
+
+  }
+
+  for(i = 0; i &amp;lt; 10; i++) {
+    c = a * b * i;
+  }
+
+
+
+  d = 100;
+  x = function() {
+    return d * d;
+  };
+  log(x());
+
+}(window.console.log));
+</code></pre>
+<p>把赋值尽量写在变量申明中。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>var a,
+    b,
+    c;
+
+a = 10;
+b = 10;
+c = 100;
+</code></pre>
+<p><strong>推荐</strong></p>
+<pre><code>var a = 10,
+    b = 10,
+    c = 100;
+</code></pre>
+<h3 id="总是使用带类型判断的比较判断"><a class="markdownIt-Anchor" href="#总是使用带类型判断的比较判断"></a> 总是使用带类型判断的比较判断</h3>
+<p>总是使用 <code>===</code> 精确的比较操作符，避免在判断的过程中，由 JavaScript 的强制类型转换所造成的困扰。</p>
+<p>如果你使用 <code>===</code> 操作符，那比较的双方必须是同一类型为前提的条件下才会有效。</p>
+<p>如果你想了解更多关于强制类型转换的信息，你可以读一读 <a href="http://dmitrysoshnikov.com/notes/note-2-ecmascript-equality-operators/" target="_blank" rel="noopener">Dmitry Soshnikov 的这篇文章</a>。</p>
+<p>在只使用 <code>==</code> 的情况下，JavaScript 所带来的强制类型转换使得判断结果跟踪变得复杂，下面的例子可以看出这样的结果有多怪了：</p>
+<pre><code>(function(log){
+  'use strict';
+
+  log('0' == 0); // true
+  log('' == false); // true
+  log('1' == true); // true
+  log(null == undefined); // true
+
+  var x = {
+    valueOf: function() {
+      return 'X';
+    }
+  };
+
+  log(x == 'X');
+
+}(window.console.log));
+</code></pre>
+<hr />
+<h3 id="明智地使用真假判断"><a class="markdownIt-Anchor" href="#明智地使用真假判断"></a> 明智地使用真假判断</h3>
+<p>当我们在一个 if 条件语句中使用变量或表达式时，会做真假判断。<code>if(a == true)</code> 是不同于 <code>if(a)</code> 的。后者的判断比较特殊，我们称其为真假判断。这种判断会通过特殊的操作将其转换为 true 或 false，下列表达式统统返回 false：<code>false</code>, <code>0</code>, <code>undefined</code>, <code>null</code>, <code>NaN</code>, <code>''</code>（空字符串）.</p>
+<p>这种真假判断在我们只求结果而不关心过程的情况下，非常的有帮助。</p>
+<p>以下示例展示了真假判断是如何工作的：</p>
+<pre><code>(function(log){
+  'use strict';
+
+  function logTruthyFalsy(expr) {
+    if(expr) {
+      log('truthy');
+    } else {
+      log('falsy');
+    }
+  }
+
+  logTruthyFalsy(true); // truthy
+  logTruthyFalsy(1); // truthy
+  logTruthyFalsy({}); // truthy
+  logTruthyFalsy([]); // truthy
+  logTruthyFalsy('0'); // truthy
+
+  logTruthyFalsy(false); // falsy
+  logTruthyFalsy(0); // falsy
+  logTruthyFalsy(undefined); // falsy
+  logTruthyFalsy(null); // falsy
+  logTruthyFalsy(NaN); // falsy
+  logTruthyFalsy(''); // falsy
+
+}(window.console.log));
+</code></pre>
+<hr />
+<h3 id="变量赋值时的逻辑操作"><a class="markdownIt-Anchor" href="#变量赋值时的逻辑操作"></a> 变量赋值时的逻辑操作</h3>
+<p>逻辑操作符 <code>||</code> 和 <code>&amp;amp;&amp;amp;</code> 也可被用来返回布尔值。如果操作对象为非布尔对象，那每个表达式将会被自左向右地做真假判断。基于此操作，最终总有一个表达式被返回回来。这在变量赋值时，是可以用来简化你的代码的。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>if(!x) {
+  if(!y) {
+    x = 1;
+  } else {
+    x = y;
+  }
+}
+</code></pre>
+<p><strong>推荐</strong></p>
+<pre><code>x = x || y || 1;
+</code></pre>
+<p>这一小技巧经常用来给方法设定默认的参数。</p>
+<pre><code>(function(log){
+  'use strict';
+
+  function multiply(a, b) {
+    a = a || 1;
+    b = b || 1;
+
+    log('Result ' + a * b);
+  }
+
+  multiply(); // Result 1
+  multiply(10); // Result 10
+  multiply(3, NaN); // Result 3
+  multiply(9, 5); // Result 45
+
+}(window.console.log));
+</code></pre>
+<hr />
+<h3 id="分号"><a class="markdownIt-Anchor" href="#分号"></a> 分号</h3>
+<p>总是使用分号，因为隐式的代码嵌套会引发难以察觉的问题。当然我们更要从根本上来杜绝这些问题<a href="https://github.com/gionkunz/chartist-js/blob/develop/CODINGSTYLE.md" target="_blank" rel="noopener">1</a> 。以下几个示例展示了缺少分号的危害：</p>
+<pre><code>// 1.
+MyClass.prototype.myMethod = function() {
+  return 42;
+}  // No semicolon here.
+
+(function() {
+  // Some initialization code wrapped in a function to create a scope for locals.
+})();
+
+
+var x = {
+  'i': 1,
+  'j': 2
+}  // No semicolon here.
+
+// 2.  Trying to do one thing on Internet Explorer and another on Firefox.
+// I know you'd never write code like this, but throw me a bone.
+[ffVersion, ieVersion][isIE]();
+
+
+var THINGS_TO_EAT = [apples, oysters, sprayOnCheese]  // No semicolon here.
+
+// 3. conditional execution a la bash
+-1 == resultOfOperation() || die();
+</code></pre>
+<p><strong>So what happens?</strong></p>
+<ol>
+<li>JavaScript 错误 —— 首先返回 42 的那个 function 被第二个 function 当中参数传入调用，接着数字 42 也被&quot;调用&quot;而导致出错。</li>
+<li>八成你会得到 ‘no such property in undefined’ 的错误提示，因为在真实环境中的调用是这个样子：<code>x[ffVersion, ieVersion][isIE]()</code>.</li>
+<li><code>die</code> 总是被调用。因为数组减 1 的结果是 <code>NaN</code>，它不等于任何东西（无论 <code>resultOfOperation</code> 是否返回 <code>NaN</code>）。所以最终的结果是 <code>die()</code> 执行完所获得值将赋给 <code>THINGS_TO_EAT</code>.</li>
+</ol>
+<p><strong>Why?</strong></p>
+<p>JavaScript 中语句要以分号结束，否则它将会继续执行下去，不管换不换行。以上的每一个示例中，函数声明或对象或数组，都变成了在一句语句体内。要知道闭合圆括号并不代表语句结束，JavaScript 不会终结语句，除非它的下一个 token 是一个中缀符<a href="http://dmitrysoshnikov.com/notes/note-2-ecmascript-equality-operators/" target="_blank" rel="noopener">2</a> 或者是圆括号操作符。</p>
+<p>这真是让人大吃一惊，所以乖乖地给语句末加上分号吧。</p>
+<p><strong>澄清：分号与函数</strong></p>
+<p>分号需要用在表达式的结尾，而并非函数声明的结尾。区分它们最好的例子是：</p>
+<pre><code>var foo = function() {
+  return true;
+};  // semicolon here.
+
+function foo() {
+  return true;
+}  // no semicolon here.
+</code></pre>
+<hr />
+<h3 id="嵌套函数"><a class="markdownIt-Anchor" href="#嵌套函数"></a> 嵌套函数</h3>
+<p>嵌套函数是非常有用的，比如用在持续创建和隐藏辅助函数的任务中。你可以非常自由随意地使用它们。</p>
+<hr />
+<h3 id="语句块内的函数声明"><a class="markdownIt-Anchor" href="#语句块内的函数声明"></a> 语句块内的函数声明</h3>
+<p>切勿在语句块内声明函数，在 ECMAScript 5 的严格模式下，这是不合法的。函数声明应该在定义域的顶层。但在语句块内可将函数申明转化为函数表达式赋值给变量。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>if (x) {
+  function foo() {}
+}
+</code></pre>
+<p><strong>推荐</strong></p>
+<pre><code>if (x) {
+  var foo = function() {};
+}
+</code></pre>
+<hr />
+<h3 id="异常"><a class="markdownIt-Anchor" href="#异常"></a> 异常</h3>
+<p>基本上你无法避免出现异常，特别是在做大型开发时（使用应用开发框架等等）。</p>
+<p>在没有自定义异常的情况下，从有返回值的函数中返回错误信息一定非常的棘手，更别提多不优雅了。不好的解决方案包括了传第一个引用类型来接纳错误信息，或总是返回一个对象列表，其中包含着可能的错误对象。以上方式基本上是比较简陋的异常处理方式。适时可做自定义异常处理。</p>
+<p>在复杂的环境中，你可以考虑抛出对象而不仅仅是字符串（默认的抛出值）。</p>
+<pre><code>if(name === undefined) {
+  throw {
+    name: 'System Error',
+    message: 'A name should always be specified!'
+  }
+}
+</code></pre>
+<hr />
+<h3 id="标准特性"><a class="markdownIt-Anchor" href="#标准特性"></a> 标准特性</h3>
+<p>总是优先考虑使用标准特性。为了最大限度地保证扩展性与兼容性，总是首选标准的特性，而不是非标准的特性（例如：首选 <code>string.charAt(3)</code> 而不是 <code>string[3]</code>；首选 DOM 的操作方法来获得元素引用，而不是某一应用特定的快捷方法）。</p>
+<hr />
+<h3 id="简易的原型继承"><a class="markdownIt-Anchor" href="#简易的原型继承"></a> 简易的原型继承</h3>
+<p>如果你想在 JavaScript 中继承你的对象，请遵循一个简易的模式来创建此继承。如果你预计你会遇上复杂对象的继承，那可以考虑采用一个继承库，比如 <a href="https://github.com/rauschma/proto-js" target="_blank" rel="noopener">Proto.js by Axel Rauschmayer</a>.</p>
+<p>简易继承请用以下方式：</p>
+<pre><code>(function(log){
+  'use strict';
+
+  // Constructor function
+  function Apple(name) {
+    this.name = name;
+  }
+  // Defining a method of apple
+  Apple.prototype.eat = function() {
+    log('Eating ' + this.name);
+  };
+
+  // Constructor function
+  function GrannySmithApple() {
+    // Invoking parent constructor
+    Apple.prototype.constructor.call(this, 'Granny Smith');
+  }
+  // Set parent prototype while creating a copy with Object.create
+  GrannySmithApple.prototype = Object.create(Apple.prototype);
+  // Set constructor to the sub type, otherwise points to Apple
+  GrannySmithApple.prototype.constructor = GrannySmithApple;
+
+  // Calling a super method
+  GrannySmithApple.prototype.eat = function() {
+    // Be sure to apply it onto our current object with call(this)
+    Apple.prototype.eat.call(this);
+
+    log('Poor Grany Smith');
+  };
+
+  // Instantiation
+  var apple = new Apple('Test Apple');
+  var grannyApple = new GrannySmithApple();
+
+  log(apple.name); // Test Apple
+  log(grannyApple.name); // Granny Smith
+
+  // Instance checks
+  log(apple instanceof Apple); // true
+  log(apple instanceof GrannySmithApple); // false
+
+  log(grannyApple instanceof Apple); // true
+  log(grannyApple instanceof GrannySmithApple); // true
+
+  // Calling method that calls super method
+  grannyApple.eat(); // Eating Granny SmithnPoor Grany Smith
+
+}(window.console.log));
+</code></pre>
+<hr />
+<h3 id="使用闭包"><a class="markdownIt-Anchor" href="#使用闭包"></a> 使用闭包</h3>
+<p>闭包的创建也许是 JS 最有用也是最易被忽略的能力了。<a href="http://jibbering.com/faq/faq_notes/closures.html" target="_blank" rel="noopener">关于闭包如何工作的合理解释</a>。</p>
+<hr />
+<h3 id="切勿在循环中创建函数"><a class="markdownIt-Anchor" href="#切勿在循环中创建函数"></a> 切勿在循环中创建函数</h3>
+<p>在简单的循环语句中加入函数是非常容易形成闭包而带来隐患的。下面的例子就是一个典型的陷阱：</p>
+<p><strong>不推荐</strong></p>
+<pre><code>(function(log, w){
+  'use strict';
+
+  // numbers and i is defined in the current function closure
+  var numbers = [1, 2, 3],
+      i;
+
+  for(i = 0; i &amp;lt; numbers.length; i++) {
+    w.setTimeout(function() {
+      // At the moment when this gets executed the i variable, coming from the outer function scope
+      // is set to 3 and the current program is alerting the message 3 times
+      // 'Index 3 with number undefined
+      // If you understand closures in javascript you know how to deal with those cases
+      // It's best to just avoid functions / new closures in loops as this prevents those issues
+
+      w.alert('Index ' + i + ' with number ' + numbers[i]);
+    }, 0);
+  }
+
+}(window.console.log, window));
+</code></pre>
+<p>接下来的改进虽然已经解决了上述例子中的问题或 bug，但还是违反了不在循环中创建函数或闭包的原则。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>(function(log, w){
+  'use strict';
+
+  // numbers and i is defined in the current function closure
+  var numbers = [1, 2, 3],
+      i;
+
+  for(i = 0; i &amp;lt; numbers.length; i++) { // Creating a new closure scope with an IIFE solves the problem // The delayed function will use index and number which are // in their own closure scope (one closure per loop iteration). // --- // Still this is not recommended as we violate our rule to not // create functions within loops and we are creating two! (function(index, number){ w.setTimeout(function() { // Will output as expected 0 &amp;gt; 1, 1 &amp;gt; 2, 2 &amp;gt; 3
+        w.alert('Index ' + index + ' with number ' + number);
+      }, 0);
+    }(i, numbers[i]));
+  }
+
+}(window.console.log, window));
+</code></pre>
+<p>接下来的改进已解决问题，而且也遵循了规范。可是，你会发现看上去似乎过于复杂繁冗了，应该会有更好的解决方案吧。</p>
+<p><strong>不完全推荐</strong></p>
+<pre><code>(function(log, w){
+  'use strict';
+
+  // numbers and i is defined in the current function closure
+  var numbers = [1, 2, 3],
+      i;
+
+  // Create a function outside of the loop that will accept arguments to create a
+  // function closure scope. This function will return a function that executes in this
+  // closure parent scope.
+  function alertIndexWithNumber(index, number) {
+    return function() {
+      w.alert('Index ' + index + ' with number ' + number);
+    };
+  }
+
+  // First parameter is a function call that returns a function.
+  // ---
+  // This solves our problem and we don't create a function inside our loop
+  for(i = 0; i &amp;lt; numbers.length; i++) {
+    w.setTimeout(alertIndexWithNumber(i, numbers[i]), 0);
+  }
+
+}(window.console.log, window));
+</code></pre>
+<p>将循环语句转换为函数执行的方式问题能得到立马解决，每一次循环都会对应地创建一次闭包。函数式的风格更加值得推荐，而且看上去也更加地自然和可预料。</p>
+<p><strong>推荐</strong></p>
+<pre><code>(function(log, w){
+  'use strict';
+
+  // numbers and i is defined in the current function closure
+  var numbers = [1, 2, 3],
+      i;
+
+  numbers.forEach(function(number, index) {
+    w.setTimeout(function() {
+      w.alert('Index ' + index + ' with number ' + number);
+    }, 0);
+  });
+
+}(window.console.log, window));
+</code></pre>
+<hr />
+<h3 id="eval-函数魔鬼"><a class="markdownIt-Anchor" href="#eval-函数魔鬼"></a> eval 函数（魔鬼）</h3>
+<p><code>eval()</code> 不但混淆语境还很危险，总会有比这更好、更清晰、更安全的另一种方案来写你的代码，因此尽量不要使用 evil 函数。</p>
+<hr />
+<h3 id="this-关键字"><a class="markdownIt-Anchor" href="#this-关键字"></a> this 关键字</h3>
+<p>只在对象构造器、方法和在设定的闭包中使用 <code>this</code> 关键字。this 的语义在此有些误导。它时而指向全局对象（大多数时），时而指向调用者的定义域（在 eval 中），时而指向 DOM 树中的某一节点（当用事件处理绑定到 HTML 属性上时），时而指向一个新创建的对象（在构造器中），还时而指向其它的一些对象（如果函数被 <code>call()</code> 和 <code>apply()</code> 执行和调用时）。</p>
+<p>正因为它是如此容易地被搞错，请限制它的使用场景：</p>
+<ul>
+<li>在构造函数中</li>
+<li>在对象的方法中（包括由此创建出的闭包内）</li>
+</ul>
+<hr />
+<h3 id="首选函数式风格"><a class="markdownIt-Anchor" href="#首选函数式风格"></a> 首选函数式风格</h3>
+<p>函数式编程让你可以简化代码并缩减维护成本，因为它容易复用，又适当地解耦和更少的依赖。</p>
+<p>接下来的例子中，在一组数字求和的同一问题上，比较了两种解决方案。第一个例子是经典的程序处理，而第二个例子则是采用了函数式编程和 ECMA Script 5.1 的数组方法。</p>
+<p>例外：往往在重代码性能轻代码维护的情况之下，要选择最优性能的解决方案而非维护性高的方案（比如用简单的循环语句代替 forEach）。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>(function(log){
+  'use strict';
+
+  var arr = [10, 3, 7, 9, 100, 20],
+      sum = 0,
+      i;
+
+
+  for(i = 0; i &amp;lt; arr.length; i++) {
+    sum += arr[i];
+  }
+
+  log('The sum of array ' + arr + ' is: ' + sum)
+
+}(window.console.log));
+</code></pre>
+<p><strong>推荐</strong></p>
+<pre><code>(function(log){
+  'use strict';
+
+  var arr = [10, 3, 7, 9, 100, 20];
+
+  var sum = arr.reduce(function(prevValue, currentValue) {
+    return prevValue + currentValue;
+  }, 0);
+
+  log('The sum of array ' + arr + ' is: ' + sum);
+
+}(window.console.log));
+</code></pre>
+<p>另一个例子通过某一规则对一个数组进行过滤匹配来创建一个新的数组。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>(function(log){
+  'use strict';
+
+  var numbers = [11, 3, 7, 9, 100, 20, 14, 10],
+      numbersGreaterTen = [],
+      i;
+
+
+  for(i = 0; i &amp;lt; numbers.length; i++) { if(numbers[i] &amp;gt; 10) {
+      numbersGreaterTen.push(numbers[i]);
+    }
+  }
+
+  log('From the list of numbers ' + numbers + ' only ' + numbersGreaterTen + ' are greater than ten');
+
+}(window.console.log));
+</code></pre>
+<p><strong>推荐</strong></p>
+<pre><code>(function(log){
+  'use strict';
+
+  var numbers = [11, 3, 7, 9, 100, 20, 14, 10];
+
+  var numbersGreaterTen = numbers.filter(function(element) {
+    return element &amp;gt; 10;
+  });
+
+  log('From the list of numbers ' + numbers + ' only ' + numbersGreaterTen + ' are greater than ten');
+
+}(window.console.log));
+</code></pre>
+<hr />
+<h3 id="使用-ecma-script-5"><a class="markdownIt-Anchor" href="#使用-ecma-script-5"></a> 使用 ECMA Script 5</h3>
+<p>建议使用 ECMA Script 5 中新增的语法糖和函数。这将简化你的程序，并让你的代码更加灵活和可复用。</p>
+<hr />
+<h3 id="数组和对象的属性迭代"><a class="markdownIt-Anchor" href="#数组和对象的属性迭代"></a> 数组和对象的属性迭代</h3>
+<p>用 ECMA5 的迭代方法来迭代数组。使用 <code>Array.forEach</code> 或者如果你要在特殊场合下中断迭代，那就用 <code>Array.every</code>。</p>
+<pre><code>(function(log){
+  'use strict';
+
+  // Iterate over an array and break at a certain condition
+  [1, 2, 3, 4, 5].every(function(element, index, arr) {
+    log(element + ' at index ' + index + ' in array ' + arr);
+
+    if(index !== 5) {
+      return true;
+    }
+  });
+
+  // Defining a simple javascript object
+  var obj = {
+    a: 'A',
+    b: 'B',
+    'c-d-e': 'CDE'
+  };
+
+  // Iterating over the object keys
+  Object.keys(obj).forEach(function(element, index, arr) {
+    log('Key ' + element + ' has value ' + obj[element]);
+  });
+
+}(window.console.log));
+</code></pre>
+<hr />
+<h3 id="不要使用-switch"><a class="markdownIt-Anchor" href="#不要使用-switch"></a> 不要使用 switch</h3>
+<p>switch 在所有的编程语言中都是个非常错误的难以控制的语句，建议用 if else 来替换它。</p>
+<hr />
+<h3 id="数组和对象字面量"><a class="markdownIt-Anchor" href="#数组和对象字面量"></a> 数组和对象字面量</h3>
+<p>用数组和对象字面量来代替数组和对象构造器。数组构造器很容易让人在它的参数上犯错。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>// Length is 3.
+var a1 = new Array(x1, x2, x3);
+
+// Length is 2.
+var a2 = new Array(x1, x2);
+
+// If x1 is a number and it is a natural number the length will be x1.
+// If x1 is a number but not a natural number this will throw an exception.
+// Otherwise the array will have one element with x1 as its value.
+var a3 = new Array(x1);
+
+// Length is 0.
+var a4 = new Array();
+</code></pre>
+<p>正因如此，如果将代码传参从两个变为一个，那数组很有可能发生意料不到的长度变化。为避免此类怪异状况，请总是采用更多可读的数组字面量。</p>
+<p><strong>推荐</strong></p>
+<pre><code>var a = [x1, x2, x3];
+var a2 = [x1, x2];
+var a3 = [x1];
+var a4 = [];
+</code></pre>
+<p>对象构造器不会有类似的问题，但是为了可读性和统一性，我们应该使用对象字面量。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>var o = new Object();
+
+var o2 = new Object();
+o2.a = 0;
+o2.b = 1;
+o2.c = 2;
+o2['strange key'] = 3;
+</code></pre>
+<p>应该写成这样：</p>
+<p><strong>推荐</strong></p>
+<pre><code>var o = {};
+
+var o2 = {
+  a: 0,
+  b: 1,
+  c: 2,
+  'strange key': 3
+};
+</code></pre>
+<hr />
+<h3 id="修改内建对象的原型链"><a class="markdownIt-Anchor" href="#修改内建对象的原型链"></a> 修改内建对象的原型链</h3>
+<p>修改内建的诸如 <code>Object.prototype</code> 和 <code>Array.prototype</code> 是被严厉禁止的。修改其它的内建对象比如 <code>Function.prototype</code>，虽危害没那么大，但始终还是会导致在开发过程中难以 debug 的问题，应当也要避免。</p>
+<hr />
+<h3 id="自定义-tostring-方法"><a class="markdownIt-Anchor" href="#自定义-tostring-方法"></a> 自定义 toString() 方法</h3>
+<p>你可以通过自定义 <code>toString()</code> 来控制对象字符串化。这很好，但你必须保证你的方法总是成功并不会有其它副作用。如果你的方法达不到这样的标准，那将会引发严重的问题。如果 <code>toString()</code> 调用了一个方法，这个方法做了一个断言<a href="https://github.com/rauschma/proto-js" target="_blank" rel="noopener">3</a> ，当断言失败，它可能会输出它所在对象的名称，当然对象也需要调用 <code>toString()</code>。</p>
+<hr />
+<h3 id="圆括号"><a class="markdownIt-Anchor" href="#圆括号"></a> 圆括号</h3>
+<p>一般在语法和语义上真正需要时才谨慎地使用圆括号。不要用在一元操作符上，例如 <code>delete</code>, <code>typeof</code> 和 <code>void</code>，或在关键字之后，例如 <code>return</code>, <code>throw</code>, <code>case</code>, <code>new</code> 等。</p>
+<hr />
+<h3 id="字符串"><a class="markdownIt-Anchor" href="#字符串"></a> 字符串</h3>
+<p>统一使用单引号(’)，不使用双引号(&quot;)。这在创建 HTML 字符串非常有好处：</p>
+<pre><code>    var msg = 'This is some HTML &lt;div class=&quot;makes-sense&quot;&gt;&lt;/div&gt;';
+</code></pre>
+<hr />
+<h3 id="三元条件判断if-的快捷方法"><a class="markdownIt-Anchor" href="#三元条件判断if-的快捷方法"></a> 三元条件判断（if 的快捷方法）</h3>
+<p>用三元操作符分配或返回语句。在比较简单的情况下使用，避免在复杂的情况下使用。没人愿意用 10 行三元操作符把自己的脑子绕晕。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>if(x === 10) {
+  return 'valid';
+} else {
+  return 'invalid';
+}
+</code></pre>
+<p><strong>推荐</strong></p>
+<pre><code>return x === 10 ? 'valid' : 'invalid';
+</code></pre>
+<hr />
+<p><a href="https://github.com/gionkunz/chartist-js/blob/develop/CODINGSTYLE.md" target="_blank" rel="noopener">1</a>：作者指的是采用严格规范的语句写法，从根本上杜绝由分号缺失而引起的代码歧义。</p>
+<p><a href="http://dmitrysoshnikov.com/notes/note-2-ecmascript-equality-operators/" target="_blank" rel="noopener">2</a>：中缀符，指的是像 <code>x + y</code> 中的 <code>+</code>。</p>
+<p><a href="https://github.com/rauschma/proto-js" target="_blank" rel="noopener">3</a>：断言一般指程序员在测试测序时的假设，一般是一些布尔表达式，当返回是 true 时，断言为真，代码运行会继续进行；如果条件判断为 false，代码运行停止，你的应用被终止。</p>
+<hr />
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/hexolog/images/wechatpay.png" alt="kuleyu 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/hexolog/images/alipay.png" alt="kuleyu 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/hexolog/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+            <a href="/hexolog/tags/%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/" rel="tag"># 编码规范</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/hexolog/post/d4e64c45.html" rel="next" title="Ajax总结篇">
+                <i class="fa fa-chevron-left"></i> Ajax总结篇
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/hexolog/post/226a05d8.html" rel="prev" title="前端编码风格规范(1) 之 一般规范">
+                前端编码风格规范(1) 之 一般规范 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/hexolog/images/avatar.png"
+                alt="kuleyu" />
+            
+              <p class="site-author-name" itemprop="name">kuleyu</p>
+              <p class="site-description motion-element" itemprop="description">你的态度，就是你未来生活的样子</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                  
+                    <a href="/hexolog/archives/">
+                  
+                    <span class="site-state-item-count">46</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/hexolog/categories/index.html">
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/hexolog/tags/index.html">
+                    <span class="site-state-item-count">60</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/kuleyu" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github-square"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1402546930@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://plus.google.com/yourname" target="_blank" title="Google+">
+                      
+                        <i class="fa fa-fw fa-google-plus-official"></i>Google+</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://your-weibo-url" target="_blank" title="微博">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>微博</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://your-douban-url" target="_blank" title="豆瓣">
+                      
+                        <i class="fa fa-fw fa-douban"></i>豆瓣</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://your-zhihu-url" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-zhihu"></i>知乎</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://surmon.me/" title="surmon" target="_blank">surmon</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://xinwenke.top/" title="wenke" target="_blank">wenke</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#javascript-规范"><span class="nav-number">1.</span> <span class="nav-text"> JavaScript 规范</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#全局命名空间污染与-iife"><span class="nav-number">1.1.</span> <span class="nav-text"> 全局命名空间污染与 IIFE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iife立即执行的函数表达式"><span class="nav-number">1.2.</span> <span class="nav-text"> IIFE（立即执行的函数表达式）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#严格模式"><span class="nav-number">1.3.</span> <span class="nav-text"> 严格模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量声明"><span class="nav-number">1.4.</span> <span class="nav-text"> 变量声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#理解-javascript-的定义域和定义域提升"><span class="nav-number">1.5.</span> <span class="nav-text"> 理解 JavaScript 的定义域和定义域提升</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总是使用带类型判断的比较判断"><span class="nav-number">1.6.</span> <span class="nav-text"> 总是使用带类型判断的比较判断</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#明智地使用真假判断"><span class="nav-number">1.7.</span> <span class="nav-text"> 明智地使用真假判断</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量赋值时的逻辑操作"><span class="nav-number">1.8.</span> <span class="nav-text"> 变量赋值时的逻辑操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分号"><span class="nav-number">1.9.</span> <span class="nav-text"> 分号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#嵌套函数"><span class="nav-number">1.10.</span> <span class="nav-text"> 嵌套函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语句块内的函数声明"><span class="nav-number">1.11.</span> <span class="nav-text"> 语句块内的函数声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异常"><span class="nav-number">1.12.</span> <span class="nav-text"> 异常</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标准特性"><span class="nav-number">1.13.</span> <span class="nav-text"> 标准特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简易的原型继承"><span class="nav-number">1.14.</span> <span class="nav-text"> 简易的原型继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用闭包"><span class="nav-number">1.15.</span> <span class="nav-text"> 使用闭包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#切勿在循环中创建函数"><span class="nav-number">1.16.</span> <span class="nav-text"> 切勿在循环中创建函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#eval-函数魔鬼"><span class="nav-number">1.17.</span> <span class="nav-text"> eval 函数（魔鬼）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#this-关键字"><span class="nav-number">1.18.</span> <span class="nav-text"> this 关键字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#首选函数式风格"><span class="nav-number">1.19.</span> <span class="nav-text"> 首选函数式风格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-ecma-script-5"><span class="nav-number">1.20.</span> <span class="nav-text"> 使用 ECMA Script 5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组和对象的属性迭代"><span class="nav-number">1.21.</span> <span class="nav-text"> 数组和对象的属性迭代</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不要使用-switch"><span class="nav-number">1.22.</span> <span class="nav-text"> 不要使用 switch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组和对象字面量"><span class="nav-number">1.23.</span> <span class="nav-text"> 数组和对象字面量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改内建对象的原型链"><span class="nav-number">1.24.</span> <span class="nav-text"> 修改内建对象的原型链</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义-tostring-方法"><span class="nav-number">1.25.</span> <span class="nav-text"> 自定义 toString() 方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#圆括号"><span class="nav-number">1.26.</span> <span class="nav-text"> 圆括号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串"><span class="nav-number">1.27.</span> <span class="nav-text"> 字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三元条件判断if-的快捷方法"><span class="nav-number">1.28.</span> <span class="nav-text"> 三元条件判断（if 的快捷方法）</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017.03 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">kuleyu</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.0</div>
+
+
+
+  <div class="footer-custom">Hosted by <a target="_blank" href="https://www.netlify.com/">Netlify</a></div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+    <script type="text/javascript" src="/hexolog/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/hexolog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/hexolog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/hexolog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script id="ribbon" type="text/javascript" size="160" alpha="0.2"  zIndex="-6" src="/hexolog/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/hexolog/lib/reading_progress/reading_progress.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/hexolog/js/src/utils.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/hexolog/js/src/motion.js?v=6.0.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/hexolog/js/src/affix.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/hexolog/js/src/schemes/pisces.js?v=6.0.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/hexolog/js/src/scrollspy.js?v=6.0.0"></script>
+<script type="text/javascript" src="/hexolog/js/src/post-details.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/hexolog/js/src/bootstrap.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'kuleyu',
+            repo: 'bloxment',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '365893ba8bb81ccf4e102ed1af2979a89b8cea38',
+            
+                client_id: 'af4f71ced0f776cb26d9'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/hexolog/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("bVHFwyWVoXDg1pVfzy8aoD0H-gzGzoHsz", "WByLAt3BrbNHUKUJMWxbO0kf");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/hexolog/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/hexolog/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
