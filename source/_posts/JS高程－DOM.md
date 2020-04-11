@@ -1,10 +1,14 @@
 ---
-title: "JS高程－DOM"
-date: 2017-08-21
-categories: ["JavaScript","学习笔记"]
-tags: ["dom"]
+title: JS高程－DOM
+categories:
+  - JavaScript
+  - 学习笔记
+tags:
+  - dom
 comment: true
 weight: 10
+abbrlink: ab8e0436
+date: 2017-08-21 00:00:00
 ---
 
 > DOM（文档对象模型）是针对HTML和XML文档的一个API（应用程序编程接口），描绘了一个层次化的节点树，允许开发人员添加、移除和修改页面的某一部分。

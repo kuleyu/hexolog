@@ -1,10 +1,15 @@
 ---
-title: "javascript 字符串及数组操作方法"
-date: 2018-03-23T20:51:49+08:00
-lastmod: 2018-03-23T20:51:49+08:00
+title: javascript 字符串及数组操作方法
 draft: false
-tags: ["javascript","字符串","数组"]
-categories: ["学习笔记"]
+tags:
+  - javascript
+  - 字符串
+  - 数组
+categories:
+  - 学习笔记
+abbrlink: b0e2f0cd
+date: 2018-03-23 12:51:49
+lastmod: 2018-03-23 12:51:49
 ---
 
 

@@ -1,10 +1,19 @@
 ---
-title: "bootstrap常用类小结"
+title: bootstrap常用类小结
+categories:
+  - Front-End
+  - 搬运整理
+tags:
+  - Bootstrap
+author: >-
+  <a href="http://blog.poetries.top/" rel="noopener"
+  target="_blank">poetries</a>
+contentCopyright: >-
+  <a
+  href="https://github.com/poetries/poetries.github.io/blob/dev/source/_posts/"
+  rel="noopener" target="_blank">See origin</a>
+abbrlink: 10fd8090
 date: 2017-11-04 22:55:24
-categories: ["Front-End","搬运整理"]
-tags: ["Bootstrap"]
-author: '<a href="http://blog.poetries.top/" rel="noopener" target="_blank">poetries</a>'
-contentCopyright: '<a href="https://github.com/poetries/poetries.github.io/blob/dev/source/_posts/" rel="noopener" target="_blank">See origin</a>'
 ---
 
 网格选项

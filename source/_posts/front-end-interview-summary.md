@@ -1,11 +1,20 @@
 ---
-title: "前端面试题整理"
-date: 2017-03-12 22:24:08
-categories: ["Front-End","搬运整理"]
-tags: ["面试"]
+title: 前端面试题整理
+categories:
+  - Front-End
+  - 搬运整理
+tags:
+  - 面试
 comments: true
-author: '<a href="http://blog.poetries.top/" rel="noopener" target="_blank">poetries</a>'
-contentCopyright: '<a href="https://github.com/poetries/poetries.github.io/blob/dev/source/_posts/" rel="noopener" target="_blank">See origin</a>'
+author: >-
+  <a href="http://blog.poetries.top/" rel="noopener"
+  target="_blank">poetries</a>
+contentCopyright: >-
+  <a
+  href="https://github.com/poetries/poetries.github.io/blob/dev/source/_posts/"
+  rel="noopener" target="_blank">See origin</a>
+abbrlink: 8fe9c4e1
+date: 2017-03-12 22:24:08
 ---
 
 ## 目录

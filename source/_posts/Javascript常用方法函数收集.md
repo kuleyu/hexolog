@@ -1,14 +1,23 @@
 ---
-title: "Javascript常用方法函数收集"
+title: Javascript常用方法函数收集
 comment: true
 draft: false
-date: 2018-04-19T20:54:15+24:00
-lastmod: 2018-04-19T20:54:15+24:00
-categories: ["Front-End", "搬运整理"]
-tags: ["JavaScript","Snippet"]
-author: '<a href="http://blog.poetries.top/" rel="noopener" target="_blank">poetries</a>'
-contentCopyright: '<a href="http://blog.poetries.top" rel="noopener" target="_blank">See origin</a>'
+categories:
+  - Front-End
+  - 搬运整理
+tags:
+  - JavaScript
+  - Snippet
+author: >-
+  <a href="http://blog.poetries.top/" rel="noopener"
+  target="_blank">poetries</a>
+contentCopyright: >-
+  <a href="http://blog.poetries.top" rel="noopener" target="_blank">See
+  origin</a>
 weight: 10
+abbrlink: 30fd5d95
+date: 2018-04-18 20:54:15
+lastmod: 2018-04-18 20:54:15
 ---
 
 ## 字符串及数组类

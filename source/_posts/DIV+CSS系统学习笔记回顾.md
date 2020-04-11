@@ -1,10 +1,20 @@
 ---
-title: "DIV+CSS系统学习笔记回顾"
+title: DIV+CSS系统学习笔记回顾
+categories:
+  - Front-End
+  - 搬运整理
+tags:
+  - CSS
+  - XHTML
+author: >-
+  <a href="http://blog.poetries.top/" rel="noopener"
+  target="_blank">poetries</a>
+contentCopyright: >-
+  <a
+  href="https://github.com/poetries/poetries.github.io/blob/dev/source/_posts/"
+  rel="noopener" target="_blank">See origin</a>
+abbrlink: 96b1bc20
 date: 2016-09-06 18:24:08
-categories: ["Front-End","搬运整理"]
-tags: ["CSS","XHTML"]
-author: '<a href="http://blog.poetries.top/" rel="noopener" target="_blank">poetries</a>'
-contentCopyright: '<a href="https://github.com/poetries/poetries.github.io/blob/dev/source/_posts/" rel="noopener" target="_blank">See origin</a>'
 ---
 
 

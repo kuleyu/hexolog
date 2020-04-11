@@ -1,13 +1,22 @@
 ---
-title: "Ajax总结篇"
+title: Ajax总结篇
 comment: true
 draft: false
-date: 2018-04-19T16:54:16+08:00
-lastmod: 2018-04-19T16:54:16+08:00
-categories: ["Front-End", "搬运整理"]
-tags: ["JavaScript","Ajax"]
-author: '<a href="http://blog.poetries.top/" rel="noopener" target="_blank">poetries</a>'
-contentCopyright: '<a href="http://blog.poetries.top/2016/11/26/Ajax-summary" rel="noopener" target="_blank">See origin</a>'
+categories:
+  - Front-End
+  - 搬运整理
+tags:
+  - JavaScript
+  - Ajax
+author: >-
+  <a href="http://blog.poetries.top/" rel="noopener"
+  target="_blank">poetries</a>
+contentCopyright: >-
+  <a href="http://blog.poetries.top/2016/11/26/Ajax-summary" rel="noopener"
+  target="_blank">See origin</a>
+abbrlink: d4e64c45
+date: 2018-04-19 08:54:16
+lastmod: 2018-04-19 08:54:16
 ---
 
 

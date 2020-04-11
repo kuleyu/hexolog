@@ -1,15 +1,24 @@
 ---
-title: "Js变量提升、临时死区、作用域、立即执行函数"
+title: Js变量提升、临时死区、作用域、立即执行函数
 comment: true
 draft: false
-date: 2018-03-28T02:37:02+08:00
-lastmod: 2018-03-28T02:37:02+08:00
-categories: ["", ""]
-tags: ["", "", ""]
+categories:
+  - ''
+  - ''
+tags:
+  - ''
+  - ''
+  - ''
 author: '<a href="http://captaininphw.xyz/" rel="noopener" target="_blank">戴江涛</a>'
 weight: 10
-contentCopyright: '<a href="http://captaininphw.xyz/2018/03/16/CSS-%E5%B8%B8%E8%A7%81%E5%B8%83%E5%B1%80/" rel="noopener" target="_blank">See origin</a>'
+contentCopyright: >-
+  <a
+  href="http://captaininphw.xyz/2018/03/16/CSS-%E5%B8%B8%E8%A7%81%E5%B8%83%E5%B1%80/"
+  rel="noopener" target="_blank">See origin</a>
 hiddenFromHomePage: true
+abbrlink: 56be0507
+date: 2018-03-27 18:37:02
+lastmod: 2018-03-27 18:37:02
 ---
 
 提到 JS 中声明变量的方式，必然提及var、let、const、function 四个关键词，其中 var、function 声明的变量会发生变量提升。

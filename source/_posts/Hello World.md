@@ -16,12 +16,6 @@ Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [docume
 $ hexo new "My New Post"
 ```
 
-### Create a page named tags
-
-```bash
-$ hexo new page "tags"
-```
-
 More info: [Writing](https://hexo.io/docs/writing.html)
 
 ### Run server
@@ -45,6 +39,8 @@ More info: [Generating](https://hexo.io/docs/generating.html)
 ``` bash
 $ hexo deploy
 ```
+
+More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
 <!-- more -->
 ### Front-matter
 

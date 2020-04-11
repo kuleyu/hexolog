@@ -1,11 +1,14 @@
 ---
-title: "hugo usages"
-date: 2017-08-30T21:56:44+08:00
-lastmod: 2018-03-23T21:56:44+08:00
+title: hugo usages
 draft: false
-tags: ["hugo usages"]
-categories: ["Even theme preview"]
+tags:
+  - hugo usages
+categories:
+  - Even theme preview
 hiddenFromHomePage: true
+abbrlink: 959d1b61
+date: 2017-08-30 13:56:44
+lastmod: 2018-03-23 13:56:44
 ---
 
 ### Add Some Content 

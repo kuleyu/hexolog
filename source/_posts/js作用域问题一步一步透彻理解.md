@@ -1,12 +1,17 @@
 ---
-title: "Js作用域问题一步一步透彻理解"
+title: Js作用域问题一步一步透彻理解
 comment: true
 draft: false
-date: 2018-04-01T18:09:34+08:00
-lastmod: 2018-04-01T18:09:34+08:00
-categories: ["JavaScript","学习笔记"]
-tags: ["js","作用域"]
+categories:
+  - JavaScript
+  - 学习笔记
+tags:
+  - js
+  - 作用域
 weight: 10
+abbrlink: ae13e827
+date: 2018-04-01 10:09:34
+lastmod: 2018-04-01 10:09:34
 ---
 
 ## **黄金守则第一条**
@@ -24,6 +29,8 @@ function bbb() {
 }
 bbb();      // 10
 ```
+
+<!-- more -->
 
 ## **黄金守则第二条**
 

@@ -1,10 +1,18 @@
 ---
-title: "bootstrap笔记总结"
+title: bootstrap笔记总结
+categories:
+  - Front-End
+  - 搬运整理
+tags:
+  - Bootstrap
+author: >-
+  <a href="http://blog.poetries.top/" rel="noopener"
+  target="_blank">poetries</a>
+contentCopyright: >-
+  <a href="http://blog.poetries.top/2016/11/19/bootstrap-review" rel="noopener"
+  target="_blank">See origin</a>
+abbrlink: 2e40f178
 date: 2016-11-19 16:55:24
-categories: ["Front-End","搬运整理"]
-tags: ["Bootstrap"]
-author: '<a href="http://blog.poetries.top/" rel="noopener" target="_blank">poetries</a>'
-contentCopyright: '<a href="http://blog.poetries.top/2016/11/19/bootstrap-review" rel="noopener" target="_blank">See origin</a>'
 ---
 
 > 原文出处 http://blog.poetries.top/2016/11/19/bootstrap-review
