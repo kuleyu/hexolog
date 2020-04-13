@@ -3,6 +3,11 @@ a blog powered by Hexo and Netlify
 本博客采用**Netlify**自动部署
 
 # 更新
+
+### update on 2020-04-13
+1. 用 `hexo-tag-mmedia`代替了`hexo-tag-cplayer`；
+2. 更新 `hexo-next-theme` 至 `7.8.0`;
+
 ### update on 2017-12-26
 1. 参考![hexo-abbrlink介绍][1]![hexo链接持久化终极解决之道][2]添加 hexo-abbrlink 插件，优化链接问题。
 2. 修改模板，给文章添加编辑功能（单击编辑按钮后直接跳转到文章在GitHub的编辑窗口）

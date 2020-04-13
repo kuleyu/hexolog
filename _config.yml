@@ -80,7 +80,8 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next-6.0
+theme: next
+#theme: next-6.0
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -110,3 +111,33 @@ markdown_it_plus:
   typographer: 
   quotes: “”‘’ 
   pre_class: highlight
+
+# hexo-tag-mmedia plugin config
+mmedia:
+  aplayer:
+    cdn: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js
+    style_cdn: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css
+    default:
+  meting:
+    cdn: https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js
+    #api: https://sm.sm9.top/api.php
+    default:
+  dplayer:
+    cdn: https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js
+    style_cdn: https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css
+    hls_cdn: https://cdn.jsdelivr.net/npm/hls.j/dist/hls.min.js
+    dash_cdn: https://cdn.jsdelivr.net/npm/dashjs/dist/dash.all.min.js
+    shaka_dash_cdn: https://cdn.jsdelivr.net/npm/shaka-player/dist/shaka-player.compiled.js
+    flv_cdn: https://cdn.jsdelivr.net/npm/flv.js/dist/flv.min.js
+    webtorrent_cdn: https://cdn.jsdelivr.net/npm/webtorrent/webtorrent.min.js
+    default: 
+      #api: https://danmu.u2sb.top/api/danmu/dplayer/
+      loop: true
+      screenshot: true
+  bilibili: 
+    default: 
+      quality: high
+      danmaku: true
+      width: 850px
+      height: 550px
+      margin: auto
